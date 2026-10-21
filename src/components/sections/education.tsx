@@ -157,7 +157,7 @@ export function Education() {
   }>;
 
   return (
-    <section id='education' className='py-20 md:py-32 scroll-mt-28'>
+    <section id='education' className='py-20 md:py-32'>
       <div className='container mx-auto px-4'>
         <div className='max-w-4xl mx-auto'>
           {/* Education */}

@@ -27,7 +27,7 @@ export function Projects() {
   );
 
   return (
-    <section id='skala' className='py-20 md:py-32 scroll-mt-28'>
+    <section id='skala' className='py-20 md:py-32'>
       <div className='container mx-auto px-4'>
         {/* Section Header */}
         <motion.div

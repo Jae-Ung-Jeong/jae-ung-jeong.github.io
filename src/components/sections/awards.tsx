@@ -15,7 +15,7 @@ export function Awards() {
   }>;
 
   return (
-    <section id='awards' className='py-20 md:py-32 scroll-mt-28'>
+    <section id='awards' className='py-20 md:py-32'>
       <div className='container mx-auto px-4'>
         <div className='max-w-4xl mx-auto'>
           {/* Certifications */}

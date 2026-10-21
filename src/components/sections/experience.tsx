@@ -80,7 +80,7 @@ export function Experience() {
   const orgs = Object.entries(t.raw('orgs') as Record<string, Org>);
 
   return (
-    <section id='activities' className='py-20 md:py-32 scroll-mt-28'>
+    <section id='activities' className='py-20 md:py-32'>
       <div className='container mx-auto px-4'>
         {/* Section Header */}
         <motion.div
