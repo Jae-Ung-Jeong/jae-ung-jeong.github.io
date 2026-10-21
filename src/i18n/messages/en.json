@@ -635,8 +635,13 @@
     }
   },
   "certifications": {
-    "title": "Awards & Training",
+    "title": "Awards, Talks & Training",
     "items": [
+      {
+        "name": "MITA 2025 international conference presentation",
+        "org": "Quantitative evaluation of torus fitting on voxel point clouds",
+        "date": "2025.07"
+      },
       {
         "name": "KIISC Risk Management (RMF) & Security Evaluation Workshop",
         "org": "Korea Institute of Information Security & Cryptology",
@@ -650,22 +655,27 @@
       {
         "name": "LG Aimers 2nd cohort (Data Intelligence, completed)",
         "org": "LG AI Research",
-        "date": "2023.04"
+        "date": "2023.01 – 2023.04"
       },
       {
-        "name": "10th K-Hackathon, Seoul-region finalist",
+        "name": "10th K-Hackathon, Seoul-region finalist (team of 4)",
         "org": "Software Education Innovation Center",
-        "date": "2022.08"
+        "date": "2022.05 – 2022.08"
       },
       {
-        "name": "Campus Patent Universiade participant (patent strategy · commercialization)",
+        "name": "KCS 2022 (29th Korean Conference on Semiconductors) presentation",
+        "org": "Efficiency analysis of a Si photonics optical modulator",
+        "date": "2022.01"
+      },
+      {
+        "name": "Campus Patent Universiade, patent strategy finalist (team of 3 · leader)",
         "org": "KIPO · KIPA",
-        "date": "2021"
+        "date": "2021.05 – 2021.10"
       },
       {
-        "name": "SID Award, SID Audition finals",
-        "org": "Hanyang ERICA Startup Education Center",
-        "date": "2021.06"
+        "name": "SID Award, SID Audition finals (team of 3 · leader)",
+        "org": "Hanyang ERICA LINC 3.0 Startup Education Center",
+        "date": "2021.03 – 2021.06"
       }
     ]
   },
