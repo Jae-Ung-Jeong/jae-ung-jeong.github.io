@@ -13,7 +13,7 @@
     "name": "Jaeung Jeong",
     "role": "AI Service Planner",
     "description": "From semiconductor engineering to computer science, I design user flows and plan AI services whose judgments are verified with numbers.",
-    "company": "SKALA AI Campus, 4th cohort",
+    "company": "SKALA, 4th cohort",
     "downloadResume": "Download Resume",
     "viewGithub": "GitHub"
   },
@@ -80,8 +80,8 @@
     "hideDetails": "Hide details",
     "orgs": {
       "skala": {
-        "name": "SKALA AI Campus, 4th cohort (SK AX)",
-        "type": "Pangyo Class 8 · hiring-linked AI program",
+        "name": "SKALA, 4th cohort (SK AX)",
+        "type": "AI practitioner training program · Pangyo Campus",
         "period": "2026.07 - 2026.12",
         "positions": {
           "curriculum": {
@@ -198,7 +198,7 @@
   },
   "projects": {
     "title": "SKALA (SK AX)",
-    "subtitle": "SKALA AI Campus 4th cohort (SK AX) · Pangyo Class 8 · 2026.07 – 2026.12",
+    "subtitle": "SKALA 4th cohort · AI Practitioner Training Program · SK AX Pangyo Campus · 2026.07 – 2026.12",
     "viewMore": "View details",
     "modal": {
       "overview": "Overview",

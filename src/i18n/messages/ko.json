@@ -13,7 +13,7 @@
     "name": "정재웅",
     "role": "AI 서비스 기획자",
     "description": "반도체 공학과 컴퓨터공학을 거쳐, 사용자 흐름을 설계하고 AI의 판단을 숫자로 검증하는 서비스를 기획합니다.",
-    "company": "SKALA AI캠퍼스 4기",
+    "company": "SKALA 4기",
     "downloadResume": "이력서 다운로드",
     "viewGithub": "GitHub"
   },
@@ -80,8 +80,8 @@
     "hideDetails": "상세 내용 접기",
     "orgs": {
       "skala": {
-        "name": "SKALA AI캠퍼스 4기 (SK AX)",
-        "type": "판교 8반 · 채용연계형 AI 교육",
+        "name": "SKALA 4기 (SK AX)",
+        "type": "AI 실무 인재 양성 프로그램 · 판교캠퍼스",
         "period": "2026.07 - 2026.12",
         "positions": {
           "curriculum": {
@@ -194,7 +194,7 @@
   },
   "projects": {
     "title": "SKALA (SK AX)",
-    "subtitle": "SKALA AI캠퍼스 4기 (SK AX) · 판교 8반 · 2026.07 – 2026.12",
+    "subtitle": "SKALA 4기 · AI 실무 인재 양성 프로그램 · SK AX 판교캠퍼스 · 2026.07 – 2026.12",
     "viewMore": "자세히 보기",
     "modal": {
       "overview": "개요",
