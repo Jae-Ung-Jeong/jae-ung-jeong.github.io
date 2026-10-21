@@ -20,33 +20,33 @@
   },
   "about": {
     "title": "About",
-    "subtitle": "I design the flow and verify it with numbers",
+    "subtitle": "Core strengths",
     "highlights": {
       "flow": {
         "tag": "Flow design",
-        "title": "From user flow to API",
-        "description": "I break a problem into each user's pain points and design a service where state, screens and data connect into one flow.",
+        "title": "Service flow design",
+        "description": "From pain points to screens and APIs, in one flow.",
         "metrics": [
-          "Hosil Note: designed 14 screens + 10 modals, 46 APIs and 17 tables solo",
-          "KV cache evaluation agent: redesigned a fixed pipeline into Supervisor-based dynamic routing"
+          "Hosil Note: 24 screens · 46 APIs · 17 tables",
+          "Fixed pipeline → Supervisor dynamic routing"
         ]
       },
       "verify": {
         "tag": "Verify with numbers",
-        "title": "I question familiar metrics first",
-        "description": "I first ask whether a metric actually fits the problem, then redefine the criteria.",
+        "title": "Rethinking evaluation",
+        "description": "I first check whether a metric fits the problem.",
         "metrics": [
-          "Redefined evaluation around Recall instead of 93% accuracy on 6.6%-defect data (Recall 0 → 0.381)",
-          "Chose a RAG similarity threshold from the score distribution (9 of 10 golden-set questions correct)"
+          "The 93%-accuracy trap → Recall 0 → 0.381",
+          "RAG threshold set from score distribution (9/10)"
         ]
       },
       "rootcause": {
         "tag": "Root cause",
-        "title": "I trace it to the last case",
-        "description": "I don't stop at the result; I explain with data why it happened.",
+        "title": "Data-driven root cause analysis",
+        "description": "I explain the cause behind a result with numbers.",
         "metrics": [
-          "Traced a recurring 3D alignment error in a 3-party industry project to COLMAP coordinate normalization",
-          "Showed numerically that 13 missed defects were latent defects within normal sensor ranges"
+          "Found the cause of a 3D alignment error (3-party project)",
+          "Showed 13 missed defects were latent"
         ]
       }
     },
@@ -55,20 +55,20 @@
       "items": [
         {
           "key": "bridge",
-          "title": "Translating between domain and AI",
-          "description": "I turn experts' judgment criteria into structures AI can follow, and get people from different backgrounds to discuss on the same basis.",
+          "title": "Domain ↔ AI translator",
+          "description": "I turn experts' judgment criteria into structures AI can follow.",
           "examples": [
-            "Structured the trademark examination flow (generic term → customary mark → distinctiveness) into step-by-step prompts with a patent attorney (F1 71%)",
-            "Ran weekly meetings and issue tracking between Korean and US researchers, aligning three teams on shared data"
+            "With a patent attorney: examination flow → step prompts (F1 71%)",
+            "Weekly meetings and issue tracking across 3 KR/US teams"
           ]
         },
         {
           "key": "trust",
           "title": "AI recommends, people decide",
-          "description": "I design services that keep working when AI is wrong or fails, and that keep measuring quality.",
+          "description": "Services that keep working when AI fails, and keep measuring quality.",
           "examples": [
-            "Stored AI recommendations separately from human-confirmed values to measure adoption rate",
-            "Designed per-step fallbacks for AI failures and guaranteed agent termination"
+            "Recommendation vs decision stored separately → adoption rate",
+            "Per-step fallbacks and guaranteed termination"
           ]
         }
       ]
@@ -117,17 +117,17 @@
             "period": "2023.09 - 2026.02",
             "projects": [
               "Sparse point cloud completion (master's thesis)",
-              "Torus fitting evaluation on voxel point clouds (presented at MITA 2025)",
-              "AI trademark registrability assessment (with a patent attorney)",
-              "Cloud-based ransomware detection research support (built the experiment dataset)"
+              "Torus fitting evaluation (MITA 2025)",
+              "AI trademark assessment (with a patent attorney)",
+              "Ransomware detection research support (dataset)"
             ]
           },
           "industry": {
             "team": "Industry project (KongStudio, SNU, Hanyang)",
             "period": "2024.03 - 2024.12",
             "projects": [
-              "Mobile graphics performance and quality optimization with 3D Gaussian Splatting",
-              "Root cause analysis of alignment errors; weekly meetings and issue tracking with US researchers"
+              "3DGS mobile rendering quality optimization",
+              "Alignment error RCA; weekly KR/US meetings and issue tracking"
             ]
           },
           "conferences": {
@@ -172,8 +172,8 @@
             "team": "Founder & president, college bowling club 'Ssakssupin'",
             "period": "2021.03 - 2022.12",
             "projects": [
-              "Grew to 60 members by redesigning awards so anyone could win regardless of skill",
-              "Secured funding through faculty sponsorship and a member rate negotiated with the bowling alley"
+              "Grew to 60 members with inclusive awards",
+              "Funded through sponsorship and a member rate"
             ]
           },
           "crush": {
@@ -210,8 +210,8 @@
     "items": {
       "kvcache": {
         "title": "KV Cache Technology Evaluation Multi-Agent",
-        "description": "An Agentic RAG that evaluates memory optimization technologies from four perspectives and writes the report automatically, redesigned as a Supervisor-based multi-agent system",
-        "role": "Web search, shared subgraph and Supervisor routing",
+        "description": "An Agentic RAG that writes technology evaluation reports, redesigned as multi-agent",
+        "role": "Search, subgraph and Supervisor design",
         "period": "2026.09 – 2026.10",
         "scope": "Team · 5",
         "tech": [
@@ -224,8 +224,8 @@
           "Pydantic"
         ],
         "achievements": [
-          "Rework time 953s → 126s (−87%); time to first report 28.1 → ~12 min",
-          "Retrieval eval on 30 questions: Hit@5 0.800 · MRR 0.600 (BGE-M3)"
+          "Rework time −87% (953s → 126s)",
+          "Retrieval Hit@5 0.800 · MRR 0.600"
         ],
         "detail": {
           "overview": "The system evaluates KIVI (2-bit KV quantization, software) and ITME (CXL memory expansion, hardware) by technology readiness, market, stakeholders and domain, and generates a citation-checked PDF report. Built first as a fixed-order graph in the RAG Pipeline module, then converted into a multi-agent design where a Supervisor assigns work dynamically in the AI Agent module.",
@@ -242,8 +242,8 @@
       },
       "gonggong": {
         "title": "Gonggong Chwippo: Listed-Company Cross-Check Agent",
-        "description": "A conversational AI agent that cross-checks disclosures, financials, employment and news to give job seekers per-company 'points to check'",
-        "role": "Integration & verification (agent flow, cross-check logic, tests)",
+        "description": "An agent that cross-checks disclosures, financials, jobs and news for per-company checkpoints",
+        "role": "Agent integration & verification",
         "period": "2026.09",
         "scope": "Team · 4",
         "tech": [
@@ -255,8 +255,8 @@
           "pytest"
         ],
         "achievements": [
-          "End-to-end agent working on real public APIs",
-          "55 offline tests passing; follow-up answers in 3.3s with no external API calls"
+          "End-to-end on real public APIs",
+          "55 tests · 3.3s follow-ups"
         ],
         "detail": {
           "overview": "The service cross-checks a listed company's disclosures (OpenDART), Financial Services Commission data, National Pension employment data and news to surface points that a company profile alone doesn't show. Classification runs on GPT-4o-mini and analysis on GPT-4o, with a human-in-the-loop approval step before saving results.",
@@ -270,7 +270,7 @@
       },
       "solarcast": {
         "title": "SolarCast: Solar Power Forecasting AIOps",
-        "description": "An MLOps pipeline that serves a forecasting model and decides on retraining, promotion and rollback when performance drifts",
+        "description": "An MLOps pipeline that detects drift and decides on retraining, promotion and rollback",
         "role": "Planning and implementation",
         "period": "2026.10",
         "scope": "Solo",
@@ -282,8 +282,8 @@
           "Pydantic"
         ],
         "achievements": [
-          "Full loop implemented: drift detection → retraining → reject/promote → rollback",
-          "Baseline RMSE 11,092 MWh (13.7% better than a naive forecast)"
+          "Detect → retrain → promote/reject → rollback",
+          "RMSE 13.7% better than naive"
         ],
         "detail": {
           "overview": "An LSTM model trained on 762 days of Korea Power Exchange (KPX) public data forecasts solar generation and is served with FastAPI, with versions managed by an MLflow model registry and a deployment gate. When forecast error (WAPE) exceeds 0.388, the pipeline treats it as drift, retrains, and promotes the new model only if it passes the gate.",
@@ -299,7 +299,7 @@
       },
       "springrag": {
         "title": "Spring AI RAG for Internal Docs Q&A",
-        "description": "Built the six RAG steps by hand and chose settings by measuring retrieval quality on a golden set",
+        "description": "Hand-built six RAG steps; settings chosen with a golden set",
         "role": "RAG pipeline design and evaluation",
         "period": "2026.08",
         "scope": "Solo",
@@ -311,8 +311,8 @@
           "SimpleVectorStore"
         ],
         "achievements": [
-          "9 of 10 golden-set questions answered correctly",
-          "Set the similarity threshold to 0.3 from the score distribution (answers 0.465 vs trap questions 0.433)"
+          "9 of 10 golden-set answers correct",
+          "Threshold 0.3 from score distribution"
         ],
         "detail": {
           "overview": "Without the framework's built-in RAG helpers, I implemented split → embed → store → retrieve → prompt → answer myself. Answers return their sources and whether they are grounded.",
@@ -327,14 +327,14 @@
       },
       "sllm": {
         "title": "HR Policy sLLM Fine-tuning",
-        "description": "A policy Q&A chatbot built by LoRA-tuning a 1.5B small model, assuming company data cannot leave the premises",
+        "description": "A company policy chatbot built by LoRA-tuning a 1.5B model",
         "role": "Data, training and evaluation",
         "period": "2026.08",
         "scope": "Solo",
         "tech": ["Qwen2.5-1.5B", "LoRA (PEFT)", "TRL", "PyTorch"],
         "achievements": [
-          "Format compliance 0/20 → 19/20; safe answers to unseen questions 1/5 → 5/5",
-          "Showed the score gain came from format rather than content"
+          "Format compliance 0/20 → 19/20",
+          "Safe answers to unseen questions 1/5 → 5/5"
         ],
         "detail": {
           "overview": "Applied LoRA SFT to Qwen2.5-1.5B-Instruct to build an HR policy Q&A model, with 582 training, 97 validation and 20 evaluation examples (15 seen policies + 5 unseen).",
@@ -348,15 +348,15 @@
         "images": []
       },
       "hosilnote": {
-        "title": "Hosil Note: AI Repair Management for Rental Units",
-        "description": "Service planning and design where tenant request → landlord handling → vendor repair → record form one flow, and AI only recommends",
+        "title": "Hosil Note: Rental Unit Repair Management",
+        "description": "Connects request → handling → repair → record, with AI only recommending",
         "role": "Service planning and design",
         "period": "2026.09",
         "scope": "Solo",
         "tech": ["OpenAPI 3.0", "DBML", "PostgreSQL", "JWT"],
         "achievements": [
-          "Designed 14 screens + 10 modals, 46 APIs and 17 tables",
-          "Stores AI recommendations and human decisions separately to measure adoption"
+          "24 screens · 46 APIs · 17 tables",
+          "Recommendation vs decision → adoption rate"
         ],
         "detail": {
           "overview": "Landlords who rent out studio units themselves rely on texts, receipts and memory for repair history. I mapped the pain points of landlords, tenants and repair vendors, and designed four request steps (intake → decision → handoff → record) where AI assists at every step but people decide.",
@@ -386,15 +386,14 @@
     "items": {
       "thesis": {
         "title": "Sparse Point Cloud Completion (Master's Thesis)",
-        "description": "A 3D completion framework that keeps shapes from collapsing on very sparse input by adding geometry-aware losses",
+        "description": "A 3D completion framework that keeps shapes intact on sparse input",
         "role": "Master's thesis · Computer Graphics Lab",
         "period": "2026.02",
         "scope": "Solo",
         "tech": ["PyTorch", "SeedFormer", "Point Cloud", "PCN Dataset"],
         "features": [
-          "Chamfer Distance 25.40 → 19.20 on 256-point input (24.4% better)",
-          "F-Score 0.768 → 0.824",
-          "Small cost: +0.25M parameters, inference 18.4 → 24.1 ms"
+          "Chamfer Distance 24.4% better (256 points)",
+          "F-Score 0.768 → 0.824"
         ],
         "detail": {
           "overview": "Transformer-based completion models such as SeedFormer learn only to minimize coordinate distance, so sharp edges and boundaries collapse when input is sparse. Without major architecture changes, I added two modules that teach geometry explicitly. (A Transformer-based Framework for Sparse Point Cloud Completion with Geometric Constraints)",
@@ -409,7 +408,7 @@
       },
       "anomaly": {
         "title": "Semiconductor Process Anomaly Detection & Yield Root Cause",
-        "description": "Found that a 93%-accuracy model caught no defects at all, and redesigned the evaluation criteria first",
+        "description": "Found the 93%-accuracy trap and redesigned evaluation first",
         "role": "Analysis design, modeling and report automation",
         "period": "2025.10 – 2026.06",
         "scope": "Solo",
@@ -422,9 +421,8 @@
           "SHAP"
         ],
         "features": [
-          "Redefined evaluation around Recall instead of accuracy (Recall 0 → 0.381)",
-          "Showed the 13 missed defects were latent defects within normal sensor ranges",
-          "Identified the top 10 yield-impacting variables and generated PDF reports automatically"
+          "Recall 0 → 0.381",
+          "13 latent defects found · top 10 yield variables"
         ],
         "detail": {
           "overview": "The SECOM process sensor data (1,567 samples, 590 sensors) has only 6.6% defects, a 14:1 imbalance where predicting 'normal' for everything already scores 93% accuracy. I rebuilt the evaluation around the manufacturing view that missing a defect is worse than a false alarm.",
@@ -440,7 +438,7 @@
       },
       "trademark": {
         "title": "AI Trademark Registrability Assessment",
-        "description": "Moved a trademark examiner's reasoning order into LLM prompts with a patent attorney, and found the cases the model handles poorly",
+        "description": "An assessment model that follows an examiner's reasoning order",
         "role": "Criteria structuring, prompt design and model validation",
         "period": "2024.08 – 2024.12",
         "scope": "Team · with a patent attorney",
@@ -451,11 +449,7 @@
           "Prompt Engineering",
           "Python"
         ],
-        "features": [
-          "Chain-of-Thought assessment that follows the examination flow",
-          "F1 71% in K-fold cross-validation",
-          "Identified 24% of data as unsuitable for the approach"
-        ],
+        "features": ["K-fold F1 71%", "24% unsuitable data identified"],
         "detail": {
           "overview": "Trademark examination is long and varies by examiner, making registrability hard to predict before filing. I structured KIPO examination guidelines and case law by decision factor, and designed step-by-step prompts that judge in the order generic term → customary mark → distinctiveness.",
           "tasks": [
@@ -468,16 +462,15 @@
         "images": []
       },
       "gs3d": {
-        "title": "3D Gaussian Splatting Alignment Error Root Cause",
-        "description": "Pinpointed a recurring alignment error in a game studio–SNU–Hanyang industry project with numbers",
+        "title": "3DGS Alignment Error Root Cause",
+        "description": "Pinpointed a recurring alignment error with numbers",
         "role": "Alignment error root cause analysis and issue tracking",
         "period": "2024.03 – 2024.12",
         "scope": "Team · 3-party industry project",
         "tech": ["Python", "COLMAP", "3D Gaussian Splatting", "Unreal Engine"],
         "features": [
-          "Traced the cause to COLMAP coordinate normalization",
-          "Turned qualitative errors into numbers to settle a three-team debate",
-          "Led weekly meetings and issue tracking between Korean and US researchers"
+          "Cause: COLMAP coordinate normalization",
+          "Issue tracking across 3 KR/US teams"
         ],
         "detail": {
           "overview": "When objects were trained separately for real-time rendering of game scenes with 3D Gaussian Splatting, an unexplained alignment error kept recurring. With each team blaming a different cause, I ran every possible combination and measured where the error appeared.",
@@ -491,16 +484,15 @@
         "images": []
       },
       "tcad": {
-        "title": "Si Photonics Modulator Simulation Automation",
-        "description": "Turned hand-run device simulations over hundreds of conditions into an automatic run-and-compare pipeline",
+        "title": "Optical Modulator Simulation Automation",
+        "description": "Turned hundreds of device simulations into automatic run-and-compare",
         "role": "Undergraduate researcher · Advanced Semiconductor Devices Lab",
         "period": "2021.07 – 2022.01",
         "scope": "Solo",
         "tech": ["Python", "Sentaurus TCAD", "Lumerical MODE"],
         "features": [
-          "Automatically linked TCAD process/device simulation with optical mode analysis",
-          "Confirmed about 70% higher modulation efficiency for a strained SiGe L-shape structure",
-          "Presented at KCS 2022 (Korean Conference on Semiconductors)"
+          "~70% higher modulation efficiency confirmed",
+          "Presented at KCS 2022"
         ],
         "detail": {
           "overview": "Finding the best Mach-Zehnder modulator structure on Si photonics meant simulating hundreds of doping, thickness and strain conditions, each taking tens of minutes. I connected the two simulators with Python and compared results automatically.",
@@ -514,16 +506,15 @@
         "images": []
       },
       "torus": {
-        "title": "Quantitative Evaluation of Torus Fitting on Voxel Point Clouds",
-        "description": "Approximated complex surfaces with torus patches and measured how parameters affect the result",
+        "title": "Torus Fitting Evaluation",
+        "description": "Approximated surfaces with torus patches and measured accuracy",
         "role": "Presented at MITA 2025",
         "period": "2025",
         "scope": "Solo",
         "tech": ["Python", "Point Cloud", "PCA"],
         "features": [
-          "Converted surfaces to voxel point clouds and fitted local torus patches",
-          "54 settings tested: mean error 0.0508 (best 0.0332)",
-          "Built an evaluation frame from parameter correlation analysis"
+          "54 settings · mean error 0.0508",
+          "Presented at MITA 2025"
         ],
         "detail": {
           "overview": "I converted complex surfaces into voxel-based point clouds and fitted a torus patch to each local region. Beyond modeling, I built a frame that compares fitting accuracy numerically across settings.",
