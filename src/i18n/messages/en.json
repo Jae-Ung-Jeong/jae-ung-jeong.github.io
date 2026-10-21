@@ -1,0 +1,795 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "personalProjects": "Side Projects",
+    "skills": "Skills",
+    "education": "Education",
+    "blog": "Tech Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Junhee Lee",
+    "role": "Frontend Developer",
+    "description": "Frontend developer who thinks about user experience and business impact together.",
+    "company": "ProBit Global",
+    "downloadResume": "Download Resume",
+    "viewGithub": "GitHub"
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "Core Competencies",
+    "highlights": {
+      "spot": {
+        "title": "SPOT Exchange Migration",
+        "company": "D&S Ever",
+        "description": "Migrated 7-year legacy (qooxdoo) project to React + TypeScript + Tanstack Query",
+        "metrics": [
+          "MAU 180K → 200K (10% increase)",
+          "Monthly events 3.6M → 4M (10% increase)"
+        ]
+      },
+      "p2p": {
+        "title": "P2P Trading Service Design",
+        "company": "D&S Ever",
+        "description": "Built real-time trading system based on Next.js",
+        "metrics": [
+          "Designed multi-communication (WebSocket, SSE, Axios)",
+          "Developed entire frontend for ads, trading, 2FA systems"
+        ]
+      },
+      "seo": {
+        "title": "Web Performance & SEO Optimization",
+        "company": "Eazel",
+        "description": "Data-driven optimization experience",
+        "metrics": [
+          "SEO: Search index 8K → 38K pages (475% increase)",
+          "Achieved FCP under 1 second (Lighthouse)"
+        ]
+      }
+    },
+    "approach": {
+      "title": "Business Impact",
+      "items": [
+        {
+          "key": "bottom_up",
+          "title": "Bottom-up Development",
+          "description": "Regularly analyze competitor services to discover UX improvements and proactively propose them.",
+          "examples": [
+            "Introduced Depth Chart → Enhanced trade visualization",
+            "Mobile Simple Layout → BUY/SELL click events per user 7 → 12 increase"
+          ],
+          "images": [
+            "/images/business_impact/bottom_up/bottom-up.png",
+            "/images/business_impact/bottom_up/bottom-up-2.png",
+            "/images/business_impact/bottom_up/bottom-up-3.png",
+            "/images/business_impact/bottom_up/bottom-up-4.png",
+            "/images/business_impact/bottom_up/bottom-up-5.png",
+            "/images/projects/spot/spot_market_depth.gif",
+            "/images/projects/spot/spot_mobile_simple_order.gif"
+          ]
+        },
+        {
+          "key": "data_driven",
+          "title": "Data-Driven Decision Making",
+          "description": "Built quantitative evaluation metrics through Google Analytics report automation.",
+          "examples": [
+            "Weekly/Monthly traffic report automation",
+            "User behavior pattern analysis dashboard"
+          ],
+          "images": [
+            "/images/business_impact/data_driven/data_driven_list.png",
+            "/images/business_impact/data_driven/data_driven_excel.png"
+          ]
+        }
+      ]
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "years": "4 Years",
+    "current": "Current",
+    "showDetails": "Show Details",
+    "hideDetails": "Hide Details",
+    "companies": {
+      "dnsever": {
+        "name": "D&S Ever Co., Ltd.",
+        "period": "Jul 2024 - Feb 2026",
+        "duration": "1 year 8 months",
+        "type": "Full-time",
+        "positions": {
+          "dev": {
+            "team": "Dev Team",
+            "period": "Jun 2025 - Feb 2026",
+            "projects": [
+              "KYC (Know Your Customer) identity verification service internalization",
+              "AI-powered service structure documentation",
+              "SPOT enhancement (BUY/SELL Indicator, Simple Layout)",
+              "Full service maintenance"
+            ],
+            "details": {
+              "kyc": [
+                "Built self-developed identity verification service using AWS Rekognition in response to Sumsub contract expiration",
+                "Planned and implemented 3-step verification flow [Identity verification - ID upload - Real-time face recognition and comparison] using Amplify Liveness",
+                "Implemented session persistence and authentication flow across Infrastructure - Backend - Frontend",
+                "Applied structure and design using Figma MCP and Claude Code"
+              ],
+              "ai_docs": [
+                "Analyzed 7+ year monorepo structure services using Claude Code with feedback, systematized in each repository's .md files",
+                "Built user flow analysis and automated document generation system",
+                "Established single-document-based onboarding system"
+              ],
+              "spot": [
+                "Added BUY/SELL (trade history) Indicator",
+                "Added Mobile web Simple Layout mode (Buy, Sell event clicks increased from 7 to 12 per user)",
+                "Implemented Depth Chart (canvas-based custom implementation)"
+              ],
+              "maintenance": [
+                "Implemented and designed Angular-based legacy projects",
+                "Added account deletion feature",
+                "Designed authentication persistence system between WebView and SSO server",
+                "Soft landing work for service termination"
+              ]
+            },
+            "teamSize": {
+              "kyc": "FE 1, BE 1, Planning 1",
+              "ai_docs": "FE 1",
+              "spot": "FE 1, Planning 1",
+              "maintenance": "FE 1, BE 2, PM 1"
+            }
+          },
+          "p2p": {
+            "team": "P2P TF Team",
+            "period": "Jan 2025 - Jun 2025",
+            "teamSize": "FE 2, BE 2, Planning 2, UX/UI 2, PM 1",
+            "projects": [
+              "Led entire frontend from design to release as project maintainer",
+              "Implemented Next.js SSR/ISR strategy",
+              "Applied multi-communication methods (Axios, SSE, WebSocket)",
+              "Designed and implemented 2FA system"
+            ],
+            "details": {
+              "overview": "Built real-time communication-based fiat-crypto trading system between users",
+              "process": [
+                "Set feature-based sprint cycles, operated continuous feedback-based development process",
+                "Optimized page loading and SEO with Next.js SSR/ISR strategy"
+              ],
+              "communication": [
+                "General request handling with Axios",
+                "Server-client push via SSE (Server Sent Events)",
+                "Real-time bidirectional communication via WebSocket"
+              ],
+              "features": [
+                "Ad management (my ads), creation (post ads), editing (update ads)",
+                "Trading functionality (open order), trade history",
+                "User information (user center) community features",
+                "Real-time chat feature (Sendbird)"
+              ],
+              "security": [
+                "Designed and implemented complete 2FA system",
+                "Integrated various authentication options: Passkey, phone verification, OTP, email, Security Key"
+              ]
+            }
+          },
+          "spot": {
+            "team": "SPOT Team",
+            "period": "Jul 2024 - Dec 2024",
+            "teamSize": "FE 2, Planning 1, UX/UI 2, PM 1",
+            "projects": [
+              "ProBit Global exchange service (SPOT) migration",
+              "Full migration of 7-year qooxdoo legacy SPA to React",
+              "Real-time socket communication optimization",
+              "Dark mode and color theme implementation"
+            ],
+            "details": {
+              "migration": [
+                "Achieved performance improvements: MAU 180K → 200K, click events 3.6M → 4M",
+                "Improved maintainability and new feature development speed",
+                "Introduced tanstack-query to improve API call flow and prevent duplicate calls"
+              ],
+              "socket": [
+                "Improved connection stability through ping-pong mechanism redesign",
+                "Implemented reconnection logic using window online/offline, document visibilitychange events",
+                "Developed automatic re-authentication for Access Token expiration (15 min)",
+                "Minimized server load by removing unnecessary polling and introducing SSE"
+              ],
+              "ux": [
+                "Implemented dark mode and color theme",
+                "Multi-layout support",
+                "First listing countdown feature",
+                "Depth Chart implementation",
+                "Web accessibility and RTL/LTR support for internationalization"
+              ]
+            }
+          }
+        }
+      },
+      "eazel": {
+        "name": "Eazel Inc.",
+        "period": "Jan 2022 - Jun 2024",
+        "duration": "2 years 6 months",
+        "type": "Full-time",
+        "positions": {
+          "web2": {
+            "team": "Web Team",
+            "period": "Jan 2024 - May 2024",
+            "teamSize": "FE 3, BE 2, UX/UI 1",
+            "projects": [
+              "Admin system development for post-renewal maintenance",
+              "Frontend performance optimization and quality improvement",
+              "SEO optimization strategy planning and execution"
+            ],
+            "details": {
+              "admin": [
+                "Implemented data visualization with highChart library, improved charting UX",
+                "Self-designed and implemented audio streaming functionality",
+                "Provided conditional audio streaming for non-members/members based on presigned URL"
+              ],
+              "optimization": [
+                "Performed Next.js 12 → 14, react-query v4 → v5 migration",
+                "Achieved FCP under 1 second per page (Lighthouse)",
+                "Structural improvements to minimize Layout Shift (using Suspense, Skeleton UI)",
+                "Unit test implementation (jest)"
+              ],
+              "seo": [
+                "Increased search engine index from ~8K to ~38K pages (4x+ growth)",
+                "Google Analytics 4 implementation",
+                "Documented workflows for non-developers to understand"
+              ]
+            }
+          },
+          "renewal": {
+            "team": "Renewal TF Team",
+            "period": "Jan 2023 - Dec 2023",
+            "teamSize": "FE 3, BE 2, UX/UI 1",
+            "projects": [
+              "Led major tech stack transition in web service renewal project",
+              "Socket.io-based real-time chat feature",
+              "Stripe SDK payment system integration"
+            ],
+            "details": {
+              "tech": [
+                "Full adoption of Next.js, TypeScript, react-query framework",
+                "SSR/CSR strategy implementation and performance improvements (FCP/LCP optimization)"
+              ],
+              "features": [
+                "WebSocket-based real-time chat feature",
+                "Community system implementation (comments, likes, follow system)",
+                "Built artwork payment system with Stripe SDK integration",
+                "Provided art price and trend analysis UI using highChart.js"
+              ],
+              "monitoring": [
+                "Built error logging and handling system with Sentry"
+              ]
+            }
+          },
+          "web1": {
+            "team": "Web Team",
+            "period": "Jan 2022 - Dec 2022",
+            "teamSize": "FE 3, BE 1, UX/UI 1",
+            "projects": [
+              "Global art project 'Gucci Garden Archetypes' page development",
+              "Led internal developer study group",
+              "Introduced TypeScript to main project"
+            ],
+            "details": {
+              "gucci": [
+                "Developed UI features: map functionality, loading screen, custom buttons",
+                "Developed admin page for internal operational efficiency",
+                "Published responsive web-based art content curation and categories"
+              ],
+              "study": [
+                "Led learning and practical application of key frontend theories: TypeScript, Clean Code, Refactoring"
+              ],
+              "typescript": [
+                "Introduced TypeScript to main project",
+                "Enhanced maintainability through code documentation"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "viewMore": "View Details",
+    "modal": {
+      "overview": "Overview",
+      "tasks": "Key Tasks",
+      "techStack": "Tech Stack",
+      "achievements": "Achievements"
+    },
+    "items": {
+      "spot": {
+        "title": "SPOT Exchange Migration",
+        "description": "Full migration from 7-year qooxdoo legacy to React to resolve rising maintenance costs and feature development delays",
+        "role": "Frontend Developer (1 of 2)",
+        "period": "Jul 2024 - Dec 2024",
+        "teamSize": "FE 2, Planning 1, UX/UI 2, PM 1",
+        "tech": ["React", "TypeScript", "Tanstack Query", "WebSocket"],
+        "achievements": [
+          "MAU 180K → 200K (10% increase)",
+          "Monthly events 3.6M → 4M (10% increase)"
+        ],
+        "detail": {
+          "overview": "Fully migrated ProBit Global's core SPOT trading platform from a 7-year-old qooxdoo-based legacy system to a modern React + TypeScript architecture. Maintained complex trading functionalities including real-time price data, order systems, and charts while significantly improving developer productivity and user experience.",
+          "tasks": [
+            "Optimized WebSocket-based real-time price/order book data processing and implemented reconnection logic",
+            "Established server state management and caching strategies using Tanstack Query",
+            "Designed and implemented dark mode and custom color theme system",
+            "Integrated and customized TradingView chart library",
+            "Implemented real-time order book data-based Depth Chart",
+            "Improved order form UX and implemented real-time validation logic",
+            "Implemented Mobile responsive layout and Simple/Pro mode switching feature"
+          ]
+        },
+        "images": [
+          "/images/projects/spot/spot_sell_coin.gif",
+          "/images/projects/spot/spot_market_depth.gif",
+          "/images/projects/spot/spot_info.gif",
+          "/images/projects/spot/spot_mobile_order.gif",
+          "/images/projects/spot/spot_mobile_simple_order.gif"
+        ]
+      },
+      "p2p": {
+        "title": "P2P Trading Service",
+        "description": "Designed and built real-time P2P trading platform for business expansion and competitive positioning",
+        "role": "Project Maintainer",
+        "period": "Jan 2025 - Jun 2025",
+        "teamSize": "FE 2, BE 2, Planning 2, UX/UI 2, PM 1",
+        "tech": ["Next.js", "WebSocket", "SSE", "Axios"],
+        "achievements": [
+          "Led entire frontend from design to release",
+          "Integrated multi-auth options (Passkey, OTP, etc.)"
+        ],
+        "detail": {
+          "overview": "Led the entire frontend development from design to release for a P2P trading platform enabling direct fiat and cryptocurrency transactions between users. Built a secure and reliable trading environment through real-time communication and multi-factor authentication systems.",
+          "tasks": [
+            "Established and applied Next.js-based SSR/ISR rendering strategies",
+            "Designed multi-communication architecture using WebSocket, SSE, and Axios",
+            "Developed entire frontend for ad creation/management, trading",
+            "Real-time chat feature (Sendbird)",
+            "Designed and implemented multi-factor 2FA system including Passkey and OTP",
+            "Designed UI/UX for trade status management and dispute resolution"
+          ]
+        },
+        "images": []
+      },
+      "kyc": {
+        "title": "KYC Identity Verification",
+        "description": "Self-developed identity verification service using AWS Rekognition",
+        "role": "Solo Frontend Developer",
+        "period": "Nov 2025 - Dec 2025",
+        "teamSize": "FE 1, BE 1, Planning 1",
+        "tech": [
+          "AWS Rekognition",
+          "Amplify Liveness",
+          "Claude Code",
+          "Figma MCP"
+        ],
+        "achievements": [
+          "Planned and implemented 3-step verification flow",
+          "Applied AI tools for structure and design"
+        ],
+        "detail": {
+          "overview": "Internalized the identity verification system that previously relied on external KYC solutions (Sumsub) using AWS Rekognition and Amplify Liveness. Actively utilized AI tools to improve development efficiency and designed a user-friendly verification flow.",
+          "tasks": [
+            "Implemented facial recognition authentication using AWS Rekognition Face Liveness",
+            "Developed ID card capture and OCR data extraction process",
+            "Planned and implemented 3-step verification flow [Identity verification → ID upload → Real-time face recognition and comparison]",
+            "Implemented session persistence and authentication flow across Infrastructure - Backend - Frontend",
+            "Introduced AI-based development workflow using Claude Code and Figma MCP"
+          ]
+        },
+        "images": ["/images/projects/kyc/kyc.gif"]
+      },
+      "eazel": {
+        "title": "Eazel Web Service Renewal",
+        "description": "Complete renewal from vanilla JS to Next.js to resolve tech debt and improve performance",
+        "role": "Frontend Developer · Tech Lead",
+        "period": "Jan 2023 - Dec 2023",
+        "teamSize": "FE 3, BE 2, UX/UI 1",
+        "tech": [
+          "Next.js",
+          "TypeScript",
+          "react-query",
+          "socket.io",
+          "highChart.js"
+        ],
+        "achievements": [
+          "Search index 8K → 38K pages (475% increase)",
+          "Achieved FCP under 1 second"
+        ],
+        "detail": {
+          "overview": "Led the major tech stack transition in the complete renewal of Eazel's global art platform web service. Significantly improved search exposure and user experience through SEO optimization and performance improvements.",
+          "tasks": [
+            "Transitioned entire service architecture to Next.js",
+            "Improved code stability and developer productivity by introducing TypeScript",
+            "Implemented real-time chat functionality using WebSocket",
+            "Community system implementation (comments, likes, follow system)",
+            "Built payment system with Stripe SDK integration",
+            "Provided art price and trend analysis UI using highChart.js",
+            "Increased search index by 475% through SEO optimization",
+            "Achieved FCP under 1 second through performance optimization"
+          ]
+        },
+        "images": []
+      }
+    }
+  },
+  "personalProjects": {
+    "title": "Side Projects",
+    "subtitle": "Personal learning and experimental projects.",
+    "viewMore": "View Details",
+    "modal": {
+      "overview": "Overview",
+      "tasks": "Key Features",
+      "techStack": "Tech Stack",
+      "links": "Links"
+    },
+    "items": {
+      "my-text-to-sql-learner": {
+        "title": "Text-to-SQL - Natural Language SQL Converter",
+        "description": "AI service that converts natural language questions to SQL and visualizes query results as charts",
+        "role": "Personal Project",
+        "period": "2026",
+        "tech": [
+          "Next.js 16",
+          "React 19",
+          "TypeScript",
+          "Tailwind CSS 4",
+          "shadcn/ui",
+          "Vercel AI SDK",
+          "Gemini 2.5 Flash",
+          "Supabase",
+          "Recharts",
+          "Playwright"
+        ],
+        "features": [
+          "Natural language to SQL conversion powered by Gemini 2.5 Flash",
+          "Automatic chart visualization based on query characteristics (Bar/Line/Pie)",
+          "SQL safety validation (only SELECT/WITH allowed, dangerous keywords blocked)"
+        ],
+        "detail": {
+          "overview": "An AI service that converts natural language questions into SQL queries, executes them on Supabase (PostgreSQL), and visualizes results as tables and charts. Features Text-to-SQL conversion using Gemini 2.5 Flash, automatic chart type selection (Bar/Line/Pie) based on query characteristics, and SQL safety validation (only SELECT/WITH permitted).",
+          "tasks": [
+            "Implemented Text-to-SQL conversion pipeline with Vercel AI SDK + Gemini 2.5 Flash",
+            "Unified AI calls, SQL validation, and DB execution via Server Actions",
+            "Built automatic chart type selection logic based on query result characteristics (Recharts)",
+            "Implemented SQL safety validation layer (only SELECT/WITH allowed, dangerous keywords and multi-statement queries blocked)",
+            "Designed database security with Supabase anon key + RLS (SELECT-only, system table access blocked)",
+            "Built Playwright E2E test suite"
+          ]
+        },
+        "github": "https://github.com/junh0328/my-text-to-sql-learner",
+        "images": [
+          "/images/personal-projects/my-text-to-sql-learner/ask_to_db.gif"
+        ]
+      },
+      "my-claude-learner": {
+        "title": "AI Chatbot - Multi Provider SSE Streaming",
+        "description": "Multi Provider SSE streaming AI chatbot service using Claude, Gemini, and Groq",
+        "role": "Personal Project",
+        "period": "2026",
+        "tech": [
+          "Next.js 16",
+          "React 19",
+          "TypeScript",
+          "Tailwind CSS 4",
+          "shadcn/ui",
+          "Claude API",
+          "Gemini API",
+          "Groq API",
+          "SSE",
+          "Playwright"
+        ],
+        "features": [
+          "Real-time streaming chat with SSE",
+          "Multi Provider strategy (Claude, Gemini, Groq)",
+          "Chain fallback system based on Rate Limit (Gemini → Groq → Claude)"
+        ],
+        "detail": {
+          "overview": "An AI chatbot service that streams responses from various LLM APIs (Claude, Gemini, Groq) via SSE (Server-Sent Events). Features a chain fallback system that automatically switches from Gemini → Groq → Claude when rate limits are hit, along with web search integration, chat history, and code syntax highlighting.",
+          "tasks": [
+            "Implemented SSE streaming pipeline with fetch + ReadableStream",
+            "Designed Multi Provider strategy supporting Claude, Gemini, and Groq APIs",
+            "Implemented chain fallback system based on Rate Limit (429) (Gemini → Groq → Claude)",
+            "Applied proxy pattern using Next.js API Routes for API key protection",
+            "Integrated web search (Claude web_search, Gemini google_search)",
+            "Built Playwright E2E test suite (38 test cases)"
+          ]
+        },
+        "github": "https://github.com/junh0328/my-claude-learner",
+        "images": [
+          "/images/personal-projects/my-claude-learner/claude-learner.gif"
+        ]
+      },
+      "my-agentic-ai": {
+        "title": "Review Sentiment Analysis Agent AI",
+        "description": "Agent AI service for review text sentiment analysis using Google Gemini and Claude API",
+        "role": "Personal Project",
+        "period": "2025",
+        "tech": [
+          "Next.js 16",
+          "React 19",
+          "TypeScript",
+          "shadcn/ui",
+          "Tailwind CSS",
+          "Framer Motion",
+          "Google Gemini API",
+          "Claude API"
+        ],
+        "features": [
+          "Review text sentiment analysis (positive/negative/neutral)",
+          "Sentiment score ranging from -1.0 to 1.0",
+          "UI auto-generation using Figma MCP"
+        ],
+        "detail": {
+          "overview": "An Agent AI service that analyzes review text sentiment and automatically generates appropriate responses using Google Gemini and Claude API. Built based on the 'AWS Agentic AI Review Management Automation' seminar from AWSKRUG.",
+          "tasks": [
+            "Implemented review text input and sentiment analysis",
+            "Auto-response generation using AI models (Gemini, Claude)",
+            "Built design-based code auto-generation workflow using Figma MCP",
+            "Implemented responsive UI with shadcn/ui and Tailwind CSS"
+          ]
+        },
+        "github": "https://github.com/junh0328/my-agentic-ai",
+        "images": [
+          "/images/personal-projects/my-agentic-ai/agentic-ai.gif",
+          "/images/personal-projects/my-agentic-ai/figma_make_default.png",
+          "/images/personal-projects/my-agentic-ai/figma_make_code_download.png"
+        ]
+      },
+      "my-liveness": {
+        "title": "AWS Rekognition Face Liveness Demo",
+        "description": "Face Liveness authentication demo application using AWS Rekognition and Amplify",
+        "role": "Personal Project",
+        "period": "2025",
+        "tech": [
+          "Next.js 16",
+          "React 19",
+          "TypeScript",
+          "Tailwind CSS 4",
+          "AWS Amplify",
+          "AWS Rekognition",
+          "Zod"
+        ],
+        "features": [
+          "Real-time face recognition and Liveness verification",
+          "AWS Amplify UI component integration",
+          "Authentication result visualization"
+        ],
+        "detail": {
+          "overview": "A demo application for testing and learning AWS Rekognition Face Liveness feature. Developed to pre-validate AWS service integration methods before the company's KYC project.",
+          "tasks": [
+            "AWS Amplify setup and Rekognition Face Liveness integration",
+            "Real-time camera stream processing and face recognition implementation",
+            "Liveness verification result handling and UI feedback",
+            "Input data validation using Zod"
+          ]
+        },
+        "github": "https://github.com/junh0328/my-liveness",
+        "images": ["/images/personal-projects/my-liveness/record_720.gif"]
+      },
+      "my-tanstack-query-strategy": {
+        "title": "TanStack Query v5 Strategy Guide",
+        "description": "Comparative analysis of three data fetching strategies (CSR, SSR, Streaming) with TanStack Query in Next.js App Router",
+        "role": "Personal Project",
+        "period": "2025",
+        "tech": ["Next.js", "TanStack Query v5", "React 18+", "TypeScript"],
+        "features": [
+          "CSR vs SSR vs Streaming strategy comparison",
+          "QueryClient server/client separation pattern",
+          "useQuery vs useSuspenseQuery selection criteria"
+        ],
+        "detail": {
+          "overview": "A strategy guide and example project for effectively utilizing TanStack Query v5 in Next.js App Router environment. Documented the working principles and selection criteria for three data fetching strategies: CSR, SSR+Hydration, and Streaming.",
+          "tasks": [
+            "QueryClient server/client separation pattern implementation",
+            "Comparative analysis of CSR, SSR+Hydration, Streaming strategies",
+            "useQuery vs useSuspenseQuery selection criteria documentation",
+            "Server cache transfer pattern implementation using HydrationBoundary"
+          ]
+        },
+        "github": "https://github.com/junh0328/my-tanstack-query-strategy",
+        "images": [
+          "/images/personal-projects/my-tanstack-query-strategy/tanstack.gif"
+        ]
+      },
+      "my-monorepo": {
+        "title": "Local Weather Service",
+        "description": "Weather service built with pnpm + Turborepo-based monorepo structure",
+        "role": "Personal Project",
+        "period": "2025",
+        "tech": [
+          "Next.js 16",
+          "React 19",
+          "Vite 6",
+          "Tailwind CSS 4",
+          "Turborepo",
+          "shadcn/ui"
+        ],
+        "features": [
+          "Monorepo structure design (Turborepo)",
+          "Shared UI package separation (@repo/ui)",
+          "Real-time weather information"
+        ],
+        "detail": {
+          "overview": "A learning and practice project for monorepo structure using Turborepo. Designed with multiple applications based on Next.js and Vite sharing a common UI package. Learned monorepo web deployment process through Vercel.",
+          "tasks": [
+            "Monorepo structure design using Turborepo",
+            "Common UI component package (@repo/ui) implementation",
+            "Next.js web application and Vite-based app implementation",
+            "Weather API integration and real-time information display"
+          ]
+        },
+        "github": "https://github.com/junh0328/my-monorepo",
+        "images": ["/images/personal-projects/my-monorepo/weather.gif"]
+      }
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "categories": {
+      "core": {
+        "title": "Core",
+        "items": ["React.js", "Next.js", "TypeScript", "Angular.js"]
+      },
+      "data": {
+        "title": "Data & Communication",
+        "items": [
+          "Tanstack Query",
+          "WebSocket",
+          "SSE",
+          "Axios",
+          "Zod",
+          "Redux Toolkit",
+          "Zustand"
+        ]
+      },
+      "styling": {
+        "title": "Styling",
+        "items": [
+          "shadcn/ui",
+          "MUI",
+          "Styled-Components",
+          "Emotion",
+          "Tailwind CSS"
+        ]
+      },
+      "devops": {
+        "title": "DevOps & Monitoring",
+        "items": ["Git", "Sentry", "Google Analytics"]
+      },
+      "productivity": {
+        "title": "Productivity",
+        "items": ["Lokalise", "Claude Code", "Figma MCP"]
+      }
+    }
+  },
+  "education": {
+    "title": "Education",
+    "university": "Yongin University",
+    "major": "Management Information Systems",
+    "period": "Mar 2016 - Feb 2022",
+    "gpa": "3.95/4.5",
+    "status": "Graduated",
+    "viewCourses": "View Courses",
+    "hideCourses": "Hide Courses",
+    "courses": {
+      "basic": {
+        "title": "Foundation",
+        "items": [
+          "Web Programming Basics",
+          "Management Information Systems",
+          "e-Business Administration"
+        ]
+      },
+      "major": {
+        "title": "Major",
+        "items": [
+          "Database",
+          "Java Programming",
+          "Database Programming",
+          "Advanced Java Programming",
+          "Business & AI",
+          "Web Programming",
+          "E-Commerce",
+          "Business & Big Data",
+          "MIS Project",
+          "Mobile Programming",
+          "Visual Programming",
+          "Advanced Web Programming",
+          "Internet Marketing",
+          "Business & IoT"
+        ]
+      }
+    }
+  },
+  "certifications": {
+    "title": "Certifications & Training",
+    "items": [
+      {
+        "name": "AI-POT (AI Prompt Proficiency) Level 1",
+        "org": "KPC Korea Productivity Center",
+        "date": "Jan 2026"
+      },
+      {
+        "name": "AWS Foundations of Prompt Engineering",
+        "org": "AWS",
+        "date": "Nov 2025"
+      },
+      {
+        "name": "AWS Technical Essentials",
+        "org": "AWS",
+        "date": "Nov 2025"
+      },
+      {
+        "name": "Review Management Automation with AWS Agentic AI",
+        "org": "AWSKRUG",
+        "date": "Nov 2025"
+      },
+      {
+        "name": "JavaScript Algorithms & Data Structures Masterclass",
+        "org": "Udemy",
+        "date": "Jul 2024"
+      },
+      {
+        "name": "Frontend Testing & Design Offline Commit",
+        "org": "Goorm",
+        "date": "Mar 2024"
+      },
+      {
+        "name": "Building Career as Product Developer Agora",
+        "org": "Toss",
+        "date": "Oct 2023"
+      },
+      {
+        "name": "Web Development Course Completion",
+        "org": "Korea IT Academy",
+        "date": "Feb 2020",
+        "description": "HTML/CSS/JS/JQuery/PHP/Node.js/MySQL/React.js"
+      }
+    ]
+  },
+  "language": {
+    "title": "Languages",
+    "items": [
+      {
+        "name": "English",
+        "level": "Conversational"
+      }
+    ]
+  },
+  "blog": {
+    "title": "Tech Blog",
+    "subtitle": "I consistently write a tech blog to document what I learn.",
+    "viewAll": "View All Posts"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's Work Together",
+    "links": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "tistory": "Tistory",
+      "velog": "Velog"
+    }
+  },
+  "footer": {
+    "copyright": "Junhee Lee. All rights reserved.",
+    "builtWith": "Built with Next.js and shadcn/ui"
+  },
+  "theme": {
+    "light": "Light Mode",
+    "dark": "Dark Mode",
+    "system": "System"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for does not exist or may have been moved.",
+    "backHome": "Back to Home"
+  }
+}
