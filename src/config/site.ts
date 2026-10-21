@@ -6,7 +6,7 @@
  */
 export const siteConfig = {
   // 배포 도메인 (sitemap, robots, canonical, OG에 사용)
-  url: 'https://example.com',
+  url: 'https://jae-ung-jeong.github.io',
 
   name: '홍길동',
   role: 'Developer',
@@ -24,7 +24,10 @@ export const siteConfig = {
 
   links: {
     email: '',
-    github: { url: '', username: '' },
+    github: {
+      url: 'https://github.com/Jae-Ung-Jeong',
+      username: 'Jae-Ung-Jeong',
+    },
     linkedin: { url: '', username: '' },
     tistory: { url: '', username: '' },
     velog: { url: '', username: '' },

@@ -9,6 +9,12 @@
 3. `src/i18n/messages/ko.json`, `en.json`: 섹션 본문
 4. `public/images/`: 프로젝트 이미지와 로고, `public/title_image.png`: OG 이미지
 
+## 배포 (GitHub Pages)
+
+- 정적 export(`output: 'export'`)로 `out/`에 빌드되고, `main`에 push하면 `.github/workflows/deploy-pages.yml`이 https://jae-ung-jeong.github.io 에 배포합니다.
+- 최초 1회: GitHub 레포 `Jae-Ung-Jeong.github.io` 생성 → Settings → Pages → Source를 **GitHub Actions**로 설정
+- 정적 호스팅이라 API Route와 미들웨어는 쓸 수 없고, 블로그 RSS는 빌드 시점에만 갱신됩니다.
+
 <img src="./assets/main.png" alt="포트폴리오 메인 섹션">
 
 ## 주요 특징

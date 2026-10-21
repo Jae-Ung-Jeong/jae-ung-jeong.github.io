@@ -1,27 +1,6 @@
 # API Contract
 
-이 프로젝트는 Next.js 서버 라우트를 최소한으로 사용하며, 현재 공개 계약은 health 체크 엔드포인트입니다.
+이 프로젝트는 GitHub Pages 배포를 위해 정적 export(`output: 'export'`)로 빌드하므로 서버 라우트(API Route, 미들웨어)를 사용하지 않습니다.
 
-## GET `/api/health`
-
-- 목적: 런타임 상태 확인 (liveness probe)
-- 구현: `src/app/api/health/route.ts`
-
-### Response
-
-```json
-{
-  "status": "ok",
-  "service": "my-dev-portfolio",
-  "timestamp": "2026-03-03T00:00:00.000Z"
-}
-```
-
-### Status Codes
-
-- `200 OK`: 정상 응답
-
-## 변경 정책
-
-- 응답 필드 변경 시 `docs/adr/`에 결정 배경을 기록
-- breaking change 시 PR 설명에 명시
+- 새 API Route나 미들웨어를 추가하면 정적 export 빌드가 실패합니다.
+- 서버 기능이 필요해지면 Vercel 등 Node 런타임 호스팅으로 옮긴 뒤 이 문서를 갱신합니다.
