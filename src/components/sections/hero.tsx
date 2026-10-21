@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Download, Github, Linkedin, Mail, BookOpen } from 'lucide-react';
 import * as gtag from '@/lib/gtag';
 import LiquidEther from '@/components/common/liquid-ether';
+import { siteConfig } from '@/config/site';
 
 // Theme-based color palettes
 const LIGHT_COLORS = ['#3425A0', '#4231c8', '#7B6AE8'];
@@ -22,29 +23,29 @@ export function Hero() {
   const socialLinks = [
     {
       icon: Github,
-      href: 'https://github.com/junh0328',
+      href: siteConfig.links.github.url,
       label: 'GitHub',
       gtagLabel: 'github',
     },
     {
       icon: Linkedin,
-      href: 'https://www.linkedin.com/in/%EC%A4%80%ED%9D%AC-%EC%9D%B4-23176a214/',
+      href: siteConfig.links.linkedin.url,
       label: 'LinkedIn',
       gtagLabel: 'linkedin',
     },
     {
       icon: Mail,
-      href: 'mailto:junh0328@naver.com',
+      href: siteConfig.links.email && `mailto:${siteConfig.links.email}`,
       label: 'Email',
       gtagLabel: 'email',
     },
     {
       icon: BookOpen,
-      href: 'https://junheedot.tistory.com',
+      href: siteConfig.links.tistory.url || siteConfig.links.velog.url,
       label: 'Tech blog',
-      gtagLabel: 'blog_tistory',
+      gtagLabel: 'blog',
     },
-  ];
+  ].filter((link) => link.href);
 
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden pt-16'>
@@ -99,38 +100,42 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.5 }}
             className='flex flex-col sm:flex-row items-center justify-center gap-4 mb-12'
           >
-            <Button size='lg' variant='glass' className='glass-glow' asChild>
-              <a
-                href='/resume/resume-20260205.pdf'
-                download
-                onClick={() =>
-                  gtag.event({
-                    action: 'download',
-                    category: 'resume',
-                  })
-                }
-              >
-                <Download className='mr-2 h-4 w-4' />
-                {t('downloadResume')}
-              </a>
-            </Button>
-            <Button size='lg' variant='glass' asChild>
-              <a
-                href='https://github.com/junh0328'
-                target='_blank'
-                rel='noopener noreferrer'
-                onClick={() =>
-                  gtag.event({
-                    action: 'click',
-                    category: 'link',
-                    label: 'github',
-                  })
-                }
-              >
-                <Github className='mr-2 h-4 w-4' />
-                {t('viewGithub')}
-              </a>
-            </Button>
+            {siteConfig.resumePath ? (
+              <Button size='lg' variant='glass' className='glass-glow' asChild>
+                <a
+                  href={siteConfig.resumePath}
+                  download
+                  onClick={() =>
+                    gtag.event({
+                      action: 'download',
+                      category: 'resume',
+                    })
+                  }
+                >
+                  <Download className='mr-2 h-4 w-4' />
+                  {t('downloadResume')}
+                </a>
+              </Button>
+            ) : null}
+            {siteConfig.links.github.url ? (
+              <Button size='lg' variant='glass' asChild>
+                <a
+                  href={siteConfig.links.github.url}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  onClick={() =>
+                    gtag.event({
+                      action: 'click',
+                      category: 'link',
+                      label: 'github',
+                    })
+                  }
+                >
+                  <Github className='mr-2 h-4 w-4' />
+                  {t('viewGithub')}
+                </a>
+              </Button>
+            ) : null}
           </motion.div>
 
           {/* Social Links */}

@@ -16,8 +16,7 @@
 | UI/섹션 수정 | `src/components/sections/*`, `src/components/layout/*` | 대형 파일(`liquid-ether-engine.tsx`) 수정 시 회귀 확인 필수 |
 | i18n/콘텐츠 변경 | `src/i18n/messages/ko.json`, `src/i18n/messages/en.json`, `CLAUDE.md` | 한/영 동시 반영 |
 | 품질 게이트/CI 수정 | `package.json`, `.github/workflows/*`, `docs/adr/0001-quality-gates.md` | 로컬/CI 커맨드 불일치 금지 |
-| API/메타데이터 수정 | `src/app/api/*`, `src/app/robots.ts`, `src/app/sitemap.ts`, `docs/api-contract.md` | 계약 변경 시 CHANGELOG/ADR 동기화 |
-| Harness 진단/정리 | `docs/harness/reports/*`, `docs/harness/residual-remediation-plan-2026-03-03.md` | 신규 진단 결과는 reports에 누적 |
+| API/메타데이터 수정 | `src/app/api/*`, `src/app/robots.ts`, `src/app/sitemap.ts`, `docs/api-contract.md` | 계약 변경 시 ADR 동기화 |
 
 ## 3. 작업 전 체크리스트
 

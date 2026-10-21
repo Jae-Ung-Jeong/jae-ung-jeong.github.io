@@ -1,4 +1,6 @@
-export const GA_TRACKING_ID = 'G-6JY60CZ148';
+import { siteConfig } from '@/config/site';
+
+export const GA_TRACKING_ID = siteConfig.gaId;
 
 type GtagEvent = {
   action: string;

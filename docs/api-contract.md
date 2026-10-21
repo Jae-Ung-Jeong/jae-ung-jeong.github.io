@@ -24,4 +24,4 @@
 ## 변경 정책
 
 - 응답 필드 변경 시 `docs/adr/`에 결정 배경을 기록
-- breaking change 시 `CHANGELOG.md`에 명시
+- breaking change 시 PR 설명에 명시

@@ -1,8 +1,11 @@
 import { getLocale, getTranslations } from 'next-intl/server';
 import { getBlogPosts } from '@/lib/blog';
+import { siteConfig } from '@/config/site';
 import { BlogCards } from './blog-cards';
 
 export async function Blog() {
+  if (!siteConfig.blogRssUrl) return null;
+
   const locale = await getLocale();
   const t = await getTranslations('blog');
   const posts = await getBlogPosts(4, locale);

@@ -1,4 +1,6 @@
-const RSS_URL = 'https://junheedot.tistory.com/rss';
+import { siteConfig } from '@/config/site';
+
+const RSS_URL = siteConfig.blogRssUrl;
 
 export interface BlogPost {
   title: string;
@@ -51,7 +53,7 @@ export async function getBlogPosts(
   limit: number = 4,
   locale: string = 'ko'
 ): Promise<BlogPost[]> {
-  if (process.env.SKIP_RSS_FETCH === '1') {
+  if (!RSS_URL || process.env.SKIP_RSS_FETCH === '1') {
     return [];
   }
 

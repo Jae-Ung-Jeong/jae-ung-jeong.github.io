@@ -80,5 +80,4 @@ pnpm test:file src/lib/duration.test.ts
 - 엔지니어링 문서 인덱스: `docs/README.md`
 - 에이전트 작업 플레이북: `docs/agent-playbook.md`
 - 품질 게이트 ADR: `docs/adr/0001-quality-gates.md`
-- 진단 이력: `docs/harness/reports/`
 - 협업 컨텍스트: `CLAUDE.md`

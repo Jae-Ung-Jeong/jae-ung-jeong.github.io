@@ -11,7 +11,7 @@
 
 ## 업데이트 워크플로우
 
-1. `resume/` 폴더의 최신 PDF 확인
+1. `resume/` 폴더의 최신 PDF 확인 (`resume/`는 git에 올라가지 않음)
 2. `src/i18n/messages/ko.json`, `src/i18n/messages/en.json`과 diff 분석
 3. 변경/추가 항목 정리
 4. 사용자 확인 후 메시지 파일 반영
@@ -26,8 +26,9 @@
 
 ## 주요 경로
 
-- 이력서 원본: `resume/이준희 이력서-YYMMDD.pdf`
-- 다운로드용 이력서: `public/resume/resume-YYMMDD.pdf`
+- 이력서 원본: `resume/*.pdf`
+- 다운로드용 이력서: `public/resume/resume-YYMMDD.pdf` (경로는 `src/config/site.ts`의 `resumePath`에 반영)
+- 이름, 도메인, 링크, GA, 블로그 RSS: `src/config/site.ts`
 - 한글 메시지: `src/i18n/messages/ko.json`
 - 영어 메시지: `src/i18n/messages/en.json`
 - 관련 섹션: `src/components/sections/`

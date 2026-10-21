@@ -42,3 +42,5 @@ next-env.d.ts
 
 # playwright
 .playwright-mcp
+# private resume source (download copy goes in public/resume)
+/resume/

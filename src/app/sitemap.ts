@@ -1,8 +1,8 @@
 import { MetadataRoute } from 'next';
+import { siteConfig } from '@/config/site';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // TODO(#23): 배포 도메인으로 변경
-  const baseUrl = 'https://junheedot.com';
+  const baseUrl = siteConfig.url;
 
   return [
     {

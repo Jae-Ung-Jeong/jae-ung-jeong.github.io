@@ -9,6 +9,7 @@ import { BookOpen, Calendar, ExternalLink, ArrowRight } from 'lucide-react';
 import { SpotlightCard } from '@/components/common/spotlight-card';
 import type { BlogPost } from '@/lib/blog';
 import * as gtag from '@/lib/gtag';
+import { siteConfig } from '@/config/site';
 
 interface BlogCardsProps {
   posts: BlogPost[];
@@ -136,7 +137,7 @@ export function BlogCards({ posts, title, subtitle, viewAll }: BlogCardsProps) {
           className='group liquid-glass hover:liquid-glass-elevated'
         >
           <a
-            href='https://junheedot.tistory.com'
+            href={siteConfig.links.tistory.url || siteConfig.links.velog.url}
             target='_blank'
             rel='noopener noreferrer'
             onClick={() =>

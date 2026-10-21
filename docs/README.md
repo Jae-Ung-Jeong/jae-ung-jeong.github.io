@@ -49,17 +49,9 @@ Husky + lint-staged가 커밋 전에 아래를 자동 실행합니다.
 - 코드 TODO는 `TODO(#<issue_id>): <description>` 형식을 사용합니다.
 - 형식 검증은 `pnpm todo:check`로 실행됩니다.
 
-## Harness Diagnostics Reports
-
-진단 기록은 아래 경로에 누적합니다.
-
-- `docs/harness/reports/`
-
 ## Additional Docs
 
 - 에이전트 플레이북: `docs/agent-playbook.md`
 - 개발 가이드: `docs/development-guide.md`
 - API 계약: `docs/api-contract.md`
 - ADR: `docs/adr/0001-quality-gates.md`
-- 변경 이력: `CHANGELOG.md`
-- 로드맵: `ROADMAP.md`

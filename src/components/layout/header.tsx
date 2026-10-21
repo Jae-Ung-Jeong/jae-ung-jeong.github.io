@@ -9,6 +9,7 @@ import { useState } from 'react';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
 import * as gtag from '@/lib/gtag';
+import { siteConfig } from '@/config/site';
 
 export function Header() {
   const t = useTranslations('nav');
@@ -32,7 +33,7 @@ export function Header() {
     { href: '#education', label: t('education'), gtagLabel: 'education' },
     { href: '#blog', label: t('blog'), gtagLabel: 'blog' },
     { href: '#contact', label: t('contact'), gtagLabel: 'contact' },
-  ];
+  ].filter((item) => item.href !== '#blog' || siteConfig.blogRssUrl);
 
   const toggleLanguage = () => {
     const newLocale = locale === 'ko' ? 'en' : 'ko';
@@ -54,7 +55,7 @@ export function Header() {
               href='/'
               className='text-xl font-bold gradient-text px-3 py-1 rounded-xl hover:liquid-glass-subtle transition-all'
             >
-              JunHee Lee
+              {siteConfig.name}
             </Link>
 
             {/* Desktop Navigation */}

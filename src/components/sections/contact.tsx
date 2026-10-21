@@ -6,6 +6,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Mail, Github, Linkedin, FileText, ExternalLink } from 'lucide-react';
 import { SpotlightCard } from '@/components/common/spotlight-card';
 import * as gtag from '@/lib/gtag';
+import { siteConfig } from '@/config/site';
 
 export function Contact() {
   const t = useTranslations('contact');
@@ -14,44 +15,44 @@ export function Contact() {
     {
       icon: Mail,
       label: 'Email',
-      href: 'mailto:junh0328@naver.com',
-      username: 'junh0328@naver.com',
+      href: siteConfig.links.email && `mailto:${siteConfig.links.email}`,
+      username: siteConfig.links.email,
       color: 'hover:text-red-500',
       gtagLabel: 'email',
     },
     {
       icon: Github,
       label: t('links.github'),
-      href: 'https://github.com/junh0328',
-      username: 'junh0328',
+      href: siteConfig.links.github.url,
+      username: siteConfig.links.github.username,
       color: 'hover:text-gray-400',
       gtagLabel: 'github',
     },
     {
       icon: Linkedin,
       label: t('links.linkedin'),
-      href: 'https://www.linkedin.com/in/%EC%A4%80%ED%9D%AC-%EC%9D%B4-23176a214/',
-      username: '이준희',
+      href: siteConfig.links.linkedin.url,
+      username: siteConfig.links.linkedin.username,
       color: 'hover:text-blue-500',
       gtagLabel: 'linkedin',
     },
     {
       icon: FileText,
       label: t('links.tistory'),
-      href: 'https://junheedot.tistory.com',
-      username: 'junheedot',
+      href: siteConfig.links.tistory.url,
+      username: siteConfig.links.tistory.username,
       color: 'hover:text-orange-500',
       gtagLabel: 'blog_tistory',
     },
     {
       icon: FileText,
       label: t('links.velog'),
-      href: 'https://velog.io/@junh0328',
-      username: '@junh0328',
+      href: siteConfig.links.velog.url,
+      username: siteConfig.links.velog.username,
       color: 'hover:text-green-500',
       gtagLabel: 'blog_velog',
     },
-  ];
+  ].filter((link) => link.href);
 
   return (
     <section id='contact' className='py-20 md:py-32'>

@@ -51,11 +51,10 @@ pnpm test:file src/lib/duration.test.ts
 - 에이전트 플레이북: `docs/agent-playbook.md`
 - 아키텍처 개요: `docs/api-contract.md`
 - 품질 게이트 ADR: `docs/adr/0001-quality-gates.md`
-- 진단 리포트: `docs/harness/reports/`
 
 ## 6. 문서 동기화 규칙
 
 - `AGENTS.md`, `docs/development-guide.md`, `docs/README.md`의 명령/경로는 항상 동일하게 유지
 - 새 문서를 만들거나 경로를 바꾸면 `docs/README.md` 인덱스를 즉시 갱신
 - 코드 TODO는 `TODO(#<issue_id>): ...` 형식으로 작성하고 `pnpm todo:check`를 통과해야 함
-- 계약/정책 변경 시 `CHANGELOG.md`와 필요한 `docs/adr/*`를 함께 업데이트
+- 계약/정책 변경 시 필요한 `docs/adr/*`를 함께 업데이트

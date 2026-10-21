@@ -1,6 +1,13 @@
 # My Dev Portfolio
 
-클로드 코드를 통해 설계한 포트폴리오 웹사이트입니다. 배포를 포함한 클라이언트가 담당하는 전반적인 부분을 담았습니다.
+> [junh0328/my-dev-portfolio](https://github.com/junh0328/my-dev-portfolio)를 템플릿으로 사용했습니다. ([제작기](https://junheedot.tistory.com/entry/%ED%95%98%EB%A3%A8%EB%A7%8C%EC%97%90-%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-with-Claude-Code))
+
+## 내 정보로 바꾸기
+
+1. `src/config/site.ts`: 이름, 도메인, GitHub/LinkedIn/이메일/블로그 링크, GA 측정 ID, 블로그 RSS, 이력서 경로 (비워두면 해당 항목은 숨겨짐)
+2. `resume/`에 이력서 PDF를 넣고 Claude Code에 "이력서 기준으로 포트폴리오 내용 업데이트해줘" 요청 (`CLAUDE.md` 워크플로우 참고, `resume/`는 git에 올라가지 않음)
+3. `src/i18n/messages/ko.json`, `en.json`: 섹션 본문
+4. `public/images/`: 프로젝트 이미지와 로고, `public/title_image.png`: OG 이미지
 
 <img src="./assets/main.png" alt="포트폴리오 메인 섹션">
 

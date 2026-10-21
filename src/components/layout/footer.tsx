@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import * as gtag from '@/lib/gtag';
+import { siteConfig } from '@/config/site';
 
 export function Footer() {
   const t = useTranslations('footer');
@@ -11,23 +12,23 @@ export function Footer() {
   const socialLinks = [
     {
       icon: Github,
-      href: 'https://github.com/junh0328',
+      href: siteConfig.links.github.url,
       label: 'GitHub',
       gtagLabel: 'github',
     },
     {
       icon: Linkedin,
-      href: 'https://www.linkedin.com/in/%EC%A4%80%ED%9D%AC-%EC%9D%B4-23176a214/',
+      href: siteConfig.links.linkedin.url,
       label: 'LinkedIn',
       gtagLabel: 'linkedin',
     },
     {
       icon: Mail,
-      href: 'mailto:junh0328@naver.com',
+      href: siteConfig.links.email && `mailto:${siteConfig.links.email}`,
       label: 'Email',
       gtagLabel: 'email',
     },
-  ];
+  ].filter((link) => link.href);
 
   return (
     <footer className='mt-8 p-4'>
