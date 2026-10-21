@@ -176,7 +176,7 @@
       "clubs": {
         "name": "동아리 · 동호회",
         "type": "창설 및 운영",
-        "period": "2021.03 - 2025.08",
+        "period": "2021.03 - 현재",
         "positions": {
           "ssakssupin": {
             "team": "단과대 볼링 동아리 '싹쓰핀' 창설·회장",
@@ -187,8 +187,8 @@
             ]
           },
           "crush": {
-            "team": "볼링 동호회 Team Crush 운영진 (교외)",
-            "period": "2022.02 - 2025.08",
+            "team": "볼링 동호회 Team Crush · Team PERFECT300 운영진 (교외)",
+            "period": "2022.02 - 현재",
             "projects": ["정기 경기·대회 운영, 점수 기록·집계"]
           },
           "connection": {
@@ -711,7 +711,7 @@
       },
       {
         "name": "SID Audition 결선 SID상 (3인 팀 · 팀장)",
-        "org": "한양대 ERICA LINC 3.0 사업단 창업교육센터",
+        "org": "한양대 LINC 3.0 사업단 창업교육센터",
         "date": "2021.03 – 2021.06"
       }
     ]
