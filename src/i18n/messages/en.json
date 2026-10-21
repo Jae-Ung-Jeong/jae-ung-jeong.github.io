@@ -65,7 +65,7 @@
           "examples": [
             "B.S. Photonics & Nanoelectronics → M.S. Computer Science",
             "Process sensor anomaly detection: evaluation built on \"a missed defect costs more than a false alarm\"",
-            "TCAD simulation automation · SiC patent strategy across 2,128 filings"
+            "Built a fab simulator · TCAD automation · SiC patent analysis (2,128 filings)"
           ]
         },
         {
@@ -402,6 +402,37 @@
       "links": "Links"
     },
     "items": {
+      "fabsim": {
+        "title": "FAB Discrete-Event Simulator",
+        "description": "A scaled-down fab line with re-entrant flow, a bottleneck and tool failures in SimPy, comparing WIP, TAT and on-time rate across dispatching rules",
+        "role": "Modeling, validation and experiment design (with practitioner input)",
+        "period": "2026.08",
+        "scope": "Solo",
+        "tech": ["Python", "SimPy", "pandas", "matplotlib", "Factory Physics"],
+        "features": [
+          "Three automated checks (Little's Law error ≤ 5.2%)",
+          "SPT: mean TAT −14% / CR: P95 −9%, on-time +8%p",
+          "Failures account for 1/4 of TAT → bottleneck maintenance rivals adding tools"
+        ],
+        "detail": {
+          "overview": "Built a 15-tool, 5-step fab line to experiment with \"where to add capacity, how much WIP to hold, and in what order to process lots\". Parameters sit within public models such as the Intel Mini-Fab and SMT2020, and the tool mix reflects input from a working fab engineer. One run.py call runs simulation → aggregation → validation → plots → results document.",
+          "tasks": [
+            "3x re-entrant flow, lognormal processing times, MTBF/MTTR failures; common random numbers for fair rule comparison",
+            "FIFO / SPT / CR dispatching (re-evaluates the whole queue whenever a tool frees up)",
+            "Three automated checks: Little's Law, bottleneck = Photo (89.6% utilization), TAT −24% with failures off",
+            "Diagnosed side effects: SPT starvation (max wait 499h), CR Test-arrival bursts (CV 0.86 → 1.15)",
+            "Conclusion: throughput is set by bottleneck capacity, not the rule; cutting bottleneck MTTR rivals adding tools",
+            "Phase 2 plan: operating curve, Photo vs Test capacity-decision memo"
+          ]
+        },
+        "github": "https://github.com/Jae-Ung-Jeong/fab-simulation",
+        "images": [
+          "/images/fab-simulation/summary.png",
+          "/images/fab-simulation/line_diagram.png",
+          "/images/fab-simulation/waiting_time.png",
+          "/images/fab-simulation/tat_boxplot.png"
+        ]
+      },
       "anomaly": {
         "title": "Semiconductor Process Anomaly Detection & Yield Root Cause",
         "description": "Found the 93%-accuracy trap and redesigned evaluation first",
@@ -430,7 +461,8 @@
             "Built a single pipeline from preprocessing to modeling, prediction and PDF reporting"
           ]
         },
-        "images": []
+        "images": [],
+        "github": "https://github.com/Jae-Ung-Jeong/manufacturing-quality-anomaly-detection"
       },
       "thesis": {
         "title": "Sparse Point Cloud Completion (Master's Thesis)",
@@ -587,6 +619,7 @@
       "semi": {
         "title": "Semiconductor Domain",
         "items": [
+          "Fab discrete-event simulation (SimPy)",
           "Device simulation (Sentaurus TCAD)",
           "Optical mode analysis (Lumerical)",
           "Process sensor data analysis",

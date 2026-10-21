@@ -60,7 +60,7 @@
           "examples": [
             "나노광전자 학사 → 컴퓨터공학 석사",
             "공정 센서 데이터 이상 탐지: \"미탐지가 과탐지보다 위험하다\"는 현장 기준으로 평가 설계",
-            "TCAD 시뮬레이션 자동화 · SiC 특허 2,128건 전략 분석"
+            "FAB 시뮬레이터 직접 구현 · TCAD 자동화 · SiC 특허 2,128건 분석"
           ]
         },
         {
@@ -393,6 +393,37 @@
       "links": "링크"
     },
     "items": {
+      "fabsim": {
+        "title": "FAB 이산사건 시뮬레이터",
+        "description": "재진입·병목·장비 고장을 가진 축소 팹 라인을 SimPy로 구현하고, 디스패칭 룰별 재공·TAT·납기를 정량 비교",
+        "role": "모델링·검증·실험 설계 (현직자 자문 반영)",
+        "period": "2026.08",
+        "scope": "개인",
+        "tech": ["Python", "SimPy", "pandas", "matplotlib", "Factory Physics"],
+        "features": [
+          "검증 3종 자동화 (Little's Law 오차 ≤ 5.2%)",
+          "SPT: 평균 TAT −14% / CR: P95 −9% · 납기 +8%p",
+          "고장이 TAT의 1/4 → 병목 보전이 증설만큼의 레버"
+        ],
+        "detail": {
+          "overview": "\"어느 장비군에 Capa를 둘까, 재공을 얼마나 유지할까, 어떤 순서로 처리할까\"를 실험해 보기 위해 15대·5스텝 축소 팹 라인을 만들었습니다. 파라미터는 Intel Mini-Fab, SMT2020 같은 공개 모델 범위에서 잡고 장비 구성은 현직자 자문을 반영했습니다. run.py 한 번으로 시뮬레이션 → 집계 → 검증 → 그래프 → 결과 문서가 갱신됩니다.",
+          "tasks": [
+            "재진입 3회 · 로그정규 처리시간 · MTBF/MTTR 고장 모델, 공통난수법으로 룰 간 공정한 비교",
+            "FIFO / SPT / CR 디스패칭 룰 구현 (장비가 빌 때 대기열 전체 재평가)",
+            "검증 3종 자동 출력: Little's Law, 병목 = Photo (가동률 89.6%), 고장 OFF 시 TAT −24%",
+            "부작용 진단: SPT의 기아(최장 499h 대기), CR의 Test 도착 burst (CV 0.86 → 1.15)",
+            "결론: 생산량은 룰이 아니라 병목 Capa가 결정 · 병목 MTTR 단축이 증설 못지않은 레버",
+            "Phase 2 계획: 운영곡선, Photo 증설 vs Test 증설 Capa 의사결정 메모"
+          ]
+        },
+        "github": "https://github.com/Jae-Ung-Jeong/fab-simulation",
+        "images": [
+          "/images/fab-simulation/summary.png",
+          "/images/fab-simulation/line_diagram.png",
+          "/images/fab-simulation/waiting_time.png",
+          "/images/fab-simulation/tat_boxplot.png"
+        ]
+      },
       "anomaly": {
         "title": "반도체 공정 이상 탐지 · 수율 원인 분석",
         "description": "정확도 93%의 함정을 찾고, 평가 기준부터 다시 설계",
@@ -421,7 +452,8 @@
             "전처리 → 모델링 → 예측 → PDF 리포트까지 한 번에 실행되는 파이프라인 구축"
           ]
         },
-        "images": []
+        "images": [],
+        "github": "https://github.com/Jae-Ung-Jeong/manufacturing-quality-anomaly-detection"
       },
       "thesis": {
         "title": "희소 포인트 클라우드 복원 (석사 학위논문)",
@@ -569,6 +601,7 @@
       "semi": {
         "title": "반도체 도메인",
         "items": [
+          "FAB 이산사건 시뮬레이션 (SimPy)",
           "소자 시뮬레이션 (Sentaurus TCAD)",
           "광학 모드 해석 (Lumerical)",
           "공정 센서 데이터 분석",
