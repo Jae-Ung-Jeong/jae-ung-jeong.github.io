@@ -130,7 +130,7 @@
         "period": "2023.09 - 2026.02",
         "positions": {
           "research": {
-            "team": "3D reconstruction & geometric completion",
+            "team": "3D reconstruction & geometric modeling",
             "period": "2023.09 - 2026.02",
             "projects": [
               "Sparse point cloud completion (master's thesis)",
@@ -172,7 +172,7 @@
             ]
           },
           "cps": {
-            "team": "Cyber Physical Systems Lab",
+            "team": "Cyber Physical Systems Lab (CPS)",
             "period": "2021.01 - 2021.07",
             "projects": [
               "Introductory research on OS and data center architecture"
@@ -181,9 +181,9 @@
         }
       },
       "clubs": {
-        "name": "Clubs",
+        "name": "Clubs & communities",
         "type": "Founded and led",
-        "period": "2021.03 - 2022.12",
+        "period": "2021.03 - 2025.08",
         "positions": {
           "ssakssupin": {
             "team": "Founder & president, college bowling club 'Ssakssupin'",
@@ -191,6 +191,13 @@
             "projects": [
               "Grew to 60 members with inclusive awards",
               "Funded through sponsorship and a member rate"
+            ]
+          },
+          "crush": {
+            "team": "Organizer, bowling club Team Crush (off-campus)",
+            "period": "2022.02 - 2025.08",
+            "projects": [
+              "Ran regular games and tournaments; kept and tallied scores"
             ]
           },
           "connection": {
@@ -491,7 +498,7 @@
       "tcad": {
         "title": "Optical Modulator Simulation Automation",
         "description": "Turned hundreds of device simulations into automatic run-and-compare",
-        "role": "Undergraduate researcher · Advanced Semiconductor Devices Lab",
+        "role": "Undergraduate researcher · Advanced Semiconductor Devices Lab (ASDL)",
         "period": "2021.07 – 2022.01",
         "scope": "Solo",
         "tech": ["Python", "Sentaurus TCAD", "Lumerical MODE"],
@@ -594,7 +601,13 @@
       },
       "graphics": {
         "title": "3D · Graphics",
-        "items": ["PyTorch", "Point Cloud", "3D Gaussian Splatting", "COLMAP"]
+        "items": [
+          "PyTorch",
+          "Geometric modeling",
+          "Point Cloud",
+          "3D Gaussian Splatting",
+          "COLMAP"
+        ]
       }
     }
   },
@@ -609,7 +622,7 @@
         "period": "2023.09 - 2026.02",
         "status": "Graduated",
         "gpa": "4.15 / 4.5",
-        "note": "Computer Graphics Lab · Advisor: Prof. Q Youn Hong",
+        "note": "Computer Graphics Lab (3D reconstruction · geometric modeling) · Advisor: Prof. Q Youn Hong",
         "courses": [
           {
             "title": "Major",

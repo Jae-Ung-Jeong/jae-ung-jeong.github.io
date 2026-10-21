@@ -125,7 +125,7 @@
         "period": "2023.09 - 2026.02",
         "positions": {
           "research": {
-            "team": "3D 재구성·기하학적 복원 연구",
+            "team": "3D 재구성 · 기하 모델링 연구",
             "period": "2023.09 - 2026.02",
             "projects": [
               "희소 포인트 클라우드 복원 (석사 학위논문)",
@@ -159,7 +159,7 @@
         "period": "2021.01 - 2022.12",
         "positions": {
           "asdl": {
-            "team": "차세대반도체소자연구실 (ASDL)",
+            "team": "차세대 반도체소자 연구실 (ASDL)",
             "period": "2021.07 - 2022.12",
             "projects": [
               "Si Photonics 광변조기 시뮬레이션 자동화",
@@ -167,16 +167,16 @@
             ]
           },
           "cps": {
-            "team": "Cyber Physical Systems 연구실",
+            "team": "사이버 물리시스템 연구실 (CPS)",
             "period": "2021.01 - 2021.07",
             "projects": ["OS·데이터센터 시스템 구조 기초 연구"]
           }
         }
       },
       "clubs": {
-        "name": "동아리",
+        "name": "동아리 · 동호회",
         "type": "창설 및 운영",
-        "period": "2021.03 - 2022.12",
+        "period": "2021.03 - 2025.08",
         "positions": {
           "ssakssupin": {
             "team": "단과대 볼링 동아리 '싹쓰핀' 창설·회장",
@@ -185,6 +185,11 @@
               "회원 60명 규모로 성장 (참여형 시상 기준 설계)",
               "교수 찬조·전용 요금제로 운영비 확보"
             ]
+          },
+          "crush": {
+            "team": "볼링 동호회 Team Crush 운영진 (교외)",
+            "period": "2022.02 - 2025.08",
+            "projects": ["정기 경기·대회 운영, 점수 기록·집계"]
           },
           "connection": {
             "team": "학술동아리 '커넥션'",
@@ -415,7 +420,7 @@
       "thesis": {
         "title": "희소 포인트 클라우드 복원 (석사 학위논문)",
         "description": "희소 입력에서도 형상이 무너지지 않는 3D 복원 프레임워크",
-        "role": "석사 학위논문 · Computer Graphics Lab",
+        "role": "석사 학위논문 · 컴퓨터그래픽스 연구실",
         "period": "2026.02",
         "scope": "개인",
         "tech": ["PyTorch", "SeedFormer", "Point Cloud", "PCN Dataset"],
@@ -481,7 +486,7 @@
       "tcad": {
         "title": "광변조기 시뮬레이션 자동화",
         "description": "수백 가지 소자 시뮬레이션을 자동 실행·비교로 전환",
-        "role": "학부연구생 · 차세대반도체소자연구실",
+        "role": "학부연구생 · 차세대 반도체소자 연구실 (ASDL)",
         "period": "2021.07 – 2022.01",
         "scope": "개인",
         "tech": ["Python", "Sentaurus TCAD", "Lumerical MODE"],
@@ -578,7 +583,13 @@
       },
       "graphics": {
         "title": "3D · 그래픽스",
-        "items": ["PyTorch", "Point Cloud", "3D Gaussian Splatting", "COLMAP"]
+        "items": [
+          "PyTorch",
+          "기하 모델링",
+          "Point Cloud",
+          "3D Gaussian Splatting",
+          "COLMAP"
+        ]
       }
     }
   },
@@ -593,7 +604,7 @@
         "period": "2023.09 - 2026.02",
         "status": "졸업",
         "gpa": "4.15 / 4.5",
-        "note": "Computer Graphics Lab · 지도교수 홍규연",
+        "note": "컴퓨터그래픽스 연구실 (3D 재구성 · 기하 모델링) · 지도교수 홍규연",
         "courses": [
           {
             "title": "전공",
