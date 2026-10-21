@@ -624,7 +624,7 @@
     "degrees": {
       "master": {
         "school": "Hanyang University Graduate School (Seoul)",
-        "major": "M.S. in Computer Science & Engineering (Bio-AI Convergence)",
+        "major": "M.S. in Computer Science & Engineering (Bio-AI Convergence · Entrepreneurship micro-major)",
         "period": "2023.09 - 2026.02",
         "status": "Graduated",
         "gpa": "4.15 / 4.5",
@@ -639,6 +639,13 @@
               "Modeling & Simulation for CAD",
               "Mobile System Security",
               "Medical Data Security"
+            ]
+          },
+          {
+            "title": "Entrepreneurship micro-major",
+            "items": [
+              "Tech Startups & Commercialization Strategy",
+              "Startups & Contracts"
             ]
           }
         ]
