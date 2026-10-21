@@ -25,8 +25,9 @@ export function Header() {
     { href: '#skala', label: t('skala'), gtagLabel: 'skala' },
     { href: '#research', label: t('research'), gtagLabel: 'research' },
     { href: '#skills', label: t('skills'), gtagLabel: 'skills' },
-    { href: '#activities', label: t('activities'), gtagLabel: 'activities' },
     { href: '#education', label: t('education'), gtagLabel: 'education' },
+    { href: '#activities', label: t('activities'), gtagLabel: 'activities' },
+    { href: '#awards', label: t('awards'), gtagLabel: 'awards' },
     { href: '#blog', label: t('blog'), gtagLabel: 'blog' },
     { href: '#contact', label: t('contact'), gtagLabel: 'contact' },
   ].filter((item) => item.href !== '#blog' || siteConfig.blogRssUrl);

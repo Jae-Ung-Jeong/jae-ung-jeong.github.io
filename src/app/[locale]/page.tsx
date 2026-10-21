@@ -7,6 +7,7 @@ import { Projects } from '@/components/sections/projects';
 import { PersonalProjects } from '@/components/sections/personal-projects';
 import { Skills } from '@/components/sections/skills';
 import { Education } from '@/components/sections/education';
+import { Awards } from '@/components/sections/awards';
 import { Blog } from '@/components/sections/blog';
 import { Contact } from '@/components/sections/contact';
 import { Footer } from '@/components/layout/footer';
@@ -27,8 +28,9 @@ export default async function HomePage({ params }: Props) {
       <Projects />
       <PersonalProjects />
       <Skills />
-      <Experience />
       <Education />
+      <Experience />
+      <Awards />
       <Blog />
       <Contact />
       <Footer />
