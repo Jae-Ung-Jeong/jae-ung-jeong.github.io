@@ -206,9 +206,9 @@
       "kvcache": {
         "title": "KV cache 기술 평가 Multi-Agent",
         "description": "메모리 최적화 기술을 4개 관점으로 평가해 보고서를 자동 생성하는 Agentic RAG를 만들고, Supervisor 기반 멀티 에이전트로 재설계",
-        "role": "웹 검색·공통 서브그래프·Supervisor 라우팅 설계 (팀 내 최다 커밋)",
+        "role": "웹 검색·공통 서브그래프·Supervisor 라우팅 설계",
         "period": "2026.09 – 2026.10",
-        "teamSize": "5명",
+        "scope": "팀 · 5명",
         "tech": [
           "LangGraph",
           "GPT-4.1-mini",
@@ -240,7 +240,7 @@
         "description": "공시·재무·고용·뉴스를 교차 검증해 취업준비생에게 기업별 '확인 포인트'를 알려주는 대화형 AI 에이전트",
         "role": "통합·검증 (에이전트 흐름 조립, 교차 검증 로직, 테스트)",
         "period": "2026.09",
-        "teamSize": "4명",
+        "scope": "팀 · 4명",
         "tech": [
           "LangChain",
           "GPT-4o",
@@ -266,8 +266,9 @@
       "solarcast": {
         "title": "SolarCast: 태양광 발전량 예측 AIOps",
         "description": "예측 모델을 서빙하고, 성능 저하를 감지하면 재학습·승격·롤백까지 판단하는 MLOps 파이프라인",
-        "role": "개인 프로젝트 (기획·구현 전체)",
+        "role": "기획·구현 전체",
         "period": "2026.10",
+        "scope": "개인",
         "tech": [
           "FastAPI",
           "TensorFlow (LSTM)",
@@ -294,8 +295,9 @@
       "springrag": {
         "title": "Spring AI RAG 사내 문서 Q&A",
         "description": "RAG 6단계를 직접 조립하고, 골든셋으로 검색 품질을 측정해 설정값을 결정",
-        "role": "개인 실습",
+        "role": "RAG 파이프라인 설계·평가",
         "period": "2026.08",
+        "scope": "개인",
         "tech": [
           "Spring Boot",
           "Spring AI",
@@ -321,8 +323,9 @@
       "sllm": {
         "title": "HR 규정 sLLM 파인튜닝",
         "description": "사내 데이터를 외부로 보낼 수 없는 상황을 가정해, 1.5B 소형 모델을 LoRA로 학습한 규정 안내 챗봇",
-        "role": "개인 실습",
+        "role": "데이터 구성·학습·평가",
         "period": "2026.08",
+        "scope": "개인",
         "tech": ["Qwen2.5-1.5B", "LoRA (PEFT)", "TRL", "PyTorch"],
         "achievements": [
           "형식 준수 0/20 → 19/20, 미학습 질문 안전 응답 1/5 → 5/5",
@@ -342,8 +345,9 @@
       "hosilnote": {
         "title": "호실노트: AI 임대 호실 수리 관리 서비스",
         "description": "세입자 요청 → 집주인 처리 → 업체 수리 → 기록이 한 흐름으로 이어지고, AI는 추천만 하는 서비스 기획·설계",
-        "role": "개인 미니 프로젝트 (기획·설계)",
+        "role": "서비스 기획·설계",
         "period": "2026.09",
+        "scope": "개인",
         "tech": ["OpenAPI 3.0", "DBML", "PostgreSQL", "JWT"],
         "achievements": [
           "화면 14개 + 모달 10개, API 46개, 테이블 17개 설계",
@@ -380,6 +384,7 @@
         "description": "입력 점이 매우 적을 때 형상이 뭉개지는 문제를, 기하학적 제약을 추가한 손실 설계로 해결한 3D 복원 프레임워크",
         "role": "석사 학위논문 · Computer Graphics Lab",
         "period": "2026.02",
+        "scope": "개인",
         "tech": ["PyTorch", "SeedFormer", "Point Cloud", "PCN Dataset"],
         "features": [
           "입력 256점(Hard)에서 Chamfer Distance 25.40 → 19.20 (24.4% 개선)",
@@ -400,8 +405,9 @@
       "anomaly": {
         "title": "반도체 공정 이상 탐지 · 수율 원인 분석",
         "description": "정확도 93%짜리 모델이 불량을 하나도 잡지 못하는 문제를 발견하고, 평가 기준부터 다시 설계한 공정 데이터 분석",
-        "role": "개인 연구",
+        "role": "분석 설계·모델링·리포트 자동화",
         "period": "2025.10 – 2026.06",
+        "scope": "개인",
         "tech": [
           "Python",
           "scikit-learn",
@@ -430,8 +436,9 @@
       "trademark": {
         "title": "상표 등록 가능성 AI 판정",
         "description": "변리사와 협업해 상표 심사관의 판단 순서를 LLM 프롬프트로 옮기고, 모델이 약한 유형까지 찾아낸 연구",
-        "role": "연구 · 변리사 협업",
+        "role": "심사 기준 구조화·프롬프트 설계·모델 검증",
         "period": "2024.08 – 2024.12",
+        "scope": "팀 · 변리사 협업",
         "tech": [
           "GPT-4o",
           "GPT-3.5 Turbo",
@@ -458,8 +465,9 @@
       "gs3d": {
         "title": "3D Gaussian Splatting 정렬 오류 원인 분석",
         "description": "게임사·서울대·한양대 3자 산학협력에서 반복되던 정렬 오류의 원인을 수치로 규명",
-        "role": "연구원 · KongStudio·서울대·한양대 공동",
+        "role": "정렬 오류 원인 분석(RCA)·이슈 관리",
         "period": "2024.03 – 2024.12",
+        "scope": "팀 · 3자 산학협력",
         "tech": ["Python", "COLMAP", "3D Gaussian Splatting", "Unreal Engine"],
         "features": [
           "원인을 COLMAP 좌표계 정규화 단계로 규명",
@@ -482,6 +490,7 @@
         "description": "수백 가지 조건을 손으로 돌리던 반도체 소자 시뮬레이션을 자동 실행·비교 파이프라인으로 전환",
         "role": "학부연구생 · 차세대반도체소자연구실",
         "period": "2021.07 – 2022.01",
+        "scope": "개인",
         "tech": ["Python", "Sentaurus TCAD", "Lumerical MODE"],
         "features": [
           "TCAD 공정·소자 시뮬레이션과 광학 모드 해석 자동 연동",
@@ -502,8 +511,9 @@
       "torus": {
         "title": "Voxel 포인트 클라우드 토러스 피팅 정량평가",
         "description": "복잡한 곡면을 토러스 패치로 근사하고, 파라미터가 결과에 미치는 영향을 수치로 평가한 연구",
-        "role": "연구 · MITA 2025 발표",
+        "role": "MITA 2025 발표",
         "period": "2025",
+        "scope": "개인",
         "tech": ["Python", "Point Cloud", "PCA"],
         "features": [
           "곡면 데이터를 voxel 기반 포인트 클라우드로 변환해 국소 토러스 피팅",

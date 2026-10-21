@@ -210,9 +210,9 @@
       "kvcache": {
         "title": "KV Cache Technology Evaluation Multi-Agent",
         "description": "An Agentic RAG that evaluates memory optimization technologies from four perspectives and writes the report automatically, redesigned as a Supervisor-based multi-agent system",
-        "role": "Web search, shared subgraph and Supervisor routing (most commits on the team)",
+        "role": "Web search, shared subgraph and Supervisor routing",
         "period": "2026.09 – 2026.10",
-        "teamSize": "5 people",
+        "scope": "Team · 5",
         "tech": [
           "LangGraph",
           "GPT-4.1-mini",
@@ -244,7 +244,7 @@
         "description": "A conversational AI agent that cross-checks disclosures, financials, employment and news to give job seekers per-company 'points to check'",
         "role": "Integration & verification (agent flow, cross-check logic, tests)",
         "period": "2026.09",
-        "teamSize": "4 people",
+        "scope": "Team · 4",
         "tech": [
           "LangChain",
           "GPT-4o",
@@ -270,8 +270,9 @@
       "solarcast": {
         "title": "SolarCast: Solar Power Forecasting AIOps",
         "description": "An MLOps pipeline that serves a forecasting model and decides on retraining, promotion and rollback when performance drifts",
-        "role": "Solo project (planning and implementation)",
+        "role": "Planning and implementation",
         "period": "2026.10",
+        "scope": "Solo",
         "tech": [
           "FastAPI",
           "TensorFlow (LSTM)",
@@ -298,8 +299,9 @@
       "springrag": {
         "title": "Spring AI RAG for Internal Docs Q&A",
         "description": "Built the six RAG steps by hand and chose settings by measuring retrieval quality on a golden set",
-        "role": "Individual lab",
+        "role": "RAG pipeline design and evaluation",
         "period": "2026.08",
+        "scope": "Solo",
         "tech": [
           "Spring Boot",
           "Spring AI",
@@ -325,8 +327,9 @@
       "sllm": {
         "title": "HR Policy sLLM Fine-tuning",
         "description": "A policy Q&A chatbot built by LoRA-tuning a 1.5B small model, assuming company data cannot leave the premises",
-        "role": "Individual lab",
+        "role": "Data, training and evaluation",
         "period": "2026.08",
+        "scope": "Solo",
         "tech": ["Qwen2.5-1.5B", "LoRA (PEFT)", "TRL", "PyTorch"],
         "achievements": [
           "Format compliance 0/20 → 19/20; safe answers to unseen questions 1/5 → 5/5",
@@ -346,8 +349,9 @@
       "hosilnote": {
         "title": "Hosil Note: AI Repair Management for Rental Units",
         "description": "Service planning and design where tenant request → landlord handling → vendor repair → record form one flow, and AI only recommends",
-        "role": "Solo mini project (planning and design)",
+        "role": "Service planning and design",
         "period": "2026.09",
+        "scope": "Solo",
         "tech": ["OpenAPI 3.0", "DBML", "PostgreSQL", "JWT"],
         "achievements": [
           "Designed 14 screens + 10 modals, 46 APIs and 17 tables",
@@ -384,6 +388,7 @@
         "description": "A 3D completion framework that keeps shapes from collapsing on very sparse input by adding geometry-aware losses",
         "role": "Master's thesis · Computer Graphics Lab",
         "period": "2026.02",
+        "scope": "Solo",
         "tech": ["PyTorch", "SeedFormer", "Point Cloud", "PCN Dataset"],
         "features": [
           "Chamfer Distance 25.40 → 19.20 on 256-point input (24.4% better)",
@@ -404,8 +409,9 @@
       "anomaly": {
         "title": "Semiconductor Process Anomaly Detection & Yield Root Cause",
         "description": "Found that a 93%-accuracy model caught no defects at all, and redesigned the evaluation criteria first",
-        "role": "Individual research",
+        "role": "Analysis design, modeling and report automation",
         "period": "2025.10 – 2026.06",
+        "scope": "Solo",
         "tech": [
           "Python",
           "scikit-learn",
@@ -434,8 +440,9 @@
       "trademark": {
         "title": "AI Trademark Registrability Assessment",
         "description": "Moved a trademark examiner's reasoning order into LLM prompts with a patent attorney, and found the cases the model handles poorly",
-        "role": "Research · with a patent attorney",
+        "role": "Criteria structuring, prompt design and model validation",
         "period": "2024.08 – 2024.12",
+        "scope": "Team · with a patent attorney",
         "tech": [
           "GPT-4o",
           "GPT-3.5 Turbo",
@@ -462,8 +469,9 @@
       "gs3d": {
         "title": "3D Gaussian Splatting Alignment Error Root Cause",
         "description": "Pinpointed a recurring alignment error in a game studio–SNU–Hanyang industry project with numbers",
-        "role": "Researcher · KongStudio, SNU, Hanyang",
+        "role": "Alignment error root cause analysis and issue tracking",
         "period": "2024.03 – 2024.12",
+        "scope": "Team · 3-party industry project",
         "tech": ["Python", "COLMAP", "3D Gaussian Splatting", "Unreal Engine"],
         "features": [
           "Traced the cause to COLMAP coordinate normalization",
@@ -486,6 +494,7 @@
         "description": "Turned hand-run device simulations over hundreds of conditions into an automatic run-and-compare pipeline",
         "role": "Undergraduate researcher · Advanced Semiconductor Devices Lab",
         "period": "2021.07 – 2022.01",
+        "scope": "Solo",
         "tech": ["Python", "Sentaurus TCAD", "Lumerical MODE"],
         "features": [
           "Automatically linked TCAD process/device simulation with optical mode analysis",
@@ -506,8 +515,9 @@
       "torus": {
         "title": "Quantitative Evaluation of Torus Fitting on Voxel Point Clouds",
         "description": "Approximated complex surfaces with torus patches and measured how parameters affect the result",
-        "role": "Research · presented at MITA 2025",
+        "role": "Presented at MITA 2025",
         "period": "2025",
+        "scope": "Solo",
         "tech": ["Python", "Point Cloud", "PCA"],
         "features": [
           "Converted surfaces to voxel point clouds and fitted local torus patches",

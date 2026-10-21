@@ -19,7 +19,7 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
-import { Calendar, Briefcase, Github } from 'lucide-react';
+import { Calendar, Briefcase, Github, Users } from 'lucide-react';
 
 interface PersonalProjectModalProps {
   projectKey: string | null;
@@ -53,6 +53,7 @@ export function PersonalProjectModal({
   const title = t(`items.${projectKey}.title`);
   const role = t(`items.${projectKey}.role`);
   const period = t(`items.${projectKey}.period`);
+  const scope = t(`items.${projectKey}.scope`);
   const tech = t.raw(`items.${projectKey}.tech`) as string[];
   const overview = t(`items.${projectKey}.detail.overview`);
   const tasks = t.raw(`items.${projectKey}.detail.tasks`) as string[];
@@ -76,6 +77,10 @@ export function PersonalProjectModal({
             <div className='flex items-center gap-2'>
               <Calendar className='h-4 w-4' />
               <span>{period}</span>
+            </div>
+            <div className='flex items-center gap-2'>
+              <Users className='h-4 w-4' />
+              <span>{scope}</span>
             </div>
           </div>
         </DialogHeader>

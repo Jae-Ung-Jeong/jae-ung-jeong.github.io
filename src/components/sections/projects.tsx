@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Users } from 'lucide-react';
 import { ProjectModal } from './project-modal';
 import { SpotlightCard } from '@/components/common/spotlight-card';
 import * as gtag from '@/lib/gtag';
@@ -85,11 +85,15 @@ export function Projects() {
                       <div className='h-full w-full gradient-bg opacity-30' />
                     )}
                     <div className='absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-transparent' />
-                    <div className='absolute bottom-3 left-4 right-4 flex items-center justify-between'>
+                    <div className='absolute bottom-3 left-4 right-4 flex items-center justify-between gap-2'>
                       <div className='inline-flex items-center gap-2 rounded-full bg-black/35 px-2.5 py-1 text-[11px] text-white/90 backdrop-blur-sm'>
                         <span className='line-clamp-1'>
                           {t(`items.${project.key}.period`)}
                         </span>
+                      </div>
+                      <div className='inline-flex shrink-0 items-center gap-1.5 rounded-full bg-black/35 px-2.5 py-1 text-[11px] text-white/90 backdrop-blur-sm'>
+                        <Users className='h-3.5 w-3.5' />
+                        <span>{t(`items.${project.key}.scope`)}</span>
                       </div>
                     </div>
                   </div>

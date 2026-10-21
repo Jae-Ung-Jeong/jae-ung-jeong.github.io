@@ -58,13 +58,7 @@ export function ProjectModal({
   const tasks = t.raw(`items.${projectKey}.detail.tasks`) as string[];
   const images = t.raw(`items.${projectKey}.images`) as string[];
 
-  // Get teamSize if exists
-  let teamSize: string | null = null;
-  try {
-    teamSize = t(`items.${projectKey}.teamSize`);
-  } catch {
-    teamSize = null;
-  }
+  const scope = t(`items.${projectKey}.scope`);
 
   const hasImages = images && images.length > 0;
 
@@ -82,12 +76,10 @@ export function ProjectModal({
               <Calendar className='h-4 w-4' />
               <span>{period}</span>
             </div>
-            {teamSize && (
-              <div className='flex items-center gap-2'>
-                <Users className='h-4 w-4' />
-                <span>{teamSize}</span>
-              </div>
-            )}
+            <div className='flex items-center gap-2'>
+              <Users className='h-4 w-4' />
+              <span>{scope}</span>
+            </div>
           </div>
         </DialogHeader>
 
