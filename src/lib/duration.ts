@@ -1,5 +1,5 @@
 /**
- * day.js를 사용한 경력 기간 실시간 계산 유틸리티
+ * day.js를 사용한 기간 계산 유틸리티
  */
 import dayjs from 'dayjs';
 
@@ -86,59 +86,11 @@ export function formatDuration(
 }
 
 /**
- * 회사별 시작일 정보
+ * "2026.07 - 2026.12" 형식의 기간 문자열을 계산합니다.
+ * 종료일이 없거나 "현재"/"Present"면 오늘까지로 계산합니다.
  */
-export const COMPANY_START_DATES: Record<
-  string,
-  { startDate: string; endDate?: string }
-> = {
-  dnsever: { startDate: '2024.07', endDate: '2026.02' }, // 퇴사
-  eazel: { startDate: '2022.01', endDate: '2024.06' }, // 퇴사
-};
-
-/**
- * 전체 경력 시작일 (첫 회사 시작일)
- */
-export const CAREER_START_DATE = '2022.01';
-
-/**
- * 회사 재직 기간을 계산합니다.
- */
-export function getCompanyDuration(companyKey: string): DurationResult {
-  const company = COMPANY_START_DATES[companyKey];
-  if (!company) {
-    return { years: 0, months: 0, totalMonths: 0 };
-  }
-  return calculateDuration(company.startDate, company.endDate);
-}
-
-/**
- * 전체 경력 기간을 계산합니다.
- */
-export function getTotalCareerDuration(): DurationResult {
-  return calculateDuration(CAREER_START_DATE);
-}
-
-/**
- * 전체 경력을 연차로 포맷합니다 (예: "4년차" / "4th Year").
- */
-export function formatCareerYear(
-  duration: DurationResult,
-  locale: string
-): string {
-  // 경력 연차는 올림 (1개월이라도 있으면 다음 연차)
-  const totalYears = duration.years + (duration.months > 0 ? 1 : 0);
-
-  if (locale === 'ko') {
-    return `${totalYears}년차`;
-  }
-
-  const suffix = getOrdinalSuffix(totalYears);
-  return `${totalYears}${suffix} Year`;
-}
-
-function getOrdinalSuffix(n: number): string {
-  const s = ['th', 'st', 'nd', 'rd'];
-  const v = n % 100;
-  return s[(v - 20) % 10] || s[v] || s[0];
+export function getPeriodDuration(period: string): DurationResult {
+  const [start, end] = period.split('-').map((part) => part.trim());
+  const endDate = end && /^\d{4}\.\d{2}$/.test(end) ? end : undefined;
+  return calculateDuration(start, endDate);
 }

@@ -1,418 +1,367 @@
 {
   "nav": {
     "about": "About",
-    "experience": "Experience",
-    "projects": "Projects",
-    "personalProjects": "Side Projects",
+    "skala": "SKALA",
+    "research": "Research",
+    "activities": "Activities",
     "skills": "Skills",
     "education": "Education",
-    "blog": "Tech Blog",
+    "blog": "Blog",
     "contact": "Contact"
   },
   "hero": {
-    "name": "Junhee Lee",
-    "role": "Frontend Developer",
-    "description": "Frontend developer who thinks about user experience and business impact together.",
-    "company": "ProBit Global",
+    "name": "Jaeung Jeong",
+    "role": "AI Service Planner",
+    "description": "From semiconductor engineering to computer science, I design user flows and plan AI services whose judgments are verified with numbers.",
+    "company": "SKALA AI Campus, 4th cohort",
     "downloadResume": "Download Resume",
     "viewGithub": "GitHub"
   },
   "about": {
     "title": "About",
-    "subtitle": "Core Competencies",
+    "subtitle": "I design the flow and verify it with numbers",
     "highlights": {
-      "spot": {
-        "title": "SPOT Exchange Migration",
-        "company": "D&S Ever",
-        "description": "Migrated 7-year legacy (qooxdoo) project to React + TypeScript + Tanstack Query",
+      "flow": {
+        "tag": "Flow design",
+        "title": "From user flow to API",
+        "description": "I break a problem into each user's pain points and design a service where state, screens and data connect into one flow.",
         "metrics": [
-          "MAU 180K → 200K (10% increase)",
-          "Monthly events 3.6M → 4M (10% increase)"
+          "Hosil Note: designed 14 screens + 10 modals, 46 APIs and 17 tables solo",
+          "KV cache evaluation agent: redesigned a fixed pipeline into Supervisor-based dynamic routing"
         ]
       },
-      "p2p": {
-        "title": "P2P Trading Service Design",
-        "company": "D&S Ever",
-        "description": "Built real-time trading system based on Next.js",
+      "verify": {
+        "tag": "Verify with numbers",
+        "title": "I question familiar metrics first",
+        "description": "I first ask whether a metric actually fits the problem, then redefine the criteria.",
         "metrics": [
-          "Designed multi-communication (WebSocket, SSE, Axios)",
-          "Developed entire frontend for ads, trading, 2FA systems"
+          "Redefined evaluation around Recall instead of 93% accuracy on 6.6%-defect data (Recall 0 → 0.381)",
+          "Chose a RAG similarity threshold from the score distribution (9 of 10 golden-set questions correct)"
         ]
       },
-      "seo": {
-        "title": "Web Performance & SEO Optimization",
-        "company": "Eazel",
-        "description": "Data-driven optimization experience",
+      "rootcause": {
+        "tag": "Root cause",
+        "title": "I trace it to the last case",
+        "description": "I don't stop at the result; I explain with data why it happened.",
         "metrics": [
-          "SEO: Search index 8K → 38K pages (475% increase)",
-          "Achieved FCP under 1 second (Lighthouse)"
+          "Traced a recurring 3D alignment error in a 3-party industry project to COLMAP coordinate normalization",
+          "Showed numerically that 13 missed defects were latent defects within normal sensor ranges"
         ]
       }
     },
     "approach": {
-      "title": "Business Impact",
+      "title": "How I work",
       "items": [
         {
-          "key": "bottom_up",
-          "title": "Bottom-up Development",
-          "description": "Regularly analyze competitor services to discover UX improvements and proactively propose them.",
+          "key": "bridge",
+          "title": "Translating between domain and AI",
+          "description": "I turn experts' judgment criteria into structures AI can follow, and get people from different backgrounds to discuss on the same basis.",
           "examples": [
-            "Introduced Depth Chart → Enhanced trade visualization",
-            "Mobile Simple Layout → BUY/SELL click events per user 7 → 12 increase"
-          ],
-          "images": [
-            "/images/business_impact/bottom_up/bottom-up.png",
-            "/images/business_impact/bottom_up/bottom-up-2.png",
-            "/images/business_impact/bottom_up/bottom-up-3.png",
-            "/images/business_impact/bottom_up/bottom-up-4.png",
-            "/images/business_impact/bottom_up/bottom-up-5.png",
-            "/images/projects/spot/spot_market_depth.gif",
-            "/images/projects/spot/spot_mobile_simple_order.gif"
+            "Structured the trademark examination flow (generic term → customary mark → distinctiveness) into step-by-step prompts with a patent attorney (F1 71%)",
+            "Ran weekly meetings and issue tracking between Korean and US researchers, aligning three teams on shared data"
           ]
         },
         {
-          "key": "data_driven",
-          "title": "Data-Driven Decision Making",
-          "description": "Built quantitative evaluation metrics through Google Analytics report automation.",
+          "key": "trust",
+          "title": "AI recommends, people decide",
+          "description": "I design services that keep working when AI is wrong or fails, and that keep measuring quality.",
           "examples": [
-            "Weekly/Monthly traffic report automation",
-            "User behavior pattern analysis dashboard"
-          ],
-          "images": [
-            "/images/business_impact/data_driven/data_driven_list.png",
-            "/images/business_impact/data_driven/data_driven_excel.png"
+            "Stored AI recommendations separately from human-confirmed values to measure adoption rate",
+            "Designed per-step fallbacks for AI failures and guaranteed agent termination"
           ]
         }
       ]
     }
   },
   "experience": {
-    "title": "Experience",
-    "years": "4 Years",
-    "current": "Current",
-    "showDetails": "Show Details",
-    "hideDetails": "Hide Details",
-    "companies": {
-      "dnsever": {
-        "name": "D&S Ever Co., Ltd.",
-        "period": "Jul 2024 - Feb 2026",
-        "duration": "1 year 8 months",
-        "type": "Full-time",
+    "title": "Education & Activities",
+    "subtitle": "Where I learned, researched and worked with others",
+    "showDetails": "Show details",
+    "hideDetails": "Hide details",
+    "orgs": {
+      "skala": {
+        "name": "SKALA AI Campus, 4th cohort (SK AX)",
+        "type": "Pangyo Class 8 · hiring-linked AI program",
+        "period": "2026.07 - 2026.12",
         "positions": {
-          "dev": {
-            "team": "Dev Team",
-            "period": "Jun 2025 - Feb 2026",
+          "curriculum": {
+            "team": "AI service development track",
+            "period": "2026.07 - 2026.12 (expected)",
             "projects": [
-              "KYC (Know Your Customer) identity verification service internalization",
-              "AI-powered service structure documentation",
-              "SPOT enhancement (BUY/SELL Indicator, Simple Layout)",
-              "Full service maintenance"
+              "Prompt & context engineering, LLMs & Transformers, data analysis & statistics",
+              "Spring Boot & Spring AI, Vue.js, PostgreSQL, Agile & MSA",
+              "sLLM fine-tuning, ML/DL, feature engineering, model development & optimization",
+              "LangChain & LangGraph, RAG, AI agents, vector DBs, model serving & AIOps, Docker & Kubernetes"
             ],
             "details": {
-              "kyc": [
-                "Built self-developed identity verification service using AWS Rekognition in response to Sumsub contract expiration",
-                "Planned and implemented 3-step verification flow [Identity verification - ID upload - Real-time face recognition and comparison] using Amplify Liveness",
-                "Implemented session persistence and authentication flow across Infrastructure - Backend - Frontend",
-                "Applied structure and design using Figma MCP and Claude Code"
-              ],
-              "ai_docs": [
-                "Analyzed 7+ year monorepo structure services using Claude Code with feedback, systematized in each repository's .md files",
-                "Built user flow analysis and automated document generation system",
-                "Established single-document-based onboarding system"
-              ],
-              "spot": [
-                "Added BUY/SELL (trade history) Indicator",
-                "Added Mobile web Simple Layout mode (Buy, Sell event clicks increased from 7 to 12 per user)",
-                "Implemented Depth Chart (canvas-based custom implementation)"
-              ],
-              "maintenance": [
-                "Implemented and designed Angular-based legacy projects",
-                "Added account deletion feature",
-                "Designed authentication persistence system between WebView and SSO server",
-                "Soft landing work for service termination"
-              ]
-            },
-            "teamSize": {
-              "kyc": "FE 1, BE 1, Planning 1",
-              "ai_docs": "FE 1",
-              "spot": "FE 1, Planning 1",
-              "maintenance": "FE 1, BE 2, PM 1"
-            }
-          },
-          "p2p": {
-            "team": "P2P TF Team",
-            "period": "Jan 2025 - Jun 2025",
-            "teamSize": "FE 2, BE 2, Planning 2, UX/UI 2, PM 1",
-            "projects": [
-              "Led entire frontend from design to release as project maintainer",
-              "Implemented Next.js SSR/ISR strategy",
-              "Applied multi-communication methods (Axios, SSE, WebSocket)",
-              "Designed and implemented 2FA system"
-            ],
-            "details": {
-              "overview": "Built real-time communication-based fiat-crypto trading system between users",
-              "process": [
-                "Set feature-based sprint cycles, operated continuous feedback-based development process",
-                "Optimized page loading and SEO with Next.js SSR/ISR strategy"
-              ],
-              "communication": [
-                "General request handling with Axios",
-                "Server-client push via SSE (Server Sent Events)",
-                "Real-time bidirectional communication via WebSocket"
-              ],
-              "features": [
-                "Ad management (my ads), creation (post ads), editing (update ads)",
-                "Trading functionality (open order), trade history",
-                "User information (user center) community features",
-                "Real-time chat feature (Sendbird)"
-              ],
-              "security": [
-                "Designed and implemented complete 2FA system",
-                "Integrated various authentication options: Passkey, phone verification, OTP, email, Security Key"
-              ]
-            }
-          },
-          "spot": {
-            "team": "SPOT Team",
-            "period": "Jul 2024 - Dec 2024",
-            "teamSize": "FE 2, Planning 1, UX/UI 2, PM 1",
-            "projects": [
-              "ProBit Global exchange service (SPOT) migration",
-              "Full migration of 7-year qooxdoo legacy SPA to React",
-              "Real-time socket communication optimization",
-              "Dark mode and color theme implementation"
-            ],
-            "details": {
-              "migration": [
-                "Achieved performance improvements: MAU 180K → 200K, click events 3.6M → 4M",
-                "Improved maintainability and new feature development speed",
-                "Introduced tanstack-query to improve API call flow and prevent duplicate calls"
-              ],
-              "socket": [
-                "Improved connection stability through ping-pong mechanism redesign",
-                "Implemented reconnection logic using window online/offline, document visibilitychange events",
-                "Developed automatic re-authentication for Access Token expiration (15 min)",
-                "Minimized server load by removing unnecessary polling and introducing SSE"
-              ],
-              "ux": [
-                "Implemented dark mode and color theme",
-                "Multi-layout support",
-                "First listing countdown feature",
-                "Depth Chart implementation",
-                "Web accessibility and RTL/LTR support for internationalization"
+              "practice": [
+                "Steel surface defect CNN optimization (team of 3): test macro F1 0.994 with 4.4% of baseline parameters",
+                "Bank churn prediction: AUC 0.7722 → 0.8732, model differences checked with bootstrapping",
+                "PostgreSQL query tuning: comparing index strategies with EXPLAIN plans",
+                "Async collection & validation pipeline (asyncio, Pydantic, pytest); Parquet vs CSV benchmark",
+                "NYC Taxi analysis on 3M rows (team, statistical testing)",
+                "Trained a character-level mini GPT and checked generated text for memorization"
               ]
             }
           }
         }
       },
-      "eazel": {
-        "name": "Eazel Inc.",
-        "period": "Jan 2022 - Jun 2024",
-        "duration": "2 years 6 months",
-        "type": "Full-time",
+      "cglab": {
+        "name": "Hanyang University Computer Graphics Lab",
+        "type": "Master's researcher",
+        "period": "2023.09 - 2026.02",
         "positions": {
-          "web2": {
-            "team": "Web Team",
-            "period": "Jan 2024 - May 2024",
-            "teamSize": "FE 3, BE 2, UX/UI 1",
+          "research": {
+            "team": "3D reconstruction & geometric completion",
+            "period": "2023.09 - 2026.02",
             "projects": [
-              "Admin system development for post-renewal maintenance",
-              "Frontend performance optimization and quality improvement",
-              "SEO optimization strategy planning and execution"
-            ],
-            "details": {
-              "admin": [
-                "Implemented data visualization with highChart library, improved charting UX",
-                "Self-designed and implemented audio streaming functionality",
-                "Provided conditional audio streaming for non-members/members based on presigned URL"
-              ],
-              "optimization": [
-                "Performed Next.js 12 → 14, react-query v4 → v5 migration",
-                "Achieved FCP under 1 second per page (Lighthouse)",
-                "Structural improvements to minimize Layout Shift (using Suspense, Skeleton UI)",
-                "Unit test implementation (jest)"
-              ],
-              "seo": [
-                "Increased search engine index from ~8K to ~38K pages (4x+ growth)",
-                "Google Analytics 4 implementation",
-                "Documented workflows for non-developers to understand"
-              ]
-            }
+              "Sparse point cloud completion (master's thesis)",
+              "Torus fitting evaluation on voxel point clouds (presented at MITA 2025)",
+              "AI trademark registrability assessment (with a patent attorney)",
+              "Cloud-based ransomware detection research support (built the experiment dataset)"
+            ]
           },
-          "renewal": {
-            "team": "Renewal TF Team",
-            "period": "Jan 2023 - Dec 2023",
-            "teamSize": "FE 3, BE 2, UX/UI 1",
+          "industry": {
+            "team": "Industry project (KongStudio, SNU, Hanyang)",
+            "period": "2024.03 - 2024.12",
             "projects": [
-              "Led major tech stack transition in web service renewal project",
-              "Socket.io-based real-time chat feature",
-              "Stripe SDK payment system integration"
-            ],
-            "details": {
-              "tech": [
-                "Full adoption of Next.js, TypeScript, react-query framework",
-                "SSR/CSR strategy implementation and performance improvements (FCP/LCP optimization)"
-              ],
-              "features": [
-                "WebSocket-based real-time chat feature",
-                "Community system implementation (comments, likes, follow system)",
-                "Built artwork payment system with Stripe SDK integration",
-                "Provided art price and trend analysis UI using highChart.js"
-              ],
-              "monitoring": [
-                "Built error logging and handling system with Sentry"
-              ]
-            }
+              "Mobile graphics performance and quality optimization with 3D Gaussian Splatting",
+              "Root cause analysis of alignment errors; weekly meetings and issue tracking with US researchers"
+            ]
           },
-          "web1": {
-            "team": "Web Team",
-            "period": "Jan 2022 - Dec 2022",
-            "teamSize": "FE 3, BE 1, UX/UI 1",
+          "conferences": {
+            "team": "Conferences",
+            "period": "2024.12 - 2025.07",
             "projects": [
-              "Global art project 'Gucci Garden Archetypes' page development",
-              "Led internal developer study group",
-              "Introduced TypeScript to main project"
-            ],
-            "details": {
-              "gucci": [
-                "Developed UI features: map functionality, loading screen, custom buttons",
-                "Developed admin page for internal operational efficiency",
-                "Published responsive web-based art content curation and categories"
-              ],
-              "study": [
-                "Led learning and practical application of key frontend theories: TypeScript, Clean Code, Refactoring"
-              ],
-              "typescript": [
-                "Introduced TypeScript to main project",
-                "Enhanced maintainability through code documentation"
-              ]
-            }
+              "SIGGRAPH Asia 2024 (attended)",
+              "KCGS 2025 (attended)",
+              "MITA 2025 (presented)"
+            ]
+          }
+        }
+      },
+      "ugrad": {
+        "name": "Hanyang University ERICA, undergraduate research",
+        "type": "Undergraduate researcher",
+        "period": "2021.01 - 2022.12",
+        "positions": {
+          "asdl": {
+            "team": "Advanced Semiconductor Devices Lab (ASDL)",
+            "period": "2021.07 - 2022.12",
+            "projects": [
+              "Si photonics modulator simulation automation",
+              "Presented at KCS 2022"
+            ]
+          },
+          "cps": {
+            "team": "Cyber Physical Systems Lab",
+            "period": "2021.01 - 2021.07",
+            "projects": [
+              "Introductory research on OS and data center architecture"
+            ]
+          }
+        }
+      },
+      "clubs": {
+        "name": "Clubs & communities",
+        "type": "Founded and led",
+        "period": "2017.03 - 2025.08",
+        "positions": {
+          "ssakssupin": {
+            "team": "Founder & president, college bowling club 'Ssakssupin'",
+            "period": "2021.03 - 2022.12",
+            "projects": [
+              "Grew to 60 members by redesigning awards so anyone could win regardless of skill",
+              "Secured funding through faculty sponsorship and a member rate negotiated with the bowling alley"
+            ]
+          },
+          "crush": {
+            "team": "Organizer, bowling club Team Crush",
+            "period": "2022.02 - 2025.08",
+            "projects": [
+              "Ran regular games and tournaments; kept and tallied scores"
+            ]
+          },
+          "connection": {
+            "team": "Study group 'Connection'",
+            "period": "2021.03 - 2021.08",
+            "projects": ["Python data analysis study; led pandas exercises"]
+          },
+          "bolbae": {
+            "team": "Founder & president, department bowling/badminton club",
+            "period": "2017.03 - 2018.12",
+            "projects": ["Planned regular meetups; managed budget and members"]
           }
         }
       }
     }
   },
   "projects": {
-    "title": "Projects",
-    "viewMore": "View Details",
+    "title": "SKALA Projects",
+    "subtitle": "SKALA AI Campus 4th cohort (SK AX) · Pangyo Class 8 · 2026.07 – 2026.12",
+    "viewMore": "View details",
     "modal": {
       "overview": "Overview",
-      "tasks": "Key Tasks",
-      "techStack": "Tech Stack",
-      "achievements": "Achievements"
+      "tasks": "Key work",
+      "techStack": "Tech stack",
+      "achievements": "Results"
     },
     "items": {
-      "spot": {
-        "title": "SPOT Exchange Migration",
-        "description": "Full migration from 7-year qooxdoo legacy to React to resolve rising maintenance costs and feature development delays",
-        "role": "Frontend Developer (1 of 2)",
-        "period": "Jul 2024 - Dec 2024",
-        "teamSize": "FE 2, Planning 1, UX/UI 2, PM 1",
-        "tech": ["React", "TypeScript", "Tanstack Query", "WebSocket"],
+      "kvcache": {
+        "title": "KV Cache Technology Evaluation Multi-Agent",
+        "description": "An Agentic RAG that evaluates memory optimization technologies from four perspectives and writes the report automatically, redesigned as a Supervisor-based multi-agent system",
+        "role": "Web search, shared subgraph and Supervisor routing (most commits on the team)",
+        "period": "2026.09 – 2026.10",
+        "teamSize": "5 people",
+        "tech": [
+          "LangGraph",
+          "GPT-4.1-mini",
+          "BGE-M3",
+          "FAISS",
+          "Tavily",
+          "LangSmith",
+          "Pydantic"
+        ],
         "achievements": [
-          "MAU 180K → 200K (10% increase)",
-          "Monthly events 3.6M → 4M (10% increase)"
+          "Rework time 953s → 126s (−87%); time to first report 28.1 → ~12 min",
+          "Retrieval eval on 30 questions: Hit@5 0.800 · MRR 0.600 (BGE-M3)"
         ],
         "detail": {
-          "overview": "Fully migrated ProBit Global's core SPOT trading platform from a 7-year-old qooxdoo-based legacy system to a modern React + TypeScript architecture. Maintained complex trading functionalities including real-time price data, order systems, and charts while significantly improving developer productivity and user experience.",
+          "overview": "The system evaluates KIVI (2-bit KV quantization, software) and ITME (CXL memory expansion, hardware) by technology readiness, market, stakeholders and domain, and generates a citation-checked PDF report. Built first as a fixed-order graph in the RAG Pipeline module, then converted into a multi-agent design where a Supervisor assigns work dynamically in the AI Agent module.",
           "tasks": [
-            "Optimized WebSocket-based real-time price/order book data processing and implemented reconnection logic",
-            "Established server state management and caching strategies using Tanstack Query",
-            "Designed and implemented dark mode and custom color theme system",
-            "Integrated and customized TradingView chart library",
-            "Implemented real-time order book data-based Depth Chart",
-            "Improved order form UX and implemented real-time validation logic",
-            "Implemented Mobile responsive layout and Simple/Pro mode switching feature"
-          ]
-        },
-        "images": [
-          "/images/projects/spot/spot_sell_coin.gif",
-          "/images/projects/spot/spot_market_depth.gif",
-          "/images/projects/spot/spot_info.gif",
-          "/images/projects/spot/spot_mobile_order.gif",
-          "/images/projects/spot/spot_mobile_simple_order.gif"
-        ]
-      },
-      "p2p": {
-        "title": "P2P Trading Service",
-        "description": "Designed and built real-time P2P trading platform for business expansion and competitive positioning",
-        "role": "Project Maintainer",
-        "period": "Jan 2025 - Jun 2025",
-        "teamSize": "FE 2, BE 2, Planning 2, UX/UI 2, PM 1",
-        "tech": ["Next.js", "WebSocket", "SSE", "Axios"],
-        "achievements": [
-          "Led entire frontend from design to release",
-          "Integrated multi-auth options (Passkey, OTP, etc.)"
-        ],
-        "detail": {
-          "overview": "Led the entire frontend development from design to release for a P2P trading platform enabling direct fiat and cryptocurrency transactions between users. Built a secure and reliable trading environment through real-time communication and multi-factor authentication systems.",
-          "tasks": [
-            "Established and applied Next.js-based SSR/ISR rendering strategies",
-            "Designed multi-communication architecture using WebSocket, SSE, and Axios",
-            "Developed entire frontend for ad creation/management, trading",
-            "Real-time chat feature (Sendbird)",
-            "Designed and implemented multi-factor 2FA system including Passkey and OTP",
-            "Designed UI/UX for trade status management and dispute resolution"
+            "Designed the web search node and the shared per-perspective subgraph; owned graph wiring and verification",
+            "Normalized the evidence-sufficiency judge, made it fail closed, and added a single refinement loop",
+            "Ran a 30-question retrieval evaluation to compare embedding models (BGE-M3 Hit@5 0.800 vs multilingual-e5-large 0.700)",
+            "Designed Supervisor routing, per-task parallel dispatch (Send), the State schema and reducers",
+            "Separated control state from data state; guaranteed termination with layered caps and fallbacks",
+            "Parallelized judging: test run 372.8s → 240.2s (−35.6%)"
           ]
         },
         "images": []
       },
-      "kyc": {
-        "title": "KYC Identity Verification",
-        "description": "Self-developed identity verification service using AWS Rekognition",
-        "role": "Solo Frontend Developer",
-        "period": "Nov 2025 - Dec 2025",
-        "teamSize": "FE 1, BE 1, Planning 1",
+      "gonggong": {
+        "title": "Gonggong Chwippo: Listed-Company Cross-Check Agent",
+        "description": "A conversational AI agent that cross-checks disclosures, financials, employment and news to give job seekers per-company 'points to check'",
+        "role": "Integration & verification (agent flow, cross-check logic, tests)",
+        "period": "2026.09",
+        "teamSize": "4 people",
         "tech": [
-          "AWS Rekognition",
-          "Amplify Liveness",
-          "Claude Code",
-          "Figma MCP"
+          "LangChain",
+          "GPT-4o",
+          "Pydantic",
+          "Gradio",
+          "OpenDART API",
+          "pytest"
         ],
         "achievements": [
-          "Planned and implemented 3-step verification flow",
-          "Applied AI tools for structure and design"
+          "End-to-end agent working on real public APIs",
+          "55 offline tests passing; follow-up answers in 3.3s with no external API calls"
         ],
         "detail": {
-          "overview": "Internalized the identity verification system that previously relied on external KYC solutions (Sumsub) using AWS Rekognition and Amplify Liveness. Actively utilized AI tools to improve development efficiency and designed a user-friendly verification flow.",
+          "overview": "The service cross-checks a listed company's disclosures (OpenDART), Financial Services Commission data, National Pension employment data and news to surface points that a company profile alone doesn't show. Classification runs on GPT-4o-mini and analysis on GPT-4o, with a human-in-the-loop approval step before saving results.",
           "tasks": [
-            "Implemented facial recognition authentication using AWS Rekognition Face Liveness",
-            "Developed ID card capture and OCR data extraction process",
-            "Planned and implemented 3-step verification flow [Identity verification → ID upload → Real-time face recognition and comparison]",
-            "Implemented session persistence and authentication flow across Infrastructure - Backend - Frontend",
-            "Introduced AI-based development workflow using Claude Code and Figma MCP"
+            "Assembled the agent flow and defined how tools connect (integration contract)",
+            "Implemented cross-source verification logic",
+            "Built fixture-based offline tests that reproduce results without external APIs"
           ]
         },
-        "images": ["/images/projects/kyc/kyc.gif"]
+        "images": []
       },
-      "eazel": {
-        "title": "Eazel Web Service Renewal",
-        "description": "Complete renewal from vanilla JS to Next.js to resolve tech debt and improve performance",
-        "role": "Frontend Developer · Tech Lead",
-        "period": "Jan 2023 - Dec 2023",
-        "teamSize": "FE 3, BE 2, UX/UI 1",
+      "solarcast": {
+        "title": "SolarCast: Solar Power Forecasting AIOps",
+        "description": "An MLOps pipeline that serves a forecasting model and decides on retraining, promotion and rollback when performance drifts",
+        "role": "Solo project (planning and implementation)",
+        "period": "2026.10",
         "tech": [
-          "Next.js",
-          "TypeScript",
-          "react-query",
-          "socket.io",
-          "highChart.js"
+          "FastAPI",
+          "TensorFlow (LSTM)",
+          "MLflow",
+          "Docker Compose",
+          "Pydantic"
         ],
         "achievements": [
-          "Search index 8K → 38K pages (475% increase)",
-          "Achieved FCP under 1 second"
+          "Full loop implemented: drift detection → retraining → reject/promote → rollback",
+          "Baseline RMSE 11,092 MWh (13.7% better than a naive forecast)"
         ],
         "detail": {
-          "overview": "Led the major tech stack transition in the complete renewal of Eazel's global art platform web service. Significantly improved search exposure and user experience through SEO optimization and performance improvements.",
+          "overview": "An LSTM model trained on 762 days of Korea Power Exchange (KPX) public data forecasts solar generation and is served with FastAPI, with versions managed by an MLflow model registry and a deployment gate. When forecast error (WAPE) exceeds 0.388, the pipeline treats it as drift, retrains, and promotes the new model only if it passes the gate.",
           "tasks": [
-            "Transitioned entire service architecture to Next.js",
-            "Improved code stability and developer productivity by introducing TypeScript",
-            "Implemented real-time chat functionality using WebSocket",
-            "Community system implementation (comments, likes, follow system)",
-            "Built payment system with Stripe SDK integration",
-            "Provided art price and trend analysis UI using highChart.js",
-            "Increased search index by 475% through SEO optimization",
-            "Achieved FCP under 1 second through performance optimization"
+            "Redesigned the class example (stock prediction) for the solar domain; preprocessed KPX data",
+            "Set up the MLflow deployment gate and model registry",
+            "Verified drift detection: WAPE 0.179 on a normal batch vs 0.460 on a drifted batch",
+            "Verified retraining decisions: spring-data model rejected; recovery-period model promoted to v2 (RMSE 7,716), then rolled back to v1",
+            "Compared model loading: first response 2.560s (lazy) → 0.642s (eager)"
+          ]
+        },
+        "images": []
+      },
+      "springrag": {
+        "title": "Spring AI RAG for Internal Docs Q&A",
+        "description": "Built the six RAG steps by hand and chose settings by measuring retrieval quality on a golden set",
+        "role": "Individual lab",
+        "period": "2026.08",
+        "tech": [
+          "Spring Boot",
+          "Spring AI",
+          "Java",
+          "OpenAI Embedding",
+          "SimpleVectorStore"
+        ],
+        "achievements": [
+          "9 of 10 golden-set questions answered correctly",
+          "Set the similarity threshold to 0.3 from the score distribution (answers 0.465 vs trap questions 0.433)"
+        ],
+        "detail": {
+          "overview": "Without the framework's built-in RAG helpers, I implemented split → embed → store → retrieve → prompt → answer myself. Answers return their sources and whether they are grounded.",
+          "tasks": [
+            "Hand-built RAG pipeline returning sources and a grounded flag",
+            "Experimented with 10 combinations of chunk size, overlap and threshold (threshold 0.7 → 1/10, 0.0 → 10/10)",
+            "Attributed failures to the retrieval step to decide what to improve",
+            "Order summary API (pair work): authorization inside the query and a fallback message when the model call fails"
+          ]
+        },
+        "images": []
+      },
+      "sllm": {
+        "title": "HR Policy sLLM Fine-tuning",
+        "description": "A policy Q&A chatbot built by LoRA-tuning a 1.5B small model, assuming company data cannot leave the premises",
+        "role": "Individual lab",
+        "period": "2026.08",
+        "tech": ["Qwen2.5-1.5B", "LoRA (PEFT)", "TRL", "PyTorch"],
+        "achievements": [
+          "Format compliance 0/20 → 19/20; safe answers to unseen questions 1/5 → 5/5",
+          "Showed the score gain came from format rather than content"
+        ],
+        "detail": {
+          "overview": "Applied LoRA SFT to Qwen2.5-1.5B-Instruct to build an HR policy Q&A model, with 582 training, 97 validation and 20 evaluation examples (15 seen policies + 5 unseen).",
+          "tasks": [
+            "Built the training data, including refusal answers for unanswerable questions",
+            "Trained with LoRA SFT and evaluated against the base model (total score 0.086 → 0.285; 18 wins, 1 tie, 1 loss on 20 questions)",
+            "Found through decoding experiments that score swings came from settings, not the model",
+            "Read the raw answers and documented the limits of the automatic metrics"
+          ]
+        },
+        "images": []
+      },
+      "hosilnote": {
+        "title": "Hosil Note: AI Repair Management for Rental Units",
+        "description": "Service planning and design where tenant request → landlord handling → vendor repair → record form one flow, and AI only recommends",
+        "role": "Solo mini project (planning and design)",
+        "period": "2026.09",
+        "tech": ["OpenAPI 3.0", "DBML", "PostgreSQL", "JWT"],
+        "achievements": [
+          "Designed 14 screens + 10 modals, 46 APIs and 17 tables",
+          "Stores AI recommendations and human decisions separately to measure adoption"
+        ],
+        "detail": {
+          "overview": "Landlords who rent out studio units themselves rely on texts, receipts and memory for repair history. I mapped the pain points of landlords, tenants and repair vendors, and designed four request steps (intake → decision → handoff → record) where AI assists at every step but people decide.",
+          "tasks": [
+            "Mapped pain points → features → screens; defined actors and permissions",
+            "Defined 7 request states, who changes them, and the matching APIs",
+            "Designed four AI steps with per-step fallbacks when AI fails",
+            "Door codes stored encrypted, shown only to the assigned vendor on the visit day, deleted on completion",
+            "Vendors join through expiring job links instead of signing up",
+            "Replacement reminders are rule-based date math, not AI"
           ]
         },
         "images": []
@@ -420,337 +369,293 @@
     }
   },
   "personalProjects": {
-    "title": "Side Projects",
-    "subtitle": "Personal learning and experimental projects.",
-    "viewMore": "View Details",
+    "title": "Research & Projects",
+    "subtitle": "Graduate and undergraduate research, and industry collaborations.",
+    "viewMore": "View details",
     "modal": {
       "overview": "Overview",
-      "tasks": "Key Features",
-      "techStack": "Tech Stack",
+      "tasks": "Key work",
+      "techStack": "Tech stack",
       "links": "Links"
     },
     "items": {
-      "my-text-to-sql-learner": {
-        "title": "Text-to-SQL - Natural Language SQL Converter",
-        "description": "AI service that converts natural language questions to SQL and visualizes query results as charts",
-        "role": "Personal Project",
-        "period": "2026",
-        "tech": [
-          "Next.js 16",
-          "React 19",
-          "TypeScript",
-          "Tailwind CSS 4",
-          "shadcn/ui",
-          "Vercel AI SDK",
-          "Gemini 2.5 Flash",
-          "Supabase",
-          "Recharts",
-          "Playwright"
-        ],
+      "thesis": {
+        "title": "Sparse Point Cloud Completion (Master's Thesis)",
+        "description": "A 3D completion framework that keeps shapes from collapsing on very sparse input by adding geometry-aware losses",
+        "role": "Master's thesis · Computer Graphics Lab",
+        "period": "2026.02",
+        "tech": ["PyTorch", "SeedFormer", "Point Cloud", "PCN Dataset"],
         "features": [
-          "Natural language to SQL conversion powered by Gemini 2.5 Flash",
-          "Automatic chart visualization based on query characteristics (Bar/Line/Pie)",
-          "SQL safety validation (only SELECT/WITH allowed, dangerous keywords blocked)"
+          "Chamfer Distance 25.40 → 19.20 on 256-point input (24.4% better)",
+          "F-Score 0.768 → 0.824",
+          "Small cost: +0.25M parameters, inference 18.4 → 24.1 ms"
         ],
         "detail": {
-          "overview": "An AI service that converts natural language questions into SQL queries, executes them on Supabase (PostgreSQL), and visualizes results as tables and charts. Features Text-to-SQL conversion using Gemini 2.5 Flash, automatic chart type selection (Bar/Line/Pie) based on query characteristics, and SQL safety validation (only SELECT/WITH permitted).",
+          "overview": "Transformer-based completion models such as SeedFormer learn only to minimize coordinate distance, so sharp edges and boundaries collapse when input is sparse. Without major architecture changes, I added two modules that teach geometry explicitly. (A Transformer-based Framework for Sparse Point Cloud Completion with Geometric Constraints)",
           "tasks": [
-            "Implemented Text-to-SQL conversion pipeline with Vercel AI SDK + Gemini 2.5 Flash",
-            "Unified AI calls, SQL validation, and DB execution via Server Actions",
-            "Built automatic chart type selection logic based on query result characteristics (Recharts)",
-            "Implemented SQL safety validation layer (only SELECT/WITH allowed, dangerous keywords and multi-statement queries blocked)",
-            "Designed database security with Supabase anon key + RLS (SELECT-only, system table access blocked)",
-            "Built Playwright E2E test suite"
+            "Distribution-Matching Loss (DML): aligns local point density with ground truth to stop points from clustering",
+            "Hole Uncertainty Weighting (HUW): finds empty regions of the input and raises their training weight",
+            "Compared against GRNet, SnowflakeNet and SeedFormer at 1,024 / 512 / 256 input points",
+            "Ablation: DML alone 22.10, HUW alone 21.50, both 19.20, showing the modules are complementary"
           ]
         },
-        "github": "https://github.com/junh0328/my-text-to-sql-learner",
-        "images": [
-          "/images/personal-projects/my-text-to-sql-learner/ask_to_db.gif"
-        ]
+        "images": []
       },
-      "my-claude-learner": {
-        "title": "AI Chatbot - Multi Provider SSE Streaming",
-        "description": "Multi Provider SSE streaming AI chatbot service using Claude, Gemini, and Groq",
-        "role": "Personal Project",
-        "period": "2026",
+      "anomaly": {
+        "title": "Semiconductor Process Anomaly Detection & Yield Root Cause",
+        "description": "Found that a 93%-accuracy model caught no defects at all, and redesigned the evaluation criteria first",
+        "role": "Individual research",
+        "period": "2025.10 – 2026.06",
         "tech": [
-          "Next.js 16",
-          "React 19",
-          "TypeScript",
-          "Tailwind CSS 4",
-          "shadcn/ui",
-          "Claude API",
-          "Gemini API",
-          "Groq API",
-          "SSE",
-          "Playwright"
+          "Python",
+          "scikit-learn",
+          "XGBoost",
+          "Isolation Forest",
+          "SMOTE",
+          "SHAP"
         ],
         "features": [
-          "Real-time streaming chat with SSE",
-          "Multi Provider strategy (Claude, Gemini, Groq)",
-          "Chain fallback system based on Rate Limit (Gemini → Groq → Claude)"
+          "Redefined evaluation around Recall instead of accuracy (Recall 0 → 0.381)",
+          "Showed the 13 missed defects were latent defects within normal sensor ranges",
+          "Identified the top 10 yield-impacting variables and generated PDF reports automatically"
         ],
         "detail": {
-          "overview": "An AI chatbot service that streams responses from various LLM APIs (Claude, Gemini, Groq) via SSE (Server-Sent Events). Features a chain fallback system that automatically switches from Gemini → Groq → Claude when rate limits are hit, along with web search integration, chat history, and code syntax highlighting.",
+          "overview": "The SECOM process sensor data (1,567 samples, 590 sensors) has only 6.6% defects, a 14:1 imbalance where predicting 'normal' for everything already scores 93% accuracy. I rebuilt the evaluation around the manufacturing view that missing a defect is worse than a false alarm.",
           "tasks": [
-            "Implemented SSE streaming pipeline with fetch + ReadableStream",
-            "Designed Multi Provider strategy supporting Claude, Gemini, and Groq APIs",
-            "Implemented chain fallback system based on Rate Limit (429) (Gemini → Groq → Claude)",
-            "Applied proxy pattern using Next.js API Routes for API key protection",
-            "Integrated web search (Claude web_search, Gemini google_search)",
-            "Built Playwright E2E test suite (38 test cases)"
+            "Cleaned missing and zero-variance features (466 of 590 kept); SMOTE oversampled training defects from 83 to 1,170",
+            "XGBoost + Isolation Forest ensemble, 405 GridSearchCV combinations, threshold tuned from 0.5 to 0.25",
+            "Mean sensor deviation 2.14 for detected vs 0.10 for missed defects: a data limit, not a tuning problem",
+            "Follow-up: XGBoost yield model (ROC-AUC 0.696) + SHAP on 104 defects (top variable F59, SHAP 0.400)",
+            "Built a single pipeline from preprocessing to modeling, prediction and PDF reporting"
           ]
         },
-        "github": "https://github.com/junh0328/my-claude-learner",
-        "images": [
-          "/images/personal-projects/my-claude-learner/claude-learner.gif"
-        ]
+        "images": []
       },
-      "my-agentic-ai": {
-        "title": "Review Sentiment Analysis Agent AI",
-        "description": "Agent AI service for review text sentiment analysis using Google Gemini and Claude API",
-        "role": "Personal Project",
+      "trademark": {
+        "title": "AI Trademark Registrability Assessment",
+        "description": "Moved a trademark examiner's reasoning order into LLM prompts with a patent attorney, and found the cases the model handles poorly",
+        "role": "Research · with a patent attorney",
+        "period": "2024.08 – 2024.12",
+        "tech": [
+          "GPT-4o",
+          "GPT-3.5 Turbo",
+          "Llama",
+          "Prompt Engineering",
+          "Python"
+        ],
+        "features": [
+          "Chain-of-Thought assessment that follows the examination flow",
+          "F1 71% in K-fold cross-validation",
+          "Identified 24% of data as unsuitable for the approach"
+        ],
+        "detail": {
+          "overview": "Trademark examination is long and varies by examiner, making registrability hard to predict before filing. I structured KIPO examination guidelines and case law by decision factor, and designed step-by-step prompts that judge in the order generic term → customary mark → distinctiveness.",
+          "tasks": [
+            "Structured examination guidelines and case law by decision factor",
+            "Converted legal text into model-ready input; designed few-shot templates",
+            "Cross-validated GPT-4o, GPT-3.5 Turbo and Llama",
+            "Categorized errors to find limits such as composite figurative marks → proposed an OCR-based multimodal extension"
+          ]
+        },
+        "images": []
+      },
+      "gs3d": {
+        "title": "3D Gaussian Splatting Alignment Error Root Cause",
+        "description": "Pinpointed a recurring alignment error in a game studio–SNU–Hanyang industry project with numbers",
+        "role": "Researcher · KongStudio, SNU, Hanyang",
+        "period": "2024.03 – 2024.12",
+        "tech": ["Python", "COLMAP", "3D Gaussian Splatting", "Unreal Engine"],
+        "features": [
+          "Traced the cause to COLMAP coordinate normalization",
+          "Turned qualitative errors into numbers to settle a three-team debate",
+          "Led weekly meetings and issue tracking between Korean and US researchers"
+        ],
+        "detail": {
+          "overview": "When objects were trained separately for real-time rendering of game scenes with 3D Gaussian Splatting, an unexplained alignment error kept recurring. With each team blaming a different cause, I ran every possible combination and measured where the error appeared.",
+          "tasks": [
+            "Controlled variables by applying ground-truth camera parameters and unifying dataset settings",
+            "Ran every simulation combination and quantified where and how large the error was",
+            "Aligned coordinate systems with Python matrix ops and the Umeyama transform; fixed the COLMAP normalization anchor",
+            "Proposed a compromise by comparing each team's fix on estimated effort and rendering efficiency"
+          ]
+        },
+        "images": []
+      },
+      "tcad": {
+        "title": "Si Photonics Modulator Simulation Automation",
+        "description": "Turned hand-run device simulations over hundreds of conditions into an automatic run-and-compare pipeline",
+        "role": "Undergraduate researcher · Advanced Semiconductor Devices Lab",
+        "period": "2021.07 – 2022.01",
+        "tech": ["Python", "Sentaurus TCAD", "Lumerical MODE"],
+        "features": [
+          "Automatically linked TCAD process/device simulation with optical mode analysis",
+          "Confirmed about 70% higher modulation efficiency for a strained SiGe L-shape structure",
+          "Presented at KCS 2022 (Korean Conference on Semiconductors)"
+        ],
+        "detail": {
+          "overview": "Finding the best Mach-Zehnder modulator structure on Si photonics meant simulating hundreds of doping, thickness and strain conditions, each taking tens of minutes. I connected the two simulators with Python and compared results automatically.",
+          "tasks": [
+            "Scripted Sentaurus TCAD (process and bias) and Lumerical MODE (optical modes)",
+            "Batch-simulated three structures (Si LPN / Si LSPN / SiGe LSPN) across bias voltages",
+            "Auto-extracted XML results → normalized loss and efficiency → compared by condition",
+            "Chose the best structure from Δneff vs voltage characteristics"
+          ]
+        },
+        "images": []
+      },
+      "torus": {
+        "title": "Quantitative Evaluation of Torus Fitting on Voxel Point Clouds",
+        "description": "Approximated complex surfaces with torus patches and measured how parameters affect the result",
+        "role": "Research · presented at MITA 2025",
         "period": "2025",
-        "tech": [
-          "Next.js 16",
-          "React 19",
-          "TypeScript",
-          "shadcn/ui",
-          "Tailwind CSS",
-          "Framer Motion",
-          "Google Gemini API",
-          "Claude API"
-        ],
+        "tech": ["Python", "Point Cloud", "PCA"],
         "features": [
-          "Review text sentiment analysis (positive/negative/neutral)",
-          "Sentiment score ranging from -1.0 to 1.0",
-          "UI auto-generation using Figma MCP"
+          "Converted surfaces to voxel point clouds and fitted local torus patches",
+          "54 settings tested: mean error 0.0508 (best 0.0332)",
+          "Built an evaluation frame from parameter correlation analysis"
         ],
         "detail": {
-          "overview": "An Agent AI service that analyzes review text sentiment and automatically generates appropriate responses using Google Gemini and Claude API. Built based on the 'AWS Agentic AI Review Management Automation' seminar from AWSKRUG.",
+          "overview": "I converted complex surfaces into voxel-based point clouds and fitted a torus patch to each local region. Beyond modeling, I built a frame that compares fitting accuracy numerically across settings.",
           "tasks": [
-            "Implemented review text input and sentiment analysis",
-            "Auto-response generation using AI models (Gemini, Claude)",
-            "Built design-based code auto-generation workflow using Figma MCP",
-            "Implemented responsive UI with shadcn/ui and Tailwind CSS"
+            "Aligned patch orientation with PCA and curvature; computed fitting accuracy",
+            "Collected mean, variance and error rate for 54 settings",
+            "Analyzed which factors drive the result with a parameter correlation heatmap"
           ]
         },
-        "github": "https://github.com/junh0328/my-agentic-ai",
-        "images": [
-          "/images/personal-projects/my-agentic-ai/agentic-ai.gif",
-          "/images/personal-projects/my-agentic-ai/figma_make_default.png",
-          "/images/personal-projects/my-agentic-ai/figma_make_code_download.png"
-        ]
-      },
-      "my-liveness": {
-        "title": "AWS Rekognition Face Liveness Demo",
-        "description": "Face Liveness authentication demo application using AWS Rekognition and Amplify",
-        "role": "Personal Project",
-        "period": "2025",
-        "tech": [
-          "Next.js 16",
-          "React 19",
-          "TypeScript",
-          "Tailwind CSS 4",
-          "AWS Amplify",
-          "AWS Rekognition",
-          "Zod"
-        ],
-        "features": [
-          "Real-time face recognition and Liveness verification",
-          "AWS Amplify UI component integration",
-          "Authentication result visualization"
-        ],
-        "detail": {
-          "overview": "A demo application for testing and learning AWS Rekognition Face Liveness feature. Developed to pre-validate AWS service integration methods before the company's KYC project.",
-          "tasks": [
-            "AWS Amplify setup and Rekognition Face Liveness integration",
-            "Real-time camera stream processing and face recognition implementation",
-            "Liveness verification result handling and UI feedback",
-            "Input data validation using Zod"
-          ]
-        },
-        "github": "https://github.com/junh0328/my-liveness",
-        "images": ["/images/personal-projects/my-liveness/record_720.gif"]
-      },
-      "my-tanstack-query-strategy": {
-        "title": "TanStack Query v5 Strategy Guide",
-        "description": "Comparative analysis of three data fetching strategies (CSR, SSR, Streaming) with TanStack Query in Next.js App Router",
-        "role": "Personal Project",
-        "period": "2025",
-        "tech": ["Next.js", "TanStack Query v5", "React 18+", "TypeScript"],
-        "features": [
-          "CSR vs SSR vs Streaming strategy comparison",
-          "QueryClient server/client separation pattern",
-          "useQuery vs useSuspenseQuery selection criteria"
-        ],
-        "detail": {
-          "overview": "A strategy guide and example project for effectively utilizing TanStack Query v5 in Next.js App Router environment. Documented the working principles and selection criteria for three data fetching strategies: CSR, SSR+Hydration, and Streaming.",
-          "tasks": [
-            "QueryClient server/client separation pattern implementation",
-            "Comparative analysis of CSR, SSR+Hydration, Streaming strategies",
-            "useQuery vs useSuspenseQuery selection criteria documentation",
-            "Server cache transfer pattern implementation using HydrationBoundary"
-          ]
-        },
-        "github": "https://github.com/junh0328/my-tanstack-query-strategy",
-        "images": [
-          "/images/personal-projects/my-tanstack-query-strategy/tanstack.gif"
-        ]
-      },
-      "my-monorepo": {
-        "title": "Local Weather Service",
-        "description": "Weather service built with pnpm + Turborepo-based monorepo structure",
-        "role": "Personal Project",
-        "period": "2025",
-        "tech": [
-          "Next.js 16",
-          "React 19",
-          "Vite 6",
-          "Tailwind CSS 4",
-          "Turborepo",
-          "shadcn/ui"
-        ],
-        "features": [
-          "Monorepo structure design (Turborepo)",
-          "Shared UI package separation (@repo/ui)",
-          "Real-time weather information"
-        ],
-        "detail": {
-          "overview": "A learning and practice project for monorepo structure using Turborepo. Designed with multiple applications based on Next.js and Vite sharing a common UI package. Learned monorepo web deployment process through Vercel.",
-          "tasks": [
-            "Monorepo structure design using Turborepo",
-            "Common UI component package (@repo/ui) implementation",
-            "Next.js web application and Vite-based app implementation",
-            "Weather API integration and real-time information display"
-          ]
-        },
-        "github": "https://github.com/junh0328/my-monorepo",
-        "images": ["/images/personal-projects/my-monorepo/weather.gif"]
+        "images": []
       }
     }
   },
   "skills": {
     "title": "Skills",
     "categories": {
-      "core": {
-        "title": "Core",
-        "items": ["React.js", "Next.js", "TypeScript", "Angular.js"]
+      "planning": {
+        "title": "Planning & Design",
+        "items": [
+          "Service planning",
+          "User flow design",
+          "Pain point analysis",
+          "API specs (OpenAPI)",
+          "DB modeling (DBML)",
+          "Agile · Scrum"
+        ]
+      },
+      "ai": {
+        "title": "AI · LLM",
+        "items": [
+          "LangChain · LangGraph",
+          "RAG",
+          "Prompt Engineering",
+          "LoRA fine-tuning",
+          "Spring AI",
+          "OpenAI API",
+          "LangSmith"
+        ]
       },
       "data": {
-        "title": "Data & Communication",
+        "title": "Data Analysis",
         "items": [
-          "Tanstack Query",
-          "WebSocket",
-          "SSE",
-          "Axios",
-          "Zod",
-          "Redux Toolkit",
-          "Zustand"
+          "Python",
+          "pandas",
+          "scikit-learn",
+          "XGBoost",
+          "SHAP",
+          "SQL (PostgreSQL)",
+          "Statistical testing"
         ]
       },
-      "styling": {
-        "title": "Styling",
+      "dev": {
+        "title": "Development & Ops",
         "items": [
-          "shadcn/ui",
-          "MUI",
-          "Styled-Components",
-          "Emotion",
-          "Tailwind CSS"
+          "FastAPI",
+          "Spring Boot",
+          "MLflow",
+          "Docker",
+          "pytest",
+          "Git · GitHub"
         ]
       },
-      "devops": {
-        "title": "DevOps & Monitoring",
-        "items": ["Git", "Sentry", "Google Analytics"]
-      },
-      "productivity": {
-        "title": "Productivity",
-        "items": ["Lokalise", "Claude Code", "Figma MCP"]
+      "research": {
+        "title": "Research Tools",
+        "items": [
+          "PyTorch",
+          "Point Cloud",
+          "COLMAP",
+          "Sentaurus TCAD",
+          "Lumerical"
+        ]
       }
     }
   },
   "education": {
     "title": "Education",
-    "university": "Yongin University",
-    "major": "Management Information Systems",
-    "period": "Mar 2016 - Feb 2022",
-    "gpa": "3.95/4.5",
-    "status": "Graduated",
-    "viewCourses": "View Courses",
-    "hideCourses": "Hide Courses",
-    "courses": {
-      "basic": {
-        "title": "Foundation",
-        "items": [
-          "Web Programming Basics",
-          "Management Information Systems",
-          "e-Business Administration"
+    "viewCourses": "View courses",
+    "hideCourses": "Hide courses",
+    "degrees": {
+      "master": {
+        "school": "Hanyang University Graduate School",
+        "major": "M.S. in Computer Science & Engineering (Bio-AI Convergence)",
+        "period": "2023.09 - 2026.02",
+        "status": "Graduated",
+        "gpa": "4.15 / 4.5",
+        "note": "Computer Graphics Lab · Advisor: Prof. Q Youn Hong",
+        "courses": [
+          "Machine Learning",
+          "AI Optimization",
+          "Topics in Computer Graphics",
+          "Modeling & Simulation for CAD",
+          "Mobile System Security",
+          "Medical Data Security",
+          "Introduction to IoT",
+          "Tech Startups & Commercialization Strategy"
         ]
       },
-      "major": {
-        "title": "Major",
-        "items": [
-          "Database",
-          "Java Programming",
-          "Database Programming",
-          "Advanced Java Programming",
-          "Business & AI",
-          "Web Programming",
-          "E-Commerce",
-          "Business & Big Data",
-          "MIS Project",
-          "Mobile Programming",
-          "Visual Programming",
-          "Advanced Web Programming",
-          "Internet Marketing",
-          "Business & IoT"
-        ]
+      "bachelor": {
+        "school": "Hanyang University ERICA",
+        "major": "Photonics & Nanoelectronics · Double major in Computer Science",
+        "period": "2017.03 - 2023.08",
+        "status": "Graduated"
+      },
+      "highschool": {
+        "school": "Gwacheon Foreign Language High School",
+        "major": "French",
+        "period": "2012.03 - 2015.02",
+        "status": "Graduated"
       }
     }
   },
   "certifications": {
-    "title": "Certifications & Training",
+    "title": "Awards & Training",
     "items": [
       {
-        "name": "AI-POT (AI Prompt Proficiency) Level 1",
-        "org": "KPC Korea Productivity Center",
-        "date": "Jan 2026"
+        "name": "KIISC Risk Management (RMF) & Security Evaluation Workshop",
+        "org": "Korea Institute of Information Security & Cryptology",
+        "date": "2024.09"
       },
       {
-        "name": "AWS Foundations of Prompt Engineering",
-        "org": "AWS",
-        "date": "Nov 2025"
+        "name": "AIAI Workshop 2024 (completed)",
+        "org": "The AI Lab",
+        "date": "2024.02"
       },
       {
-        "name": "AWS Technical Essentials",
-        "org": "AWS",
-        "date": "Nov 2025"
+        "name": "LG Aimers 2nd cohort (Data Intelligence, completed)",
+        "org": "LG AI Research",
+        "date": "2023.04"
       },
       {
-        "name": "Review Management Automation with AWS Agentic AI",
-        "org": "AWSKRUG",
-        "date": "Nov 2025"
+        "name": "10th K-Hackathon, Seoul-region finalist",
+        "org": "Software Education Innovation Center",
+        "date": "2022.08"
       },
       {
-        "name": "JavaScript Algorithms & Data Structures Masterclass",
-        "org": "Udemy",
-        "date": "Jul 2024"
+        "name": "Campus Patent Universiade participant (patent strategy · commercialization)",
+        "org": "KIPO · KIPA",
+        "date": "2021"
       },
       {
-        "name": "Frontend Testing & Design Offline Commit",
-        "org": "Goorm",
-        "date": "Mar 2024"
-      },
-      {
-        "name": "Building Career as Product Developer Agora",
-        "org": "Toss",
-        "date": "Oct 2023"
-      },
-      {
-        "name": "Web Development Course Completion",
-        "org": "Korea IT Academy",
-        "date": "Feb 2020",
-        "description": "HTML/CSS/JS/JQuery/PHP/Node.js/MySQL/React.js"
+        "name": "SID Award, SID Audition finals",
+        "org": "Hanyang ERICA Startup Education Center",
+        "date": "2021.06"
       }
     ]
   },
@@ -758,8 +663,12 @@
     "title": "Languages",
     "items": [
       {
-        "name": "English",
-        "level": "Conversational"
+        "name": "TOEIC",
+        "level": "890 (2025.07)"
+      },
+      {
+        "name": "OPIc",
+        "level": "IH (2025.08)"
       }
     ]
   },
@@ -770,7 +679,7 @@
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Let's Work Together",
+    "subtitle": "Feel free to reach out",
     "links": {
       "github": "GitHub",
       "linkedin": "LinkedIn",
@@ -779,7 +688,7 @@
     }
   },
   "footer": {
-    "copyright": "Junhee Lee. All rights reserved.",
+    "copyright": "Jaeung Jeong. All rights reserved.",
     "builtWith": "Built with Next.js and shadcn/ui"
   },
   "theme": {

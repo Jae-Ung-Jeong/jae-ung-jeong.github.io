@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -11,55 +10,40 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from '@/components/ui/collapsible';
-import { Calendar, Briefcase, ChevronDown, Users } from 'lucide-react';
+import { Building2, Calendar, ChevronDown, Users } from 'lucide-react';
 import { SpotlightCard } from '@/components/common/spotlight-card';
-import {
-  formatDuration,
-  getCompanyDuration,
-  getTotalCareerDuration,
-} from '@/lib/duration';
+import { formatDuration, getPeriodDuration } from '@/lib/duration';
 
-// Details labels for each position
-const detailsConfig: Record<string, Record<string, string[]>> = {
-  dnsever: {
-    dev: ['kyc', 'ai_docs', 'spot', 'maintenance'],
-    p2p: ['overview', 'process', 'communication', 'features', 'security'],
-    spot: ['migration', 'socket', 'ux'],
-  },
-  eazel: {
-    web2: ['admin', 'optimization', 'seo'],
-    renewal: ['tech', 'features', 'monitoring'],
-    web1: ['gucci', 'study', 'typescript'],
-  },
-};
+interface Position {
+  team: string;
+  period: string;
+  teamSize?: string;
+  projects: string[];
+  details?: Record<string, string[]>;
+}
+
+interface Org {
+  name: string;
+  type: string;
+  period: string;
+  positions: Record<string, Position>;
+}
 
 function DetailsCollapsible({
-  companyKey,
-  positionKey,
-  t,
+  details,
+  showLabel,
+  hideLabel,
 }: {
-  companyKey: string;
-  positionKey: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  t: any;
+  details?: Record<string, string[]>;
+  showLabel: string;
+  hideLabel: string;
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const detailKeys = detailsConfig[companyKey]?.[positionKey];
-  if (!detailKeys || detailKeys.length === 0) return null;
-
-  // Check if details exist in translations
-  let hasDetails = false;
-  try {
-    const details = t.raw(
-      `companies.${companyKey}.positions.${positionKey}.details`
-    );
-    hasDetails = details && Object.keys(details).length > 0;
-  } catch {
-    return null;
-  }
-
-  if (!hasDetails) return null;
+  const groups = Object.values(details ?? {}).filter(
+    (items) => Array.isArray(items) && items.length > 0
+  );
+  if (groups.length === 0) return null;
 
   return (
     <Collapsible open={isOpen} onOpenChange={setIsOpen} className='mt-3'>
@@ -69,35 +53,21 @@ function DetailsCollapsible({
             isOpen ? 'rotate-180' : ''
           }`}
         />
-        <span>{isOpen ? t('hideDetails') : t('showDetails')}</span>
+        <span>{isOpen ? hideLabel : showLabel}</span>
       </CollapsibleTrigger>
       <CollapsibleContent className='mt-3 p-3 liquid-glass-subtle space-y-3'>
-        {detailKeys.map((detailKey) => {
-          let items: string[] = [];
-          try {
-            items = t.raw(
-              `companies.${companyKey}.positions.${positionKey}.details.${detailKey}`
-            ) as string[];
-          } catch {
-            return null;
-          }
-
-          if (!items || !Array.isArray(items) || items.length === 0)
-            return null;
-
-          return (
-            <div
-              key={detailKey}
-              className='pl-3 border-l border-[var(--timeline-line)] space-y-1'
-            >
-              {items.map((item: string, i: number) => (
-                <p key={i} className='text-xs text-muted-foreground'>
-                  • {item}
-                </p>
-              ))}
-            </div>
-          );
-        })}
+        {groups.map((items, groupIndex) => (
+          <div
+            key={groupIndex}
+            className='pl-3 border-l border-[var(--timeline-line)] space-y-1'
+          >
+            {items.map((item, i) => (
+              <p key={i} className='text-xs text-muted-foreground'>
+                • {item}
+              </p>
+            ))}
+          </div>
+        ))}
       </CollapsibleContent>
     </Collapsible>
   );
@@ -107,31 +77,10 @@ export function Experience() {
   const t = useTranslations('experience');
   const locale = useLocale();
 
-  // 실시간 경력 기간 계산
-  const totalCareerDuration = formatDuration(getTotalCareerDuration(), locale);
-
-  // 회사별 재직 기간 동적 계산
-  const getCompanyDurationText = (companyKey: string) => {
-    return formatDuration(getCompanyDuration(companyKey), locale);
-  };
-
-  const companies = [
-    {
-      key: 'dnsever',
-      logo: '/images/logos/dns_ever_logo.png',
-      logoAlt: 'D&S Ever',
-      positions: ['dev', 'p2p', 'spot'],
-    },
-    {
-      key: 'eazel',
-      logo: '/images/logos/eazel.jpeg',
-      logoAlt: 'Eazel',
-      positions: ['web2', 'renewal', 'web1'],
-    },
-  ];
+  const orgs = Object.entries(t.raw('orgs') as Record<string, Org>);
 
   return (
-    <section id='experience' className='py-20 md:py-32'>
+    <section id='activities' className='py-20 md:py-32 scroll-mt-28'>
       <div className='container mx-auto px-4'>
         {/* Section Header */}
         <motion.div
@@ -142,51 +91,43 @@ export function Experience() {
           className='text-center mb-16'
         >
           <h2 className='text-3xl md:text-4xl font-bold mb-4'>{t('title')}</h2>
-          <div className='inline-flex items-center gap-2 px-4 py-2 liquid-glass-subtle'>
-            <Briefcase className='h-4 w-4 text-primary' />
-            <span className='text-sm font-medium'>{totalCareerDuration}</span>
-          </div>
+          <p className='text-xl text-muted-foreground'>{t('subtitle')}</p>
         </motion.div>
 
         {/* Timeline */}
         <div className='max-w-4xl mx-auto space-y-8'>
-          {companies.map((company, companyIndex) => (
+          {orgs.map(([orgKey, org], orgIndex) => (
             <motion.div
-              key={company.key}
+              key={orgKey}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: companyIndex * 0.1 }}
+              transition={{ duration: 0.5, delay: orgIndex * 0.1 }}
               viewport={{ once: true }}
             >
               <SpotlightCard>
                 <Card className='overflow-hidden liquid-glass-interactive'>
-                  {/* Company Header */}
+                  {/* Org Header */}
                   <CardHeader className='bg-gradient-to-r from-primary/5 to-transparent'>
                     <div className='flex flex-col md:flex-row md:items-center md:justify-between gap-4'>
                       <div className='flex items-center gap-3'>
-                        <div className='relative w-9 h-9 rounded-lg overflow-hidden liquid-glass-subtle'>
-                          <Image
-                            src={company.logo}
-                            alt={company.logoAlt}
-                            fill
-                            sizes='36px'
-                            className='object-contain'
-                          />
+                        <div className='p-2 rounded-lg liquid-glass-subtle'>
+                          <Building2 className='h-5 w-5 text-point' />
                         </div>
                         <div>
-                          <CardTitle className='text-xl'>
-                            {t(`companies.${company.key}.name`)}
-                          </CardTitle>
+                          <CardTitle className='text-xl'>{org.name}</CardTitle>
                           <p className='text-sm text-muted-foreground'>
-                            {t(`companies.${company.key}.type`)}
+                            {org.type}
                           </p>
                         </div>
                       </div>
                       <div className='flex items-center gap-2 text-sm text-muted-foreground'>
                         <Calendar className='h-4 w-4' />
-                        <span>{t(`companies.${company.key}.period`)}</span>
+                        <span>{org.period}</span>
                         <Badge variant='glass'>
-                          {getCompanyDurationText(company.key)}
+                          {formatDuration(
+                            getPeriodDuration(org.period),
+                            locale
+                          )}
                         </Badge>
                       </div>
                     </div>
@@ -195,69 +136,48 @@ export function Experience() {
                   {/* Positions */}
                   <CardContent className='pt-6'>
                     <div className='space-y-6'>
-                      {company.positions.map((position) => (
-                        <div
-                          key={position}
-                          className='relative pl-6 border-l-2 border-[var(--timeline-line)]'
-                        >
-                          {/* Timeline dot */}
-                          <div className='absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-[var(--timeline-dot-bg)] border-2 border-[var(--timeline-dot-border)] shadow-sm' />
+                      {Object.entries(org.positions).map(
+                        ([positionKey, position]) => (
+                          <div
+                            key={positionKey}
+                            className='relative pl-6 border-l-2 border-[var(--timeline-line)]'
+                          >
+                            {/* Timeline dot */}
+                            <div className='absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-[var(--timeline-dot-bg)] border-2 border-[var(--timeline-dot-border)] shadow-sm' />
 
-                          <div className='mb-2'>
-                            <h3 className='font-semibold'>
-                              {t(
-                                `companies.${company.key}.positions.${position}.team`
+                            <div className='mb-2'>
+                              <h3 className='font-semibold'>{position.team}</h3>
+                              <p className='text-sm text-muted-foreground'>
+                                {position.period}
+                              </p>
+                              {position.teamSize && (
+                                <div className='flex items-center gap-1 mt-1 text-xs text-muted-foreground'>
+                                  <Users className='h-3 w-3' />
+                                  <span>{position.teamSize}</span>
+                                </div>
                               )}
-                            </h3>
-                            <p className='text-sm text-muted-foreground'>
-                              {t(
-                                `companies.${company.key}.positions.${position}.period`
-                              )}
-                            </p>
-                            {(() => {
-                              try {
-                                const teamSize = t.raw(
-                                  `companies.${company.key}.positions.${position}.teamSize`
-                                );
-                                if (typeof teamSize === 'string') {
-                                  return (
-                                    <div className='flex items-center gap-1 mt-1 text-xs text-muted-foreground'>
-                                      <Users className='h-3 w-3' />
-                                      <span>{teamSize}</span>
-                                    </div>
-                                  );
-                                }
-                                return null;
-                              } catch {
-                                return null;
-                              }
-                            })()}
+                            </div>
+
+                            <ul className='space-y-2'>
+                              {position.projects.map((project, i) => (
+                                <li
+                                  key={i}
+                                  className='flex items-start gap-2 text-sm text-muted-foreground'
+                                >
+                                  <span className='mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/50 shrink-0' />
+                                  <span>{project}</span>
+                                </li>
+                              ))}
+                            </ul>
+
+                            <DetailsCollapsible
+                              details={position.details}
+                              showLabel={t('showDetails')}
+                              hideLabel={t('hideDetails')}
+                            />
                           </div>
-
-                          <ul className='space-y-2'>
-                            {(
-                              t.raw(
-                                `companies.${company.key}.positions.${position}.projects`
-                              ) as string[]
-                            ).map((project: string, i: number) => (
-                              <li
-                                key={i}
-                                className='flex items-start gap-2 text-sm text-muted-foreground'
-                              >
-                                <span className='mt-1.5 w-1.5 h-1.5 rounded-full bg-primary/50 shrink-0' />
-                                <span>{project}</span>
-                              </li>
-                            ))}
-                          </ul>
-
-                          {/* Details Collapsible */}
-                          <DetailsCollapsible
-                            companyKey={company.key}
-                            positionKey={position}
-                            t={t}
-                          />
-                        </div>
-                      ))}
+                        )
+                      )}
                     </div>
                   </CardContent>
                 </Card>

@@ -6,50 +6,28 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowUpRight, Github } from 'lucide-react';
+import { ArrowUpRight, FlaskConical } from 'lucide-react';
 import { PersonalProjectModal } from './personal-project-modal';
 import { SpotlightCard } from '@/components/common/spotlight-card';
 import * as gtag from '@/lib/gtag';
+
+const cardStyles = [
+  { cardVariant: 'editorial', spotlightColor: 'rgba(110, 140, 255, 0.16)' },
+  { cardVariant: 'glass', spotlightColor: 'rgba(110, 205, 255, 0.14)' },
+  { cardVariant: 'solid', spotlightColor: 'rgba(140, 230, 200, 0.14)' },
+  { cardVariant: 'outline', spotlightColor: 'rgba(246, 180, 120, 0.12)' },
+] as const;
 
 export function PersonalProjects() {
   const t = useTranslations('personalProjects');
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
 
-  const projects = [
-    {
-      key: 'my-text-to-sql-learner',
-      cardVariant: 'editorial' as const,
-      spotlightColor: 'rgba(90, 190, 255, 0.14)',
-    },
-    {
-      key: 'my-claude-learner',
-      cardVariant: 'glass' as const,
-      spotlightColor: 'rgba(120, 140, 255, 0.14)',
-    },
-    {
-      key: 'my-agentic-ai',
-      cardVariant: 'solid' as const,
-      spotlightColor: 'rgba(165, 140, 255, 0.14)',
-    },
-    {
-      key: 'my-liveness',
-      cardVariant: 'outline' as const,
-      spotlightColor: 'rgba(120, 220, 190, 0.12)',
-    },
-    {
-      key: 'my-tanstack-query-strategy',
-      cardVariant: 'glass' as const,
-      spotlightColor: 'rgba(150, 180, 255, 0.14)',
-    },
-    {
-      key: 'my-monorepo',
-      cardVariant: 'solid' as const,
-      spotlightColor: 'rgba(120, 205, 255, 0.12)',
-    },
-  ];
+  const projects = Object.keys(t.raw('items') as Record<string, unknown>).map(
+    (key, index) => ({ key, ...cardStyles[index % cardStyles.length] })
+  );
 
   return (
-    <section id='personal-projects' className='py-20 md:py-32 scroll-mt-28'>
+    <section id='research' className='py-20 md:py-32 scroll-mt-28'>
       <div className='container mx-auto px-4'>
         {/* Section Header */}
         <motion.div
@@ -110,7 +88,7 @@ export function PersonalProjects() {
                     )}
                     <div className='absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-transparent' />
                     <div className='absolute bottom-3 left-4 inline-flex items-center gap-2 rounded-full bg-black/35 px-2.5 py-1 text-[11px] text-white/90 backdrop-blur-sm'>
-                      <Github className='h-3.5 w-3.5' />
+                      <FlaskConical className='h-3.5 w-3.5' />
                       <span className='line-clamp-1'>
                         {t(`items.${project.key}.period`)}
                       </span>
@@ -121,7 +99,7 @@ export function PersonalProjects() {
                     <div className='flex items-start justify-between'>
                       <div className='flex items-center gap-3'>
                         <div className='flex items-center justify-center w-10 h-10 rounded-full border border-border/70 bg-secondary/40'>
-                          <Github className='h-5 w-5 text-muted-foreground' />
+                          <FlaskConical className='h-5 w-5 text-muted-foreground' />
                         </div>
                         <div>
                           <CardTitle className='text-lg leading-snug group-hover:text-primary transition-colors'>

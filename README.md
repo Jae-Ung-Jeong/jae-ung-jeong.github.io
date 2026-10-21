@@ -7,15 +7,13 @@
 1. `src/config/site.ts`: 이름, 도메인, GitHub/LinkedIn/이메일/블로그 링크, GA 측정 ID, 블로그 RSS, 이력서 경로 (비워두면 해당 항목은 숨겨짐)
 2. `resume/`에 이력서 PDF를 넣고 Claude Code에 "이력서 기준으로 포트폴리오 내용 업데이트해줘" 요청 (`CLAUDE.md` 워크플로우 참고, `resume/`는 git에 올라가지 않음)
 3. `src/i18n/messages/ko.json`, `en.json`: 섹션 본문
-4. `public/images/`: 프로젝트 이미지와 로고, `public/title_image.png`: OG 이미지
+4. `public/images/`: 프로젝트 이미지 (각 항목의 `images` 배열에 경로 추가)
 
 ## 배포 (GitHub Pages)
 
 - 정적 export(`output: 'export'`)로 `out/`에 빌드되고, `main`에 push하면 `.github/workflows/deploy-pages.yml`이 https://jae-ung-jeong.github.io 에 배포합니다.
 - 최초 1회: GitHub 레포 `Jae-Ung-Jeong.github.io` 생성 → Settings → Pages → Source를 **GitHub Actions**로 설정
 - 정적 호스팅이라 API Route와 미들웨어는 쓸 수 없고, 블로그 RSS는 빌드 시점에만 갱신됩니다.
-
-<img src="./assets/main.png" alt="포트폴리오 메인 섹션">
 
 ## 주요 특징
 

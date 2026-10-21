@@ -1,45 +1,29 @@
 'use client';
 
-import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { TrendingUp, BarChart3, Zap, ArrowUpRight } from 'lucide-react';
-import { BusinessImpactModal } from './business-impact-modal';
+import { BarChart3, Search, TrendingUp, Workflow, Zap } from 'lucide-react';
 import { SpotlightCard } from '@/components/common/spotlight-card';
-import * as gtag from '@/lib/gtag';
 
 interface ApproachItem {
   key: string;
   title: string;
   description: string;
   examples: string[];
-  images: string[];
 }
+
+const highlightIcons = [Workflow, BarChart3, Search];
 
 export function About() {
   const t = useTranslations('about');
-  const [selectedApproach, setSelectedApproach] = useState<string | null>(null);
-
-  const highlights = [
-    {
-      key: 'spot',
-      logo: '/images/logos/dns_ever_logo.png',
-      logoAlt: 'D&S Ever',
-    },
-    {
-      key: 'p2p',
-      logo: '/images/logos/dns_ever_logo.png',
-      logoAlt: 'D&S Ever',
-    },
-    {
-      key: 'seo',
-      logo: '/images/logos/eazel.jpeg',
-      logoAlt: 'Eazel',
-    },
-  ];
+  const highlights = Object.keys(
+    t.raw('highlights') as Record<string, unknown>
+  ).map((key, index) => ({
+    key,
+    icon: highlightIcons[index % highlightIcons.length],
+  }));
 
   return (
     <section id='about' className='py-20 md:py-32'>
@@ -70,17 +54,11 @@ export function About() {
                 <Card className='h-full liquid-glass-interactive'>
                   <CardHeader>
                     <div className='flex items-center gap-3 mb-2'>
-                      <div className='relative w-8 h-8 rounded-lg overflow-hidden liquid-glass-subtle'>
-                        <Image
-                          src={highlight.logo}
-                          alt={highlight.logoAlt}
-                          fill
-                          sizes='32px'
-                          className='object-contain'
-                        />
+                      <div className='p-1.5 rounded-lg liquid-glass-subtle'>
+                        <highlight.icon className='h-5 w-5 text-point' />
                       </div>
                       <Badge variant='glass'>
-                        {t(`highlights.${highlight.key}.company`)}
+                        {t(`highlights.${highlight.key}.tag`)}
                       </Badge>
                     </div>
                     <CardTitle className='text-xl'>
@@ -133,17 +111,7 @@ export function About() {
                 {(t.raw('approach.items') as ApproachItem[]).map(
                   (item, index) => (
                     <SpotlightCard key={item.key}>
-                      <div
-                        className='p-4 liquid-glass-interactive cursor-pointer group h-full'
-                        onClick={() => {
-                          setSelectedApproach(item.key);
-                          gtag.event({
-                            action: 'open',
-                            category: 'modal',
-                            label: `business_impact_${item.key}`,
-                          });
-                        }}
-                      >
+                      <div className='p-4 liquid-glass-interactive group h-full'>
                         <div className='flex items-center justify-between mb-3'>
                           <div className='flex items-center gap-2'>
                             <div className='p-1.5 rounded-md liquid-glass-subtle'>
@@ -153,11 +121,8 @@ export function About() {
                                 <BarChart3 className='h-4 w-4 text-point' />
                               )}
                             </div>
-                            <h3 className='font-semibold group-hover:text-primary transition-colors'>
-                              {item.title}
-                            </h3>
+                            <h3 className='font-semibold'>{item.title}</h3>
                           </div>
-                          <ArrowUpRight className='h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all' />
                         </div>
                         <p className='text-sm text-muted-foreground mb-3'>
                           {item.description}
@@ -182,13 +147,6 @@ export function About() {
           </Card>
         </motion.div>
       </div>
-
-      {/* Business Impact Modal */}
-      <BusinessImpactModal
-        itemKey={selectedApproach}
-        open={!!selectedApproach}
-        onOpenChange={(open) => !open && setSelectedApproach(null)}
-      />
     </section>
   );
 }

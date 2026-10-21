@@ -9,9 +9,18 @@ export const siteConfig = {
   url: 'https://jae-ung-jeong.github.io',
 
   name: '정재웅',
-  role: 'Developer',
-  description: '안녕하세요, 개발자 홍길동입니다.',
-  keywords: ['개발자', '포트폴리오'],
+  role: 'AI 서비스 기획자',
+  description:
+    '흐름을 설계하고, 숫자로 검증하는 AI 서비스 기획자 정재웅입니다. 반도체 공학과 컴퓨터공학을 거쳐 사람이 믿고 쓸 수 있는 AI 서비스를 기획합니다.',
+  keywords: [
+    'AI 서비스 기획',
+    'PM',
+    'LLM',
+    'RAG',
+    'AI 에이전트',
+    'SKALA',
+    '포트폴리오',
+  ],
 
   // public/ 기준 경로. 예: public/resume/resume.pdf → '/resume/resume.pdf'
   resumePath: '',

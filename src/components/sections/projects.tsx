@@ -11,43 +11,23 @@ import { ProjectModal } from './project-modal';
 import { SpotlightCard } from '@/components/common/spotlight-card';
 import * as gtag from '@/lib/gtag';
 
+const cardStyles = [
+  { cardVariant: 'editorial', spotlightColor: 'rgba(110, 140, 255, 0.16)' },
+  { cardVariant: 'glass', spotlightColor: 'rgba(110, 205, 255, 0.14)' },
+  { cardVariant: 'solid', spotlightColor: 'rgba(140, 230, 200, 0.14)' },
+  { cardVariant: 'outline', spotlightColor: 'rgba(246, 180, 120, 0.12)' },
+] as const;
+
 export function Projects() {
   const t = useTranslations('projects');
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
 
-  const projects = [
-    {
-      key: 'spot',
-      logo: '/images/logos/dns_ever_logo.png',
-      logoAlt: 'D&S Ever',
-      cardVariant: 'editorial' as const,
-      spotlightColor: 'rgba(110, 140, 255, 0.16)',
-    },
-    {
-      key: 'p2p',
-      logo: '/images/logos/dns_ever_logo.png',
-      logoAlt: 'D&S Ever',
-      cardVariant: 'glass' as const,
-      spotlightColor: 'rgba(110, 205, 255, 0.14)',
-    },
-    {
-      key: 'kyc',
-      logo: '/images/logos/dns_ever_logo.png',
-      logoAlt: 'D&S Ever',
-      cardVariant: 'solid' as const,
-      spotlightColor: 'rgba(140, 230, 200, 0.14)',
-    },
-    {
-      key: 'eazel',
-      logo: '/images/logos/eazel.jpeg',
-      logoAlt: 'Eazel',
-      cardVariant: 'outline' as const,
-      spotlightColor: 'rgba(246, 180, 120, 0.12)',
-    },
-  ];
+  const projects = Object.keys(t.raw('items') as Record<string, unknown>).map(
+    (key, index) => ({ key, ...cardStyles[index % cardStyles.length] })
+  );
 
   return (
-    <section id='projects' className='py-20 md:py-32 scroll-mt-28'>
+    <section id='skala' className='py-20 md:py-32 scroll-mt-28'>
       <div className='container mx-auto px-4'>
         {/* Section Header */}
         <motion.div
@@ -58,6 +38,7 @@ export function Projects() {
           className='text-center mb-16'
         >
           <h2 className='text-3xl md:text-4xl font-bold mb-4'>{t('title')}</h2>
+          <p className='text-xl text-muted-foreground'>{t('subtitle')}</p>
         </motion.div>
 
         {/* Projects Grid - Bento Style */}
@@ -69,7 +50,6 @@ export function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={index === 0 || index === 3 ? 'md:col-span-1' : ''}
             >
               <SpotlightCard
                 className='h-full md:h-[520px]'
@@ -107,15 +87,6 @@ export function Projects() {
                     <div className='absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-transparent' />
                     <div className='absolute bottom-3 left-4 right-4 flex items-center justify-between'>
                       <div className='inline-flex items-center gap-2 rounded-full bg-black/35 px-2.5 py-1 text-[11px] text-white/90 backdrop-blur-sm'>
-                        <div className='relative h-5 w-5 overflow-hidden rounded-full ring-1 ring-white/30'>
-                          <Image
-                            src={project.logo}
-                            alt={project.logoAlt}
-                            fill
-                            sizes='20px'
-                            className='object-cover'
-                          />
-                        </div>
                         <span className='line-clamp-1'>
                           {t(`items.${project.key}.period`)}
                         </span>

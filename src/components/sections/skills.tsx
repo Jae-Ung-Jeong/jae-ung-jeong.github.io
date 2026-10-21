@@ -3,33 +3,33 @@
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge';
-import { Code2, Database, Palette, Settings, Wrench } from 'lucide-react';
+import {
+  BrainCircuit,
+  Code2,
+  Database,
+  Settings,
+  Workflow,
+  Wrench,
+} from 'lucide-react';
+
+const categoryIcons = [
+  Workflow,
+  BrainCircuit,
+  Database,
+  Code2,
+  Settings,
+  Wrench,
+];
 
 export function Skills() {
   const t = useTranslations('skills');
 
-  const categories = [
-    {
-      key: 'core',
-      icon: Code2,
-    },
-    {
-      key: 'data',
-      icon: Database,
-    },
-    {
-      key: 'styling',
-      icon: Palette,
-    },
-    {
-      key: 'devops',
-      icon: Settings,
-    },
-    {
-      key: 'productivity',
-      icon: Wrench,
-    },
-  ];
+  const categories = Object.keys(
+    t.raw('categories') as Record<string, unknown>
+  ).map((key, index) => ({
+    key,
+    icon: categoryIcons[index % categoryIcons.length],
+  }));
 
   return (
     <section id='skills' className='py-20 md:py-32'>

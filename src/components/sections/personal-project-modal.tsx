@@ -57,7 +57,9 @@ export function PersonalProjectModal({
   const overview = t(`items.${projectKey}.detail.overview`);
   const tasks = t.raw(`items.${projectKey}.detail.tasks`) as string[];
   const images = t.raw(`items.${projectKey}.images`) as string[];
-  const github = t(`items.${projectKey}.github`);
+  const github = t.has(`items.${projectKey}.github`)
+    ? t(`items.${projectKey}.github`)
+    : null;
 
   const hasImages = images && images.length > 0;
 
@@ -152,21 +154,25 @@ export function PersonalProjectModal({
           </div>
         </div>
 
-        <Separator className='my-4' />
+        {github && (
+          <>
+            <Separator className='my-4' />
 
-        {/* Links */}
-        <div>
-          <h3 className='text-lg font-semibold mb-3 flex items-center gap-2'>
-            <span className='w-1 h-5 bg-primary rounded-full' />
-            {t('modal.links')}
-          </h3>
-          <Button asChild variant='outline' size='sm'>
-            <a href={github} target='_blank' rel='noopener noreferrer'>
-              <Github className='mr-2 h-4 w-4' />
-              GitHub Repository
-            </a>
-          </Button>
-        </div>
+            {/* Links */}
+            <div>
+              <h3 className='text-lg font-semibold mb-3 flex items-center gap-2'>
+                <span className='w-1 h-5 bg-primary rounded-full' />
+                {t('modal.links')}
+              </h3>
+              <Button asChild variant='outline' size='sm'>
+                <a href={github} target='_blank' rel='noopener noreferrer'>
+                  <Github className='mr-2 h-4 w-4' />
+                  GitHub Repository
+                </a>
+              </Button>
+            </div>
+          </>
+        )}
       </DialogContent>
     </Dialog>
   );

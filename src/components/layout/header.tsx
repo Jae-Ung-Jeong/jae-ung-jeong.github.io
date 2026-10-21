@@ -22,13 +22,9 @@ export function Header() {
 
   const navItems = [
     { href: '#about', label: t('about'), gtagLabel: 'about' },
-    { href: '#experience', label: t('experience'), gtagLabel: 'experience' },
-    { href: '#projects', label: t('projects'), gtagLabel: 'projects' },
-    {
-      href: '#personal-projects',
-      label: t('personalProjects'),
-      gtagLabel: 'personal-projects',
-    },
+    { href: '#skala', label: t('skala'), gtagLabel: 'skala' },
+    { href: '#research', label: t('research'), gtagLabel: 'research' },
+    { href: '#activities', label: t('activities'), gtagLabel: 'activities' },
     { href: '#skills', label: t('skills'), gtagLabel: 'skills' },
     { href: '#education', label: t('education'), gtagLabel: 'education' },
     { href: '#blog', label: t('blog'), gtagLabel: 'blog' },

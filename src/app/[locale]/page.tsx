@@ -24,9 +24,9 @@ export default async function HomePage({ params }: Props) {
       <Header />
       <Hero />
       <About />
-      <Experience />
       <Projects />
       <PersonalProjects />
+      <Experience />
       <Skills />
       <Education />
       <Blog />

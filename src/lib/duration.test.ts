@@ -1,10 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import {
   calculateDuration,
-  formatCareerYear,
   formatDuration,
-  getTotalCareerDuration,
-  getCompanyDuration,
+  getPeriodDuration,
 } from './duration';
 
 describe('duration utilities', () => {
@@ -42,39 +40,17 @@ describe('duration utilities', () => {
     );
   });
 
-  it('returns 0 duration for unknown company key', () => {
-    expect(getCompanyDuration('unknown')).toEqual({
-      years: 0,
-      months: 0,
-      totalMonths: 0,
+  it('parses a closed period string', () => {
+    expect(getPeriodDuration('2023.09 - 2026.02')).toEqual({
+      years: 2,
+      months: 6,
+      totalMonths: 30,
     });
   });
 
-  it('formats career year with ordinal suffix in english', () => {
-    expect(
-      formatCareerYear({ years: 3, months: 0, totalMonths: 36 }, 'en')
-    ).toBe('3rd Year');
-  });
-
-  it('returns deterministic company duration for known company key', () => {
-    expect(getCompanyDuration('dnsever')).toEqual({
-      years: 1,
-      months: 8,
-      totalMonths: 20,
-    });
-  });
-
-  it('formats career year in korean locale', () => {
-    expect(
-      formatCareerYear({ years: 3, months: 1, totalMonths: 37 }, 'ko')
-    ).toBe('4년차');
-  });
-
-  it('returns positive total career duration', () => {
-    const total = getTotalCareerDuration();
+  it('treats an open-ended period as running until today', () => {
+    const total = getPeriodDuration('2026.07 - 현재');
 
     expect(total.totalMonths).toBeGreaterThan(0);
-    expect(total.years).toBeGreaterThanOrEqual(0);
-    expect(total.months).toBeGreaterThanOrEqual(0);
   });
 });
