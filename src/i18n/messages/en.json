@@ -134,7 +134,13 @@
             "period": "2023.09 - 2026.02",
             "projects": [
               "Sparse point cloud completion (master's thesis)",
-              "Torus fitting evaluation (MITA 2025)",
+              "Torus fitting evaluation (MITA 2025)"
+            ]
+          },
+          "applied": {
+            "team": "Applied AI & security research (lab collaborations)",
+            "period": "2024",
+            "projects": [
               "AI trademark assessment (with a patent attorney)",
               "Ransomware detection research support (dataset)"
             ]
