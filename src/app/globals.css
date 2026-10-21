@@ -169,6 +169,9 @@
 
   body {
     @apply bg-background text-foreground antialiased;
+    /* 한국어를 글자 단위가 아니라 단어(띄어쓰기) 단위로 줄바꿈 */
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
 
   /* Selection color */
