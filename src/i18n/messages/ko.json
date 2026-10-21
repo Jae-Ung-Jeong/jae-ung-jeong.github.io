@@ -1,8 +1,8 @@
 {
   "nav": {
     "about": "소개",
-    "skala": "SKALA 프로젝트",
-    "research": "연구",
+    "skala": "SKALA (SK AX)",
+    "research": "연구 및 프로젝트",
     "skills": "역량",
     "activities": "교육·활동",
     "education": "학력",
@@ -193,7 +193,7 @@
     }
   },
   "projects": {
-    "title": "SKALA 프로젝트",
+    "title": "SKALA (SK AX)",
     "subtitle": "SKALA AI캠퍼스 4기 (SK AX) · 판교 8반 · 2026.07 – 2026.12",
     "viewMore": "자세히 보기",
     "modal": {
@@ -365,7 +365,7 @@
     }
   },
   "personalProjects": {
-    "title": "연구 & 프로젝트",
+    "title": "연구 및 프로젝트",
     "subtitle": "대학원·학부 연구와 외부 협업 프로젝트입니다.",
     "viewMore": "자세히 보기",
     "modal": {
