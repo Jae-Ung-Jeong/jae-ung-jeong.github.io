@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl';
 import { useTheme } from 'next-themes';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { Download, Github, Linkedin, Mail, BookOpen } from 'lucide-react';
 import * as gtag from '@/lib/gtag';
 import LiquidEther from '@/components/common/liquid-ether';
@@ -88,10 +89,24 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className='text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 text-balance whitespace-pre-line'
+            className='text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 text-balance whitespace-pre-line'
           >
             {t('description')}
           </motion.p>
+
+          {/* Keywords */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.45 }}
+            className='flex flex-wrap items-center justify-center gap-2 mb-10'
+          >
+            {(t.raw('keywords') as string[]).map((keyword) => (
+              <Badge key={keyword} variant='glass' className='px-3 py-1'>
+                {keyword}
+              </Badge>
+            ))}
+          </motion.div>
 
           {/* CTA Buttons */}
           <motion.div

@@ -13,8 +13,8 @@
   "hero": {
     "name": "정재웅",
     "role": "AI 서비스 기획자",
-    "description": "반도체 공학과 컴퓨터공학을 거쳐, 사용자 흐름을 설계하고 AI의 판단을 숫자로 검증하는 서비스를 기획합니다.",
-    "company": "SKALA 4기",
+    "description": "반도체 공학에서 출발해 AI를 배웠습니다.\n사용자 흐름을 설계하고, AI의 판단을 숫자로 검증하는 서비스를 기획합니다.",
+    "keywords": ["AI 서비스 기획", "반도체 도메인", "데이터 검증", "협업·소통"],
     "downloadResume": "이력서 다운로드",
     "viewGithub": "GitHub"
   },
@@ -51,24 +51,36 @@
       }
     },
     "approach": {
-      "title": "일하는 방식",
+      "title": "차별점",
       "items": [
         {
-          "key": "bridge",
-          "title": "도메인 ↔ AI 통역",
-          "description": "전문가의 판단 기준을 AI가 따를 수 있는 구조로 옮깁니다.",
+          "key": "semi",
+          "title": "반도체를 아는 AI 기획자",
+          "description": "소자·공정을 먼저 공부하고 AI를 배워, 제조 현장의 언어로 문제를 정의합니다.",
           "examples": [
-            "변리사 협업: 심사 흐름 → 단계별 프롬프트 (F1 71%)",
-            "한·미 3개 팀 주간 미팅·이슈 관리"
+            "나노광전자 학사 → 컴퓨터공학 석사",
+            "공정 센서 데이터 이상 탐지: \"미탐지가 과탐지보다 위험하다\"는 현장 기준으로 평가 설계",
+            "TCAD 시뮬레이션 자동화 · SiC 특허 2,128건 전략 분석"
+          ]
+        },
+        {
+          "key": "bridge",
+          "title": "배경이 다른 사람을 잇는 소통",
+          "description": "전문가의 판단 기준을 AI의 언어로 옮기고, 모두가 같은 기준으로 이야기하게 만듭니다.",
+          "examples": [
+            "변리사 ↔ 개발: 심사 흐름을 단계별 프롬프트로 번역 (F1 71%)",
+            "한·미 3개 팀: 오류를 수치화해 논의 재개, 주간 미팅 주도",
+            "동아리 60명 운영: 참여형 시상 기준으로 이탈 방지"
           ]
         },
         {
           "key": "trust",
           "title": "추천은 AI, 결정은 사람",
-          "description": "AI가 실패해도 멈추지 않고, 품질을 측정할 수 있게 설계합니다.",
+          "description": "AI가 틀려도 서비스는 멈추지 않고, 품질을 계속 측정할 수 있게 설계합니다.",
           "examples": [
             "추천값·확정값 분리 저장 → 채택률 측정",
-            "단계별 대체 흐름과 종료 보장 설계"
+            "단계별 대체 흐름 · 에이전트 종료 보장",
+            "sLLM 점수 상승이 형식 때문임을 직접 검증"
           ]
         }
       ]
@@ -162,9 +174,9 @@
         }
       },
       "clubs": {
-        "name": "동아리 · 커뮤니티",
+        "name": "동아리",
         "type": "창설 및 운영",
-        "period": "2017.03 - 2025.08",
+        "period": "2021.03 - 2022.12",
         "positions": {
           "ssakssupin": {
             "team": "단과대 볼링 동아리 '싹쓰핀' 창설·회장",
@@ -174,20 +186,10 @@
               "교수 찬조·전용 요금제로 운영비 확보"
             ]
           },
-          "crush": {
-            "team": "볼링 동호회 Team Crush 운영진",
-            "period": "2022.02 - 2025.08",
-            "projects": ["정기 경기·대회 운영, 점수 기록·집계"]
-          },
           "connection": {
             "team": "학술동아리 '커넥션'",
             "period": "2021.03 - 2021.08",
             "projects": ["Python 데이터 분석 스터디, pandas 실습 주도"]
-          },
-          "bolbae": {
-            "team": "학과 볼링·배드민턴 동아리 '볼배' 창설·회장",
-            "period": "2017.03 - 2018.12",
-            "projects": ["정기 모임 기획, 예산·회원 관리"]
           }
         }
       }
@@ -204,6 +206,30 @@
       "achievements": "성과"
     },
     "items": {
+      "hosilnote": {
+        "title": "호실노트: 임대 호실 수리 관리",
+        "description": "요청 → 처리 → 수리 → 기록을 잇고, AI는 추천만 하는 서비스 설계",
+        "role": "서비스 기획·설계",
+        "period": "2026.09",
+        "scope": "개인",
+        "tech": ["OpenAPI 3.0", "DBML", "PostgreSQL", "JWT"],
+        "achievements": [
+          "화면 24 · API 46 · 테이블 17",
+          "AI 추천값·확정값 분리 → 채택률 측정"
+        ],
+        "detail": {
+          "overview": "오피스텔 호실을 직접 임대하는 집주인은 수리 기록을 문자·영수증·기억에 의존합니다. 집주인·세입자·수리업체의 Pain Point를 정리하고, 요청 처리 4단계(접수 → 판단 → 전달 → 기록)마다 AI가 돕되 결정은 사람이 하도록 설계했습니다.",
+          "tasks": [
+            "사용자별 Pain Point → 기능 → 화면 매핑, 액터와 권한 정의",
+            "요청 상태 7가지와 상태를 바꾸는 주체·API 정의",
+            "AI 4단계 설계와 실패 시 대체 흐름 (접수는 안내 없이 등록, 판단은 추천 영역만 숨김 등)",
+            "출입 비밀번호는 암호화 저장 후 방문 당일·배정 업체에게만 공개하고 완료 즉시 삭제",
+            "수리업체는 가입 없이, 만료되는 작업 링크로 참여하도록 설계",
+            "날짜 계산인 교체 알림은 AI가 아닌 규칙으로 처리"
+          ]
+        },
+        "images": []
+      },
       "kvcache": {
         "title": "KV cache 기술 평가 Multi-Agent",
         "description": "기술 평가 보고서를 자동 생성하는 Agentic RAG를 멀티 에이전트로 재설계",
@@ -342,30 +368,6 @@
           ]
         },
         "images": []
-      },
-      "hosilnote": {
-        "title": "호실노트: 임대 호실 수리 관리",
-        "description": "요청 → 처리 → 수리 → 기록을 잇고, AI는 추천만 하는 서비스 설계",
-        "role": "서비스 기획·설계",
-        "period": "2026.09",
-        "scope": "개인",
-        "tech": ["OpenAPI 3.0", "DBML", "PostgreSQL", "JWT"],
-        "achievements": [
-          "화면 24 · API 46 · 테이블 17",
-          "AI 추천값·확정값 분리 → 채택률 측정"
-        ],
-        "detail": {
-          "overview": "오피스텔 호실을 직접 임대하는 집주인은 수리 기록을 문자·영수증·기억에 의존합니다. 집주인·세입자·수리업체의 Pain Point를 정리하고, 요청 처리 4단계(접수 → 판단 → 전달 → 기록)마다 AI가 돕되 결정은 사람이 하도록 설계했습니다.",
-          "tasks": [
-            "사용자별 Pain Point → 기능 → 화면 매핑, 액터와 권한 정의",
-            "요청 상태 7가지와 상태를 바꾸는 주체·API 정의",
-            "AI 4단계 설계와 실패 시 대체 흐름 (접수는 안내 없이 등록, 판단은 추천 영역만 숨김 등)",
-            "출입 비밀번호는 암호화 저장 후 방문 당일·배정 업체에게만 공개하고 완료 즉시 삭제",
-            "수리업체는 가입 없이, 만료되는 작업 링크로 참여하도록 설계",
-            "날짜 계산인 교체 알림은 AI가 아닌 규칙으로 처리"
-          ]
-        },
-        "images": []
       }
     }
   },
@@ -380,28 +382,6 @@
       "links": "링크"
     },
     "items": {
-      "thesis": {
-        "title": "희소 포인트 클라우드 복원 (석사 학위논문)",
-        "description": "희소 입력에서도 형상이 무너지지 않는 3D 복원 프레임워크",
-        "role": "석사 학위논문 · Computer Graphics Lab",
-        "period": "2026.02",
-        "scope": "개인",
-        "tech": ["PyTorch", "SeedFormer", "Point Cloud", "PCN Dataset"],
-        "features": [
-          "Chamfer Distance 24.4% 개선 (256점)",
-          "F-Score 0.768 → 0.824"
-        ],
-        "detail": {
-          "overview": "SeedFormer 같은 Transformer 기반 복원 모델은 좌표 거리만 줄이도록 학습해서, 입력이 희소하면 모서리와 경계가 뭉개지는 '구조적 붕괴'가 생깁니다. 네트워크 구조를 크게 바꾸지 않고, 기하학적 정보를 직접 학습시키는 두 가지 모듈을 더해 이 문제를 해결했습니다. (A Transformer-based Framework for Sparse Point Cloud Completion with Geometric Constraints)",
-          "tasks": [
-            "분포 정합 손실(DML): 예측 점의 국소 밀도를 정답과 맞춰 점이 한곳에 몰리는 현상 완화",
-            "결손 불확실성 가중치(HUW): 입력이 비어 있는 영역을 찾아 학습 가중치를 높임",
-            "입력 1,024 / 512 / 256점 세 난이도로 GRNet·SnowflakeNet·SeedFormer와 비교",
-            "Ablation: DML만 22.10, HUW만 21.50, 둘 다 19.20으로 두 모듈이 상호보완적임을 확인"
-          ]
-        },
-        "images": []
-      },
       "anomaly": {
         "title": "반도체 공정 이상 탐지 · 수율 원인 분석",
         "description": "정확도 93%의 함정을 찾고, 평가 기준부터 다시 설계",
@@ -428,6 +408,28 @@
             "탐지한 불량의 센서 평균 편차 2.14 vs 놓친 불량 0.10: 튜닝이 아닌 데이터의 한계임을 증명",
             "후속 분석: XGBoost 수율 예측(ROC-AUC 0.696) + SHAP으로 불량 104건의 영향 변수 정량화 (1위 F59, SHAP 0.400)",
             "전처리 → 모델링 → 예측 → PDF 리포트까지 한 번에 실행되는 파이프라인 구축"
+          ]
+        },
+        "images": []
+      },
+      "thesis": {
+        "title": "희소 포인트 클라우드 복원 (석사 학위논문)",
+        "description": "희소 입력에서도 형상이 무너지지 않는 3D 복원 프레임워크",
+        "role": "석사 학위논문 · Computer Graphics Lab",
+        "period": "2026.02",
+        "scope": "개인",
+        "tech": ["PyTorch", "SeedFormer", "Point Cloud", "PCN Dataset"],
+        "features": [
+          "Chamfer Distance 24.4% 개선 (256점)",
+          "F-Score 0.768 → 0.824"
+        ],
+        "detail": {
+          "overview": "SeedFormer 같은 Transformer 기반 복원 모델은 좌표 거리만 줄이도록 학습해서, 입력이 희소하면 모서리와 경계가 뭉개지는 '구조적 붕괴'가 생깁니다. 네트워크 구조를 크게 바꾸지 않고, 기하학적 정보를 직접 학습시키는 두 가지 모듈을 더해 이 문제를 해결했습니다. (A Transformer-based Framework for Sparse Point Cloud Completion with Geometric Constraints)",
+          "tasks": [
+            "분포 정합 손실(DML): 예측 점의 국소 밀도를 정답과 맞춰 점이 한곳에 몰리는 현상 완화",
+            "결손 불확실성 가중치(HUW): 입력이 비어 있는 영역을 찾아 학습 가중치를 높임",
+            "입력 1,024 / 512 / 256점 세 난이도로 GRNet·SnowflakeNet·SeedFormer와 비교",
+            "Ablation: DML만 22.10, HUW만 21.50, 둘 다 19.20으로 두 모듈이 상호보완적임을 확인"
           ]
         },
         "images": []
@@ -498,7 +500,7 @@
       "torus": {
         "title": "토러스 피팅 정량평가",
         "description": "곡면을 토러스 패치로 근사하고 정확도를 수치로 평가",
-        "role": "MITA 2025 발표",
+        "role": "실험 설계·정량 평가",
         "period": "2025",
         "scope": "개인",
         "tech": ["Python", "Point Cloud", "PCA"],
@@ -516,7 +518,7 @@
     }
   },
   "skills": {
-    "title": "역량 · 기술",
+    "title": "역량",
     "categories": {
       "planning": {
         "title": "기획 · 설계",
@@ -533,12 +535,12 @@
         "title": "AI · LLM",
         "items": [
           "LangChain · LangGraph",
+          "AI Agent 설계",
           "RAG",
           "Prompt Engineering",
           "LoRA 파인튜닝",
           "Spring AI",
-          "OpenAI API",
-          "LangSmith"
+          "OpenAI API"
         ]
       },
       "data": {
@@ -553,6 +555,16 @@
           "통계 검정"
         ]
       },
+      "semi": {
+        "title": "반도체 도메인",
+        "items": [
+          "소자 시뮬레이션 (Sentaurus TCAD)",
+          "광학 모드 해석 (Lumerical)",
+          "공정 센서 데이터 분석",
+          "특허 분석 (WIPS)",
+          "Si Photonics"
+        ]
+      },
       "dev": {
         "title": "개발 · 운영",
         "items": [
@@ -564,15 +576,9 @@
           "Git · GitHub"
         ]
       },
-      "research": {
-        "title": "연구 도구",
-        "items": [
-          "PyTorch",
-          "Point Cloud",
-          "COLMAP",
-          "Sentaurus TCAD",
-          "Lumerical"
-        ]
+      "graphics": {
+        "title": "3D · 그래픽스",
+        "items": ["PyTorch", "Point Cloud", "3D Gaussian Splatting", "COLMAP"]
       }
     }
   },
@@ -589,21 +595,62 @@
         "gpa": "4.15 / 4.5",
         "note": "Computer Graphics Lab · 지도교수 홍규연",
         "courses": [
-          "기계학습",
-          "인공지능최적화",
-          "컴퓨터그래픽스특강",
-          "CAD를위한모델링및시뮬레이션",
-          "모바일시스템시큐리티",
-          "의료데이터보안",
-          "사물인터넷기초",
-          "기술창업과사업화전략"
+          {
+            "title": "전공",
+            "items": [
+              "기계학습",
+              "인공지능 최적화",
+              "컴퓨터그래픽스 특강",
+              "CAD를 위한 모델링 및 시뮬레이션",
+              "모바일 시스템 시큐리티",
+              "의료데이터 보안"
+            ]
+          }
         ]
       },
       "bachelor": {
         "school": "한양대학교 ERICA",
         "major": "나노광전자학 · 컴퓨터학부 복수전공",
         "period": "2017.03 - 2023.08",
-        "status": "졸업"
+        "status": "졸업",
+        "courses": [
+          {
+            "title": "나노광전자학 (주전공)",
+            "items": [
+              "광전자소자",
+              "양자전자학",
+              "광공학개론",
+              "광전자융합공학",
+              "전자기학 1·2",
+              "기초전자회로",
+              "전자회로 및 제어",
+              "공학프로그래밍 1·2",
+              "나노반도체실험",
+              "광전자실험",
+              "레이저 및 광통신 실험",
+              "전자회로 및 IoT 실험",
+              "공업수학 1·2",
+              "나노광전자 캡스톤디자인"
+            ]
+          },
+          {
+            "title": "컴퓨터학부 (복수전공)",
+            "items": [
+              "자료구조론",
+              "알고리즘 설계와 분석",
+              "운영체제론",
+              "컴퓨터구조",
+              "디지털논리설계",
+              "시스템프로그래밍 기초",
+              "프로그램설계방법론",
+              "오토마타와 형식언어론",
+              "선형대수",
+              "수치해석",
+              "오픈소스 SW 기초",
+              "컴퓨터 캡스톤디자인"
+            ]
+          }
+        ]
       },
       "highschool": {
         "school": "과천외국어고등학교",

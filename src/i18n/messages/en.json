@@ -13,8 +13,13 @@
   "hero": {
     "name": "Jaeung Jeong",
     "role": "AI Service Planner",
-    "description": "From semiconductor engineering to computer science, I design user flows and plan AI services whose judgments are verified with numbers.",
-    "company": "SKALA, 4th cohort",
+    "description": "I started in semiconductor engineering and moved into AI.\nI design user flows and plan services whose AI judgments are verified with numbers.",
+    "keywords": [
+      "AI service planning",
+      "Semiconductor domain",
+      "Data verification",
+      "Collaboration"
+    ],
     "downloadResume": "Download Resume",
     "viewGithub": "GitHub"
   },
@@ -51,24 +56,36 @@
       }
     },
     "approach": {
-      "title": "How I work",
+      "title": "What sets me apart",
       "items": [
         {
-          "key": "bridge",
-          "title": "Domain ↔ AI translator",
-          "description": "I turn experts' judgment criteria into structures AI can follow.",
+          "key": "semi",
+          "title": "An AI planner who knows semiconductors",
+          "description": "I studied devices and processes before AI, so I define problems in the language of the fab.",
           "examples": [
-            "With a patent attorney: examination flow → step prompts (F1 71%)",
-            "Weekly meetings and issue tracking across 3 KR/US teams"
+            "B.S. Photonics & Nanoelectronics → M.S. Computer Science",
+            "Process sensor anomaly detection: evaluation built on \"a missed defect costs more than a false alarm\"",
+            "TCAD simulation automation · SiC patent strategy across 2,128 filings"
+          ]
+        },
+        {
+          "key": "bridge",
+          "title": "Connecting people from different backgrounds",
+          "description": "I translate experts' criteria into AI terms and get everyone talking on the same basis.",
+          "examples": [
+            "Patent attorney ↔ dev: examination flow into step-by-step prompts (F1 71%)",
+            "3 KR/US teams: quantified the error to restart the discussion; led weekly meetings",
+            "Ran a 60-member club with inclusive awards to keep people in"
           ]
         },
         {
           "key": "trust",
           "title": "AI recommends, people decide",
-          "description": "Services that keep working when AI fails, and keep measuring quality.",
+          "description": "Services that keep running when AI is wrong, and keep measuring quality.",
           "examples": [
-            "Recommendation vs decision stored separately → adoption rate",
-            "Per-step fallbacks and guaranteed termination"
+            "Recommendation and decision stored separately → adoption rate",
+            "Per-step fallbacks · guaranteed agent termination",
+            "Verified that the sLLM score gain came from format, not content"
           ]
         }
       ]
@@ -164,9 +181,9 @@
         }
       },
       "clubs": {
-        "name": "Clubs & communities",
+        "name": "Clubs",
         "type": "Founded and led",
-        "period": "2017.03 - 2025.08",
+        "period": "2021.03 - 2022.12",
         "positions": {
           "ssakssupin": {
             "team": "Founder & president, college bowling club 'Ssakssupin'",
@@ -176,22 +193,10 @@
               "Funded through sponsorship and a member rate"
             ]
           },
-          "crush": {
-            "team": "Organizer, bowling club Team Crush",
-            "period": "2022.02 - 2025.08",
-            "projects": [
-              "Ran regular games and tournaments; kept and tallied scores"
-            ]
-          },
           "connection": {
             "team": "Study group 'Connection'",
             "period": "2021.03 - 2021.08",
             "projects": ["Python data analysis study; led pandas exercises"]
-          },
-          "bolbae": {
-            "team": "Founder & president, department bowling/badminton club",
-            "period": "2017.03 - 2018.12",
-            "projects": ["Planned regular meetups; managed budget and members"]
           }
         }
       }
@@ -208,6 +213,30 @@
       "achievements": "Results"
     },
     "items": {
+      "hosilnote": {
+        "title": "Hosil Note: Rental Unit Repair Management",
+        "description": "Connects request → handling → repair → record, with AI only recommending",
+        "role": "Service planning and design",
+        "period": "2026.09",
+        "scope": "Solo",
+        "tech": ["OpenAPI 3.0", "DBML", "PostgreSQL", "JWT"],
+        "achievements": [
+          "24 screens · 46 APIs · 17 tables",
+          "Recommendation vs decision → adoption rate"
+        ],
+        "detail": {
+          "overview": "Landlords who rent out studio units themselves rely on texts, receipts and memory for repair history. I mapped the pain points of landlords, tenants and repair vendors, and designed four request steps (intake → decision → handoff → record) where AI assists at every step but people decide.",
+          "tasks": [
+            "Mapped pain points → features → screens; defined actors and permissions",
+            "Defined 7 request states, who changes them, and the matching APIs",
+            "Designed four AI steps with per-step fallbacks when AI fails",
+            "Door codes stored encrypted, shown only to the assigned vendor on the visit day, deleted on completion",
+            "Vendors join through expiring job links instead of signing up",
+            "Replacement reminders are rule-based date math, not AI"
+          ]
+        },
+        "images": []
+      },
       "kvcache": {
         "title": "KV Cache Technology Evaluation Multi-Agent",
         "description": "An Agentic RAG that writes technology evaluation reports, redesigned as multi-agent",
@@ -346,30 +375,6 @@
           ]
         },
         "images": []
-      },
-      "hosilnote": {
-        "title": "Hosil Note: Rental Unit Repair Management",
-        "description": "Connects request → handling → repair → record, with AI only recommending",
-        "role": "Service planning and design",
-        "period": "2026.09",
-        "scope": "Solo",
-        "tech": ["OpenAPI 3.0", "DBML", "PostgreSQL", "JWT"],
-        "achievements": [
-          "24 screens · 46 APIs · 17 tables",
-          "Recommendation vs decision → adoption rate"
-        ],
-        "detail": {
-          "overview": "Landlords who rent out studio units themselves rely on texts, receipts and memory for repair history. I mapped the pain points of landlords, tenants and repair vendors, and designed four request steps (intake → decision → handoff → record) where AI assists at every step but people decide.",
-          "tasks": [
-            "Mapped pain points → features → screens; defined actors and permissions",
-            "Defined 7 request states, who changes them, and the matching APIs",
-            "Designed four AI steps with per-step fallbacks when AI fails",
-            "Door codes stored encrypted, shown only to the assigned vendor on the visit day, deleted on completion",
-            "Vendors join through expiring job links instead of signing up",
-            "Replacement reminders are rule-based date math, not AI"
-          ]
-        },
-        "images": []
       }
     }
   },
@@ -384,28 +389,6 @@
       "links": "Links"
     },
     "items": {
-      "thesis": {
-        "title": "Sparse Point Cloud Completion (Master's Thesis)",
-        "description": "A 3D completion framework that keeps shapes intact on sparse input",
-        "role": "Master's thesis · Computer Graphics Lab",
-        "period": "2026.02",
-        "scope": "Solo",
-        "tech": ["PyTorch", "SeedFormer", "Point Cloud", "PCN Dataset"],
-        "features": [
-          "Chamfer Distance 24.4% better (256 points)",
-          "F-Score 0.768 → 0.824"
-        ],
-        "detail": {
-          "overview": "Transformer-based completion models such as SeedFormer learn only to minimize coordinate distance, so sharp edges and boundaries collapse when input is sparse. Without major architecture changes, I added two modules that teach geometry explicitly. (A Transformer-based Framework for Sparse Point Cloud Completion with Geometric Constraints)",
-          "tasks": [
-            "Distribution-Matching Loss (DML): aligns local point density with ground truth to stop points from clustering",
-            "Hole Uncertainty Weighting (HUW): finds empty regions of the input and raises their training weight",
-            "Compared against GRNet, SnowflakeNet and SeedFormer at 1,024 / 512 / 256 input points",
-            "Ablation: DML alone 22.10, HUW alone 21.50, both 19.20, showing the modules are complementary"
-          ]
-        },
-        "images": []
-      },
       "anomaly": {
         "title": "Semiconductor Process Anomaly Detection & Yield Root Cause",
         "description": "Found the 93%-accuracy trap and redesigned evaluation first",
@@ -432,6 +415,28 @@
             "Mean sensor deviation 2.14 for detected vs 0.10 for missed defects: a data limit, not a tuning problem",
             "Follow-up: XGBoost yield model (ROC-AUC 0.696) + SHAP on 104 defects (top variable F59, SHAP 0.400)",
             "Built a single pipeline from preprocessing to modeling, prediction and PDF reporting"
+          ]
+        },
+        "images": []
+      },
+      "thesis": {
+        "title": "Sparse Point Cloud Completion (Master's Thesis)",
+        "description": "A 3D completion framework that keeps shapes intact on sparse input",
+        "role": "Master's thesis · Computer Graphics Lab",
+        "period": "2026.02",
+        "scope": "Solo",
+        "tech": ["PyTorch", "SeedFormer", "Point Cloud", "PCN Dataset"],
+        "features": [
+          "Chamfer Distance 24.4% better (256 points)",
+          "F-Score 0.768 → 0.824"
+        ],
+        "detail": {
+          "overview": "Transformer-based completion models such as SeedFormer learn only to minimize coordinate distance, so sharp edges and boundaries collapse when input is sparse. Without major architecture changes, I added two modules that teach geometry explicitly. (A Transformer-based Framework for Sparse Point Cloud Completion with Geometric Constraints)",
+          "tasks": [
+            "Distribution-Matching Loss (DML): aligns local point density with ground truth to stop points from clustering",
+            "Hole Uncertainty Weighting (HUW): finds empty regions of the input and raises their training weight",
+            "Compared against GRNet, SnowflakeNet and SeedFormer at 1,024 / 512 / 256 input points",
+            "Ablation: DML alone 22.10, HUW alone 21.50, both 19.20, showing the modules are complementary"
           ]
         },
         "images": []
@@ -508,7 +513,7 @@
       "torus": {
         "title": "Torus Fitting Evaluation",
         "description": "Approximated surfaces with torus patches and measured accuracy",
-        "role": "Presented at MITA 2025",
+        "role": "Experiment design and quantitative evaluation",
         "period": "2025",
         "scope": "Solo",
         "tech": ["Python", "Point Cloud", "PCA"],
@@ -546,12 +551,12 @@
         "title": "AI · LLM",
         "items": [
           "LangChain · LangGraph",
+          "AI agent design",
           "RAG",
           "Prompt Engineering",
           "LoRA fine-tuning",
           "Spring AI",
-          "OpenAI API",
-          "LangSmith"
+          "OpenAI API"
         ]
       },
       "data": {
@@ -566,6 +571,16 @@
           "Statistical testing"
         ]
       },
+      "semi": {
+        "title": "Semiconductor Domain",
+        "items": [
+          "Device simulation (Sentaurus TCAD)",
+          "Optical mode analysis (Lumerical)",
+          "Process sensor data analysis",
+          "Patent analysis (WIPS)",
+          "Si Photonics"
+        ]
+      },
       "dev": {
         "title": "Development & Ops",
         "items": [
@@ -577,15 +592,9 @@
           "Git · GitHub"
         ]
       },
-      "research": {
-        "title": "Research Tools",
-        "items": [
-          "PyTorch",
-          "Point Cloud",
-          "COLMAP",
-          "Sentaurus TCAD",
-          "Lumerical"
-        ]
+      "graphics": {
+        "title": "3D · Graphics",
+        "items": ["PyTorch", "Point Cloud", "3D Gaussian Splatting", "COLMAP"]
       }
     }
   },
@@ -602,21 +611,62 @@
         "gpa": "4.15 / 4.5",
         "note": "Computer Graphics Lab · Advisor: Prof. Q Youn Hong",
         "courses": [
-          "Machine Learning",
-          "AI Optimization",
-          "Topics in Computer Graphics",
-          "Modeling & Simulation for CAD",
-          "Mobile System Security",
-          "Medical Data Security",
-          "Introduction to IoT",
-          "Tech Startups & Commercialization Strategy"
+          {
+            "title": "Major",
+            "items": [
+              "Machine Learning",
+              "AI Optimization",
+              "Topics in Computer Graphics",
+              "Modeling & Simulation for CAD",
+              "Mobile System Security",
+              "Medical Data Security"
+            ]
+          }
         ]
       },
       "bachelor": {
         "school": "Hanyang University ERICA",
         "major": "Photonics & Nanoelectronics · Double major in Computer Science",
         "period": "2017.03 - 2023.08",
-        "status": "Graduated"
+        "status": "Graduated",
+        "courses": [
+          {
+            "title": "Photonics & Nanoelectronics (major)",
+            "items": [
+              "Optoelectronic Devices",
+              "Quantum Electronics",
+              "Introduction to Optical Engineering",
+              "Optoelectronic Convergence Engineering",
+              "Electromagnetics 1·2",
+              "Basic Electronic Circuits",
+              "Electronic Circuits & Control",
+              "Engineering Programming 1·2",
+              "Nano-semiconductor Lab",
+              "Optoelectronics Lab",
+              "Laser & Optical Communication Lab",
+              "Electronic Circuits & IoT Lab",
+              "Engineering Mathematics 1·2",
+              "Photonics Capstone Design"
+            ]
+          },
+          {
+            "title": "Computer Science (double major)",
+            "items": [
+              "Data Structures",
+              "Algorithm Design & Analysis",
+              "Operating Systems",
+              "Computer Architecture",
+              "Digital Logic Design",
+              "Systems Programming",
+              "Program Design Methodology",
+              "Automata & Formal Languages",
+              "Linear Algebra",
+              "Numerical Analysis",
+              "Open Source Software",
+              "Computer Capstone Design"
+            ]
+          }
+        ]
       },
       "highschool": {
         "school": "Gwacheon Foreign Language High School",

@@ -4,22 +4,15 @@ import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge';
 import {
+  Boxes,
   BrainCircuit,
-  Code2,
+  Cpu,
   Database,
   Settings,
   Workflow,
-  Wrench,
 } from 'lucide-react';
 
-const categoryIcons = [
-  Workflow,
-  BrainCircuit,
-  Database,
-  Code2,
-  Settings,
-  Wrench,
-];
+const categoryIcons = [Workflow, BrainCircuit, Database, Cpu, Settings, Boxes];
 
 export function Skills() {
   const t = useTranslations('skills');

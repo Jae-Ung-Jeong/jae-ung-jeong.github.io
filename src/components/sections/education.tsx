@@ -30,7 +30,7 @@ interface Degree {
   status: string;
   gpa?: string;
   note?: string;
-  courses?: string[];
+  courses?: Array<{ title: string; items: string[] }>;
 }
 
 function DegreeCard({
@@ -121,15 +121,24 @@ function DegreeCard({
                     }}
                     className='overflow-hidden'
                   >
-                    <div className='flex flex-wrap gap-2 p-4 liquid-glass-subtle mt-4'>
-                      {degree.courses?.map((course) => (
-                        <Badge
-                          key={course}
-                          variant='glass'
-                          className='hover:glass-glow'
-                        >
-                          {course}
-                        </Badge>
+                    <div className='space-y-4 p-4 liquid-glass-subtle mt-4'>
+                      {degree.courses?.map((group) => (
+                        <div key={group.title}>
+                          <h3 className='text-sm font-medium text-muted-foreground mb-3'>
+                            {group.title}
+                          </h3>
+                          <div className='flex flex-wrap gap-2'>
+                            {group.items.map((course) => (
+                              <Badge
+                                key={course}
+                                variant='glass'
+                                className='hover:glass-glow'
+                              >
+                                {course}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
                       ))}
                     </div>
                   </motion.div>

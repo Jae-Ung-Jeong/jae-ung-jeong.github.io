@@ -4,7 +4,15 @@ import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { BarChart3, Search, TrendingUp, Workflow, Zap } from 'lucide-react';
+import {
+  BarChart3,
+  Cpu,
+  MessagesSquare,
+  Search,
+  ShieldCheck,
+  Workflow,
+  Zap,
+} from 'lucide-react';
 import { SpotlightCard } from '@/components/common/spotlight-card';
 
 interface ApproachItem {
@@ -15,6 +23,7 @@ interface ApproachItem {
 }
 
 const highlightIcons = [Workflow, BarChart3, Search];
+const approachIcons = [Cpu, MessagesSquare, ShieldCheck];
 
 export function About() {
   const t = useTranslations('about');
@@ -107,7 +116,7 @@ export function About() {
               </div>
             </CardHeader>
             <CardContent>
-              <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+              <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
                 {(t.raw('approach.items') as ApproachItem[]).map(
                   (item, index) => (
                     <SpotlightCard key={item.key}>
@@ -115,11 +124,11 @@ export function About() {
                         <div className='flex items-center justify-between mb-3'>
                           <div className='flex items-center gap-2'>
                             <div className='p-1.5 rounded-md liquid-glass-subtle'>
-                              {index === 0 ? (
-                                <TrendingUp className='h-4 w-4 text-point' />
-                              ) : (
-                                <BarChart3 className='h-4 w-4 text-point' />
-                              )}
+                              {(() => {
+                                const Icon =
+                                  approachIcons[index % approachIcons.length];
+                                return <Icon className='h-4 w-4 text-point' />;
+                              })()}
                             </div>
                             <h3 className='font-semibold'>{item.title}</h3>
                           </div>
