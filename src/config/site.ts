@@ -8,7 +8,7 @@ export const siteConfig = {
   // 배포 도메인 (sitemap, robots, canonical, OG에 사용)
   url: 'https://jae-ung-jeong.github.io',
 
-  name: '홍길동',
+  name: '정재웅',
   role: 'Developer',
   description: '안녕하세요, 개발자 홍길동입니다.',
   keywords: ['개발자', '포트폴리오'],
@@ -23,7 +23,7 @@ export const siteConfig = {
   blogRssUrl: '',
 
   links: {
-    email: '',
+    email: 'dnd2sla@gmail.com',
     github: {
       url: 'https://github.com/Jae-Ung-Jeong',
       username: 'Jae-Ung-Jeong',

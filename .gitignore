@@ -44,3 +44,7 @@ next-env.d.ts
 .playwright-mcp
 # private resume source (download copy goes in public/resume)
 /resume/
+
+# private reference material for writing content
+/참고자료/
+.DS_Store
