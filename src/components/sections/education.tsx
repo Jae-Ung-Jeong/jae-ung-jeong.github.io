@@ -13,9 +13,15 @@ import {
   ChevronDown,
   BookOpen,
   Languages,
+  Shield,
 } from 'lucide-react';
 import { SpotlightCard } from '@/components/common/spotlight-card';
 import * as gtag from '@/lib/gtag';
+
+const infoIcons: Record<string, typeof Languages> = {
+  language: Languages,
+  military: Shield,
+};
 
 interface Degree {
   school: string;
@@ -139,13 +145,15 @@ function DegreeCard({
 
 export function Education() {
   const tEdu = useTranslations('education');
-  const tLang = useTranslations('language');
+  const tInfo = useTranslations('info');
 
   const degrees = Object.entries(tEdu.raw('degrees') as Record<string, Degree>);
 
-  const languages = tLang.raw('items') as Array<{
-    name: string;
-    level: string;
+  const infoItems = tInfo.raw('items') as Array<{
+    key: string;
+    label: string;
+    value: string;
+    note?: string;
   }>;
 
   return (
@@ -180,17 +188,31 @@ export function Education() {
               ))}
             </div>
 
-            {languages.length > 0 && (
-              <div className='flex flex-wrap items-center gap-3 mt-6'>
-                <div className='flex items-center gap-2 text-sm text-muted-foreground'>
-                  <Languages className='h-4 w-4' />
-                  <span>{tLang('title')}</span>
-                </div>
-                {languages.map((language) => (
-                  <Badge key={language.name} variant='glass'>
-                    {language.name} · {language.level}
-                  </Badge>
-                ))}
+            {infoItems.length > 0 && (
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-6'>
+                {infoItems.map((item) => {
+                  const Icon = infoIcons[item.key] ?? Languages;
+                  return (
+                    <SpotlightCard key={item.key}>
+                      <div className='flex items-start gap-3 p-4 liquid-glass h-full'>
+                        <div className='p-2 rounded-lg liquid-glass-subtle'>
+                          <Icon className='h-5 w-5 text-point' />
+                        </div>
+                        <div>
+                          <p className='text-sm text-muted-foreground'>
+                            {item.label}
+                          </p>
+                          <p className='font-semibold'>{item.value}</p>
+                          {item.note && (
+                            <p className='text-xs text-muted-foreground mt-1'>
+                              {item.note}
+                            </p>
+                          )}
+                        </div>
+                      </div>
+                    </SpotlightCard>
+                  );
+                })}
               </div>
             )}
           </motion.div>

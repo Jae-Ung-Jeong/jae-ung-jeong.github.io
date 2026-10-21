@@ -680,16 +680,20 @@
       }
     ]
   },
-  "language": {
-    "title": "Languages",
+  "info": {
+    "title": "Languages & Military Service",
     "items": [
       {
-        "name": "TOEIC",
-        "level": "890 (2025.07)"
+        "key": "language",
+        "label": "English",
+        "value": "TOEIC 890 · OPIc IH",
+        "note": "Earned 2025.07 · 2025.08"
       },
       {
-        "name": "OPIc",
-        "level": "IH (2025.08)"
+        "key": "military",
+        "label": "Military service",
+        "value": "Republic of Korea Army, honorably discharged",
+        "note": "2019.02 – 2020.09"
       }
     ]
   },

@@ -676,16 +676,20 @@
       }
     ]
   },
-  "language": {
-    "title": "어학",
+  "info": {
+    "title": "어학 · 병역",
     "items": [
       {
-        "name": "TOEIC",
-        "level": "890 (2025.07)"
+        "key": "language",
+        "label": "어학",
+        "value": "TOEIC 890 · OPIc IH",
+        "note": "2025.07 · 2025.08 취득"
       },
       {
-        "name": "OPIc",
-        "level": "IH (2025.08)"
+        "key": "military",
+        "label": "병역",
+        "value": "육군 만기제대",
+        "note": "2019.02 – 2020.09"
       }
     ]
   },
