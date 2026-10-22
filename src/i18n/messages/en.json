@@ -248,7 +248,12 @@
             "Replacement reminders are rule-based date math, not AI"
           ]
         },
-        "images": []
+        "images": [
+          "/images/hosilnote/landlord_dashboard.jpg",
+          "/images/hosilnote/request_detail_ai_recommendation.jpg",
+          "/images/hosilnote/data_model_17_tables.png",
+          "/images/hosilnote/ui_flow_dashboard_spec.png"
+        ]
       },
       "kvcache": {
         "title": "KV Cache Technology Evaluation Multi-Agent",
@@ -280,7 +285,12 @@
             "Parallelized judging: test run 372.8s → 240.2s (−35.6%)"
           ]
         },
-        "images": []
+        "images": [
+          "/images/kvcache/supervisor_send_parallel_dispatch.jpg",
+          "/images/kvcache/sufficiency_score_0944.jpg",
+          "/images/kvcache/quality_pass_termination.jpg",
+          "/images/kvcache/full_trace_routing.jpg"
+        ]
       },
       "gonggong": {
         "title": "Gonggong Chwippo: Listed-Company Cross-Check Agent",
@@ -308,7 +318,10 @@
             "Built fixture-based offline tests that reproduce results without external APIs"
           ]
         },
-        "images": []
+        "images": [
+          "/images/gonggong/agent_architecture.jpg",
+          "/images/gonggong/project_structure_parts.jpg"
+        ]
       },
       "solarcast": {
         "title": "SolarCast: Solar Power Forecasting AIOps",
@@ -337,7 +350,12 @@
             "Compared model loading: first response 2.560s (lazy) → 0.642s (eager)"
           ]
         },
-        "images": []
+        "images": [
+          "/images/solarcast/drift_retrain_pipeline.png",
+          "/images/solarcast/aiops_dashboard.png",
+          "/images/solarcast/mlflow_model_registry.png",
+          "/images/solarcast/drift_batch_detected.png"
+        ]
       },
       "springrag": {
         "title": "Spring AI RAG for Internal Docs Q&A",
@@ -365,7 +383,7 @@
             "Order summary API (pair work): authorization inside the query and a fallback message when the model call fails"
           ]
         },
-        "images": []
+        "images": ["/images/springrag/golden_set_test_9_of_10.png"]
       },
       "sllm": {
         "title": "HR Policy sLLM Fine-tuning",
@@ -387,7 +405,10 @@
             "Read the raw answers and documented the limits of the automatic metrics"
           ]
         },
-        "images": []
+        "images": [
+          "/images/sllm/lora_evaluation_report.jpg",
+          "/images/sllm/per_question_comparison.jpg"
+        ]
       }
     }
   },
@@ -461,7 +482,11 @@
             "Built a single pipeline from preprocessing to modeling, prediction and PDF reporting"
           ]
         },
-        "images": [],
+        "images": [
+          "/images/anomaly/confusion_matrix_threshold_025.png",
+          "/images/anomaly/missed_defects_sensor_pattern.png",
+          "/images/anomaly/class_imbalance_14_to_1.png"
+        ],
         "github": "https://github.com/Jae-Ung-Jeong/manufacturing-quality-anomaly-detection"
       },
       "thesis": {
@@ -484,7 +509,11 @@
             "Ablation: DML alone 22.10, HUW alone 21.50, both 19.20, showing the modules are complementary"
           ]
         },
-        "images": []
+        "images": [
+          "/images/thesis/qualitative_comparison_airplane.jpg",
+          "/images/thesis/framework_architecture.png",
+          "/images/thesis/chamfer_distance_vs_inference_time.png"
+        ]
       },
       "trademark": {
         "title": "AI Trademark Registrability Assessment",
@@ -509,7 +538,10 @@
             "Categorized errors to find limits such as composite figurative marks → proposed an OCR-based multimodal extension"
           ]
         },
-        "images": []
+        "images": [
+          "/images/trademark/cot_judgment_flow.png",
+          "/images/trademark/examination_criteria_structured.jpg"
+        ]
       },
       "gs3d": {
         "title": "3DGS Alignment Error Root Cause",
@@ -531,7 +563,12 @@
             "Proposed a compromise by comparing each team's fix on estimated effort and rendering efficiency"
           ]
         },
-        "images": []
+        "images": [
+          "/images/gs3d/point_cloud_align_mismatch.jpg",
+          "/images/gs3d/original_scene_render.jpg",
+          "/images/gs3d/rendered_view.jpg",
+          "/images/gs3d/separated_object_training.png"
+        ]
       },
       "tcad": {
         "title": "Optical Modulator Simulation Automation",
@@ -553,7 +590,10 @@
             "Chose the best structure from Δneff vs voltage characteristics"
           ]
         },
-        "images": []
+        "images": [
+          "/images/tcad/sentaurus_tcad_process_device.jpg",
+          "/images/tcad/lumerical_optical_mode_solver.jpg"
+        ]
       },
       "torus": {
         "title": "Torus Fitting Evaluation",
@@ -574,7 +614,12 @@
             "Analyzed which factors drive the result with a parameter correlation heatmap"
           ]
         },
-        "images": []
+        "images": [
+          "/images/torus/voxelized_cup.jpg",
+          "/images/torus/voxel_center_point_cloud.jpg",
+          "/images/torus/parameter_correlation_heatmap.jpg",
+          "/images/torus/fitting_statistics.jpg"
+        ]
       }
     }
   },

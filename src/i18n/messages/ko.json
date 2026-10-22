@@ -239,7 +239,12 @@
             "날짜 계산인 교체 알림은 AI가 아닌 규칙으로 처리"
           ]
         },
-        "images": []
+        "images": [
+          "/images/hosilnote/landlord_dashboard.jpg",
+          "/images/hosilnote/request_detail_ai_recommendation.jpg",
+          "/images/hosilnote/data_model_17_tables.png",
+          "/images/hosilnote/ui_flow_dashboard_spec.png"
+        ]
       },
       "kvcache": {
         "title": "KV cache 기술 평가 Multi-Agent",
@@ -271,7 +276,12 @@
             "판정 병렬화로 테스트 실행 372.8초 → 240.2초 (−35.6%)"
           ]
         },
-        "images": []
+        "images": [
+          "/images/kvcache/supervisor_send_parallel_dispatch.jpg",
+          "/images/kvcache/sufficiency_score_0944.jpg",
+          "/images/kvcache/quality_pass_termination.jpg",
+          "/images/kvcache/full_trace_routing.jpg"
+        ]
       },
       "gonggong": {
         "title": "공공취뽀: 상장사 교차 검증 에이전트",
@@ -299,7 +309,10 @@
             "외부 API 없이 재현 가능한 fixture 기반 오프라인 테스트 구축"
           ]
         },
-        "images": []
+        "images": [
+          "/images/gonggong/agent_architecture.jpg",
+          "/images/gonggong/project_structure_parts.jpg"
+        ]
       },
       "solarcast": {
         "title": "SolarCast: 태양광 발전량 예측 AIOps",
@@ -328,7 +341,12 @@
             "모델 로딩 방식 비교: 첫 요청 응답 2.560초(Lazy) → 0.642초(Eager)"
           ]
         },
-        "images": []
+        "images": [
+          "/images/solarcast/drift_retrain_pipeline.png",
+          "/images/solarcast/aiops_dashboard.png",
+          "/images/solarcast/mlflow_model_registry.png",
+          "/images/solarcast/drift_batch_detected.png"
+        ]
       },
       "springrag": {
         "title": "Spring AI RAG 사내 문서 Q&A",
@@ -356,7 +374,7 @@
             "주문 요약 API (2인): 권한 검사를 쿼리에 포함하고, 모델 호출 실패 시 대체 문구 반환"
           ]
         },
-        "images": []
+        "images": ["/images/springrag/golden_set_test_9_of_10.png"]
       },
       "sllm": {
         "title": "HR 규정 sLLM 파인튜닝",
@@ -378,7 +396,10 @@
             "답변 원문을 직접 읽고 자동 평가 지표의 한계 정리"
           ]
         },
-        "images": []
+        "images": [
+          "/images/sllm/lora_evaluation_report.jpg",
+          "/images/sllm/per_question_comparison.jpg"
+        ]
       }
     }
   },
@@ -452,7 +473,11 @@
             "전처리 → 모델링 → 예측 → PDF 리포트까지 한 번에 실행되는 파이프라인 구축"
           ]
         },
-        "images": [],
+        "images": [
+          "/images/anomaly/confusion_matrix_threshold_025.png",
+          "/images/anomaly/missed_defects_sensor_pattern.png",
+          "/images/anomaly/class_imbalance_14_to_1.png"
+        ],
         "github": "https://github.com/Jae-Ung-Jeong/manufacturing-quality-anomaly-detection"
       },
       "thesis": {
@@ -475,7 +500,11 @@
             "Ablation: DML만 22.10, HUW만 21.50, 둘 다 19.20으로 두 모듈이 상호보완적임을 확인"
           ]
         },
-        "images": []
+        "images": [
+          "/images/thesis/qualitative_comparison_airplane.jpg",
+          "/images/thesis/framework_architecture.png",
+          "/images/thesis/chamfer_distance_vs_inference_time.png"
+        ]
       },
       "trademark": {
         "title": "상표 등록 가능성 AI 판정",
@@ -500,7 +529,10 @@
             "예측 오류를 유형화해 도형 복합 상표 등 한계 원인 규명 → OCR 기반 멀티모달 확장 방향 제시"
           ]
         },
-        "images": []
+        "images": [
+          "/images/trademark/cot_judgment_flow.png",
+          "/images/trademark/examination_criteria_structured.jpg"
+        ]
       },
       "gs3d": {
         "title": "3DGS 정렬 오류 원인 분석",
@@ -519,7 +551,12 @@
             "팀별 해결안을 예상 공수와 렌더링 효율로 비교한 절충안 제시"
           ]
         },
-        "images": []
+        "images": [
+          "/images/gs3d/point_cloud_align_mismatch.jpg",
+          "/images/gs3d/original_scene_render.jpg",
+          "/images/gs3d/rendered_view.jpg",
+          "/images/gs3d/separated_object_training.png"
+        ]
       },
       "tcad": {
         "title": "광변조기 시뮬레이션 자동화",
@@ -538,7 +575,10 @@
             "Δneff vs 전압 특성 분석으로 최적 구조 도출"
           ]
         },
-        "images": []
+        "images": [
+          "/images/tcad/sentaurus_tcad_process_device.jpg",
+          "/images/tcad/lumerical_optical_mode_solver.jpg"
+        ]
       },
       "torus": {
         "title": "토러스 피팅 정량평가",
@@ -556,7 +596,12 @@
             "파라미터 상관관계 히트맵으로 결과에 영향을 주는 요인 분석"
           ]
         },
-        "images": []
+        "images": [
+          "/images/torus/voxelized_cup.jpg",
+          "/images/torus/voxel_center_point_cloud.jpg",
+          "/images/torus/parameter_correlation_heatmap.jpg",
+          "/images/torus/fitting_statistics.jpg"
+        ]
       }
     }
   },
