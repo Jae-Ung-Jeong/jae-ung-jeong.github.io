@@ -5,3 +5,7 @@ allowBuilds:
   msw: false
   sharp: true
   unrs-resolver: true
+
+overrides:
+  browserslist: '>=4.28.7'
+  source-map-js: '>=1.2.2'
